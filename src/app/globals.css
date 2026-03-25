@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #28825C;
+  --color-forest-dark: #1e6346;
+  --color-forest-light: #e8f5ee;
+  --color-coral: #BE3929;
+  --color-coral-dark: #9a2e21;
+  --color-coral-light: #fdf0ee;
+  --color-warm-gray: #f8f6f4;
+  --color-text-primary: #2d2d2d;
+  --color-text-secondary: #5a5a5a;
+  --color-text-muted: #8a8a8a;
+
+  --font-sans: "Noto Sans JP", sans-serif;
+}

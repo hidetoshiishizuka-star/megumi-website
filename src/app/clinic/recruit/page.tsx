@@ -20,7 +20,7 @@ export default function RecruitPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         {/* メッセージ */}
         <section className="mb-16">
-          <div className="bg-forest-light rounded-2xl p-8">
+          <div className="bg-navy-light rounded-2xl p-8">
             <h2 className="text-xl font-bold mb-4">院長メッセージ</h2>
             <p className="text-text-secondary leading-relaxed mb-4">
               めぐみ在宅クリニックは、在宅医療の技術だけでなく、
@@ -37,7 +37,7 @@ export default function RecruitPage() {
 
         {/* 当院で働く魅力 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             当院で働く魅力
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -71,7 +71,7 @@ export default function RecruitPage() {
 
         {/* 募集職種 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             募集職種
           </h2>
           <div className="space-y-4">
@@ -87,7 +87,7 @@ export default function RecruitPage() {
               >
                 <span className="font-medium">{job.title}</span>
                 {job.tag && (
-                  <span className="text-xs bg-coral text-white px-3 py-1 rounded-full">
+                  <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
                     {job.tag}
                   </span>
                 )}
@@ -100,7 +100,7 @@ export default function RecruitPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">ご応募・お問い合わせ</h2>
           <p className="text-text-secondary mb-6 text-sm">
             採用に関するお問い合わせは、お電話またはメールにて承っております
@@ -108,13 +108,13 @@ export default function RecruitPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${CLINIC_INFO.tel}`}
-              className="inline-flex items-center justify-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
             >
               {CLINIC_INFO.tel}（採用係）
             </a>
             <Link
               href="/clinic/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white text-forest border-2 border-forest px-8 py-4 rounded-lg font-medium hover:bg-forest-light transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white text-navy border-2 border-navy px-8 py-4 rounded-lg font-medium hover:bg-navy-light transition-colors"
             >
               お問い合わせフォーム
             </Link>

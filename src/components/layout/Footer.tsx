@@ -26,13 +26,13 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-3">{CLINIC_INFO.address}</p>
             <p className="text-sm">
               <span className="text-gray-400">診療のお問い合わせ：</span>
-              <a href={`tel:${CLINIC_INFO.tel}`} className="text-white hover:text-forest-light">
+              <a href={`tel:${CLINIC_INFO.tel}`} className="text-white hover:text-navy-light">
                 {CLINIC_INFO.tel}
               </a>
             </p>
             <p className="text-sm">
               <span className="text-gray-400">研修・講演・取材：</span>
-              <a href={`tel:${CLINIC_INFO.telPlanning}`} className="text-white hover:text-forest-light">
+              <a href={`tel:${CLINIC_INFO.telPlanning}`} className="text-white hover:text-navy-light">
                 {CLINIC_INFO.telPlanning}
               </a>
             </p>

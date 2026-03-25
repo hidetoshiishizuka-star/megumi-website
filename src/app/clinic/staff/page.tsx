@@ -56,7 +56,7 @@ export default function StaffPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
         {/* 医師 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-twilight">
             医師
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -69,7 +69,7 @@ export default function StaffPage() {
                   🐰
                 </div>
                 <div className="p-5">
-                  <p className="text-xs text-forest font-medium mb-1">
+                  <p className="text-xs text-navy font-medium mb-1">
                     {doc.role}
                   </p>
                   <h3 className="font-bold text-lg mb-1">{doc.name}</h3>
@@ -94,7 +94,7 @@ export default function StaffPage() {
 
         {/* チーム体制 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-twilight">
             チーム体制
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -141,7 +141,7 @@ export default function StaffPage() {
         </section>
 
         {/* 訪問の3名体制 */}
-        <section className="bg-forest-light rounded-2xl p-8">
+        <section className="bg-navy-light rounded-2xl p-8">
           <h2 className="text-xl font-bold mb-4 text-center">
             訪問は3名体制で伺います
           </h2>

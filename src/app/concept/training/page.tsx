@@ -25,12 +25,12 @@ export default function TrainingPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             プログラム
           </h2>
           <div className="space-y-6">
             <div className="border border-gray-200 rounded-xl overflow-hidden">
-              <div className="bg-forest text-white px-6 py-4">
+              <div className="bg-navy text-white px-6 py-4">
                 <h3 className="font-bold text-lg">1日見学</h3>
               </div>
               <div className="px-6 py-5">
@@ -45,7 +45,7 @@ export default function TrainingPage() {
             </div>
 
             <div className="border border-gray-200 rounded-xl overflow-hidden">
-              <div className="bg-forest text-white px-6 py-4">
+              <div className="bg-navy text-white px-6 py-4">
                 <h3 className="font-bold text-lg">短期研修プログラム</h3>
               </div>
               <div className="px-6 py-5">
@@ -60,7 +60,7 @@ export default function TrainingPage() {
             </div>
 
             <div className="border border-gray-200 rounded-xl overflow-hidden">
-              <div className="bg-forest text-white px-6 py-4">
+              <div className="bg-navy text-white px-6 py-4">
                 <h3 className="font-bold text-lg">スタッフ向け研修</h3>
               </div>
               <div className="px-6 py-5">
@@ -77,7 +77,7 @@ export default function TrainingPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             学べること
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -89,21 +89,21 @@ export default function TrainingPage() {
               "チームで支える在宅緩和ケア",
               "グリーフケアの考え方",
             ].map((item) => (
-              <div key={item} className="bg-forest-light rounded-lg px-4 py-3 text-sm">
+              <div key={item} className="bg-navy-light rounded-lg px-4 py-3 text-sm">
                 {item}
               </div>
             ))}
           </div>
         </section>
 
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">見学・研修のお申し込み</h2>
           <p className="text-text-secondary mb-6 text-sm">
             お電話またはお問い合わせフォームよりお申し込みください
           </p>
           <a
             href={`tel:${CLINIC_INFO.telPlanning}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             {CLINIC_INFO.telPlanning}（企画運営係）
           </a>

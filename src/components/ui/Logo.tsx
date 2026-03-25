@@ -23,7 +23,7 @@ export default function Logo({
     <div className="flex items-center gap-2.5">
       {/* Rabbit in a styled green circle badge */}
       <div
-        className="relative flex-shrink-0 rounded-full bg-forest/10 border-2 border-forest/20 flex items-center justify-center overflow-hidden"
+        className="relative flex-shrink-0 rounded-full bg-navy/10 border-2 border-navy/20 flex items-center justify-center overflow-hidden"
         style={{ width: s.badge, height: s.badge }}
       >
         <Image
@@ -38,7 +38,7 @@ export default function Logo({
       {showText && (
         <div>
           <span
-            className={`font-bold text-forest-dark tracking-tight ${
+            className={`font-bold text-navy-dark tracking-tight ${
               size === "lg" ? "text-2xl" : size === "md" ? "text-lg" : "text-base"
             }`}
           >

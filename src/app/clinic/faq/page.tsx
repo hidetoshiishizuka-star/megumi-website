@@ -54,15 +54,15 @@ export default function FaqPage() {
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">
-              <div className="bg-forest-light px-6 py-4">
+              <div className="bg-navy-light px-6 py-4">
                 <h3 className="font-bold flex items-start gap-3">
-                  <span className="text-forest font-bold text-lg">Q</span>
+                  <span className="text-navy font-bold text-lg">Q</span>
                   {faq.q}
                 </h3>
               </div>
               <div className="px-6 py-4">
                 <p className="text-sm text-text-secondary leading-relaxed flex items-start gap-3">
-                  <span className="text-coral font-bold text-lg">A</span>
+                  <span className="text-sunrise font-bold text-lg">A</span>
                   <span>{faq.a}</span>
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function FaqPage() {
           ))}
         </div>
 
-        <section className="mt-12 bg-forest-light rounded-2xl p-8 text-center">
+        <section className="mt-12 bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">
             その他ご不明な点がありましたら
           </h2>
@@ -79,7 +79,7 @@ export default function FaqPage() {
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             {CLINIC_INFO.tel}
           </a>

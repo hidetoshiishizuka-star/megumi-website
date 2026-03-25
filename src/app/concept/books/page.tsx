@@ -32,7 +32,7 @@ export default function BooksPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             著書
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -59,14 +59,14 @@ export default function BooksPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             メディア掲載
           </h2>
           <div className="space-y-3">
             {media.map((item) => (
               <div
                 key={item}
-                className="bg-forest-light rounded-lg px-5 py-3 text-sm text-text-secondary"
+                className="bg-navy-light rounded-lg px-5 py-3 text-sm text-text-secondary"
               >
                 {item}
               </div>

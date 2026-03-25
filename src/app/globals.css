@@ -1,16 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest: #28825C;
-  --color-forest-dark: #1e6346;
-  --color-forest-light: #e8f5ee;
-  --color-coral: #BE3929;
-  --color-coral-dark: #9a2e21;
-  --color-coral-light: #fdf0ee;
-  --color-warm-gray: #f8f6f4;
-  --color-text-primary: #2d2d2d;
-  --color-text-secondary: #5a5a5a;
-  --color-text-muted: #8a8a8a;
+  /* ELC公式アームリングの4色をベースに */
+
+  /* 紺色 — 深い夜、苦しみの中にある静けさ */
+  --color-navy: #192044;
+  --color-navy-dark: #0F1530;
+  --color-navy-light: #ECEEF4;
+
+  /* やや青みがかった夜 — 寄り添いの時間 */
+  --color-twilight: #4A6AAE;
+  --color-twilight-dark: #3A5590;
+  --color-twilight-light: #EDF1F8;
+
+  /* 夜明けの紫 — 希望の兆し */
+  --color-dawn: #7E509E;
+  --color-dawn-dark: #643D82;
+  --color-dawn-light: #F2ECF6;
+
+  /* 朝焼けのオレンジ — 温もり、生きる力 */
+  --color-sunrise: #E87430;
+  --color-sunrise-dark: #CC6020;
+  --color-sunrise-light: #FFF1E8;
+
+  --color-warm-gray: #F7F6F9;
+  --color-text-primary: #192044;
+  --color-text-secondary: #4A5068;
+  --color-text-muted: #8A8FA0;
 
   --font-sans: "Noto Sans JP", sans-serif;
 }

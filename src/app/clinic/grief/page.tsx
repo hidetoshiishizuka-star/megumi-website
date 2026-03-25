@@ -29,7 +29,7 @@ export default function GriefPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             わかちあいの会
           </h2>
           <div className="bg-warm-gray rounded-xl p-6">
@@ -42,7 +42,7 @@ export default function GriefPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             個別面談
           </h2>
           <div className="bg-warm-gray rounded-xl p-6">
@@ -50,21 +50,21 @@ export default function GriefPage() {
               専任のグリーフカウンセラーが1対1でお話をお伺いします。
               1回あたり1時間〜1時間半程度です。
             </p>
-            <p className="font-medium text-forest mb-2">費用：無料</p>
+            <p className="font-medium text-navy mb-2">費用：無料</p>
             <p className="text-sm text-text-muted">
               事前のお申し込みが必要です。お電話にてご連絡ください。
             </p>
           </div>
         </section>
 
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">お問い合わせ</h2>
           <p className="text-text-secondary mb-6 text-sm">
             グリーフサポートのお申し込み・ご相談はお電話ください
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             {CLINIC_INFO.tel}
           </a>

@@ -19,7 +19,7 @@ export default function FirstVisitPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         {/* こんな方が対象です */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             こんな方が在宅医療の対象です
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -31,8 +31,8 @@ export default function FirstVisitPage() {
               "介護施設に入所中で医療が必要な方",
               "お一人暮らしで医療の不安がある方",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3 bg-forest-light rounded-lg p-4">
-                <span className="text-forest text-lg mt-0.5">✓</span>
+              <div key={item} className="flex items-start gap-3 bg-navy-light rounded-lg p-4">
+                <span className="text-navy text-lg mt-0.5">✓</span>
                 <span className="text-sm">{item}</span>
               </div>
             ))}
@@ -41,7 +41,7 @@ export default function FirstVisitPage() {
 
         {/* 訪問診療開始までの流れ */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             訪問診療開始までの流れ
           </h2>
           <div className="space-y-6">
@@ -72,7 +72,7 @@ export default function FirstVisitPage() {
               },
             ].map((item) => (
               <div key={item.step} className="flex gap-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-forest text-white rounded-full flex items-center justify-center font-bold">
+                <div className="flex-shrink-0 w-10 h-10 bg-navy text-white rounded-full flex items-center justify-center font-bold">
                   {item.step}
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export default function FirstVisitPage() {
 
         {/* お電話時にお伝えいただきたいこと */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             お電話時にお伝えいただきたいこと
           </h2>
           <div className="bg-warm-gray rounded-xl p-6 space-y-3 text-sm text-text-secondary">
@@ -103,22 +103,22 @@ export default function FirstVisitPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">ご相談はお気軽にお電話ください</h2>
           <p className="text-text-secondary mb-6 text-sm">
             地域連携室が対応いたします（月〜金 9時〜17時）
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors text-lg"
           >
             {CLINIC_INFO.tel}
           </a>
           <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center text-sm">
-            <Link href="/clinic/fee" className="text-forest hover:underline">
+            <Link href="/clinic/fee" className="text-navy hover:underline">
               費用について →
             </Link>
-            <Link href="/clinic/faq" className="text-forest hover:underline">
+            <Link href="/clinic/faq" className="text-navy hover:underline">
               よくあるご質問 →
             </Link>
           </div>

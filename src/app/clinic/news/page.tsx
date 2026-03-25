@@ -39,7 +39,7 @@ export default function NewsPage() {
               className="border-b border-gray-200 pb-4"
             >
               <time className="text-sm text-text-muted">{item.date}</time>
-              <h2 className="font-medium mt-1 hover:text-forest cursor-pointer">
+              <h2 className="font-medium mt-1 hover:text-navy cursor-pointer">
                 {item.title}
               </h2>
             </article>

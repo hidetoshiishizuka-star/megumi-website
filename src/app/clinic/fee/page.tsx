@@ -24,13 +24,13 @@ export default function FeePage() {
 
         {/* 標準負担額 */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             標準負担額の目安（月2回訪問・24時間緊急体制）
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-forest text-white">
+                <tr className="bg-navy text-white">
                   <th className="px-4 py-3 text-left">対象</th>
                   <th className="px-4 py-3">負担割合</th>
                   <th className="px-4 py-3">自己負担額（目安）</th>
@@ -69,13 +69,13 @@ export default function FeePage() {
 
         {/* 交通費 */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             交通費
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-forest text-white">
+                <tr className="bg-navy text-white">
                   <th className="px-4 py-3 text-left">距離</th>
                   <th className="px-4 py-3">日中（6:00〜22:00）</th>
                   <th className="px-4 py-3">夜間（22:00〜6:00）</th>
@@ -99,36 +99,36 @@ export default function FeePage() {
 
         {/* その他 */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             その他
           </h2>
           <ul className="space-y-3 text-sm text-text-secondary">
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               介護保険利用者は居宅療養管理指導費が別途かかります（1割: 598円、2割: 1,196円、3割: 1,794円／月）
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               院外処方のため、お薬代は別途かかります
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               予防接種（インフルエンザ等）、診断書・申請書等の文書作成料は自費となります
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               お支払いは1か月分まとめて翌月に請求いたします
             </li>
           </ul>
         </section>
 
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <p className="text-text-secondary mb-4">
             費用についてご不明な点がありましたら、お気軽にお問い合わせください。
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             {CLINIC_INFO.tel}
           </a>

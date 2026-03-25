@@ -6,7 +6,7 @@ export default function PageHeader({
   subtitle?: string;
 }) {
   return (
-    <div className="bg-forest-light py-12 sm:py-16">
+    <div className="bg-navy-light py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <h1 className="text-2xl sm:text-3xl font-bold text-text-primary">
           {title}

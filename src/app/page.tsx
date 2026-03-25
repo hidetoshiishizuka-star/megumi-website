@@ -10,9 +10,9 @@ export default function TopPage() {
       <Header variant="top" />
       <main>
         {/* Hero */}
-        <section className="relative bg-forest-light">
+        <section className="relative bg-navy-light">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
-            <p className="text-forest text-sm font-medium tracking-widest mb-4">
+            <p className="text-navy text-sm font-medium tracking-widest mb-4">
               横浜市瀬谷区 在宅医療・緩和ケア専門
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight mb-6">
@@ -27,7 +27,7 @@ export default function TopPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`tel:${CLINIC_INFO.tel}`}
-                className="inline-flex items-center justify-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors text-lg"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -36,7 +36,7 @@ export default function TopPage() {
               </a>
               <Link
                 href="/clinic/contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-forest border-2 border-forest px-8 py-4 rounded-lg font-medium hover:bg-forest-light transition-colors text-lg"
+                className="inline-flex items-center justify-center gap-2 bg-white text-navy border-2 border-navy px-8 py-4 rounded-lg font-medium hover:bg-navy-light transition-colors text-lg"
               >
                 メールでお問い合わせ
               </Link>
@@ -55,35 +55,35 @@ export default function TopPage() {
               title="患者さま・ご家族の方"
               description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
               href="/clinic/first-visit"
-              color="bg-forest-light"
+              color="bg-navy-light"
             />
             <NavCard
               icon="🎓"
               title="見学・研修をお考えの方"
               description="緩和ケアの学びの場として、見学プログラム・研修をご案内します。"
               href="/concept/training"
-              color="bg-blue-50"
+              color="bg-twilight-light"
             />
             <NavCard
               icon="👥"
               title="一緒に働きたい方"
               description="医師・看護師・コメディカルスタッフの採用情報をご案内します。"
               href="/clinic/recruit"
-              color="bg-amber-50"
+              color="bg-sunrise-light"
             />
             <NavCard
               icon="🤝"
               title="医療機関・連携先の方"
               description="患者さまのご紹介の手順、連携窓口のご案内です。"
               href="/clinic/partnership"
-              color="bg-green-50"
+              color="bg-dawn-light"
             />
             <NavCard
               icon="🎤"
               title="講演・執筆を依頼したい方"
               description="院長の講演テーマ・実績、ご依頼方法をご案内します。"
               href="/concept/lecture"
-              color="bg-purple-50"
+              color="bg-twilight-light"
             />
           </div>
         </section>
@@ -122,7 +122,7 @@ export default function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="md:flex items-center gap-12">
             <div className="md:w-1/3 mb-8 md:mb-0">
-              <div className="aspect-[3/4] bg-gradient-to-b from-forest-light to-white rounded-2xl flex items-center justify-center overflow-hidden">
+              <div className="aspect-[3/4] bg-gradient-to-b from-twilight-light via-dawn-light to-white rounded-2xl flex items-center justify-center overflow-hidden">
                 <Image
                   src="/images/usagi-original.png"
                   alt="めぐみ在宅クリニック"
@@ -136,7 +136,7 @@ export default function TopPage() {
               </p>
             </div>
             <div className="md:w-2/3">
-              <p className="text-forest text-sm font-medium mb-2">院長紹介</p>
+              <p className="text-navy text-sm font-medium mb-2">院長紹介</p>
               <h2 className="text-2xl font-bold mb-4">小澤竹俊 Taketoshi Ozawa</h2>
               <p className="text-text-secondary leading-relaxed mb-4">
                 1963年東京生まれ。東京慈恵会医科大学卒業後、救命救急・農村医療を経てホスピス病棟長を務め、
@@ -150,7 +150,7 @@ export default function TopPage() {
               </p>
               <Link
                 href="/concept/about"
-                className="inline-flex items-center gap-1 text-forest font-medium hover:text-forest-dark"
+                className="inline-flex items-center gap-1 text-navy font-medium hover:text-navy-dark"
               >
                 院長について詳しく →
               </Link>
@@ -159,22 +159,22 @@ export default function TopPage() {
         </section>
 
         {/* Clinic Overview */}
-        <section className="bg-forest text-white py-16">
+        <section className="bg-navy text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="text-2xl font-bold mb-8">クリニック概要</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
               <div>
-                <h3 className="font-medium text-forest-light mb-2">所在地</h3>
+                <h3 className="font-medium text-navy-light mb-2">所在地</h3>
                 <p className="text-sm">{CLINIC_INFO.address}</p>
               </div>
               <div>
-                <h3 className="font-medium text-forest-light mb-2">診療体制</h3>
+                <h3 className="font-medium text-navy-light mb-2">診療体制</h3>
                 <p className="text-sm">24時間365日対応</p>
                 <p className="text-sm">外来：{CLINIC_INFO.outpatient.general}</p>
                 <p className="text-sm">緩和ケア外来：{CLINIC_INFO.outpatient.palliative}</p>
               </div>
               <div>
-                <h3 className="font-medium text-forest-light mb-2">対応エリア</h3>
+                <h3 className="font-medium text-navy-light mb-2">対応エリア</h3>
                 <p className="text-sm">{CLINIC_INFO.areas.join("・")}など</p>
                 <p className="text-sm mt-1">おおむね5km圏内（要相談可）</p>
               </div>
@@ -206,7 +206,7 @@ function NavCard({
       className={`${color} rounded-xl p-6 hover:shadow-lg transition-shadow group`}
     >
       <span className="text-3xl mb-4 block">{icon}</span>
-      <h3 className="font-bold text-lg mb-2 group-hover:text-forest transition-colors">
+      <h3 className="font-bold text-lg mb-2 group-hover:text-navy transition-colors">
         {title}
       </h3>
       <p className="text-sm text-text-secondary">{description}</p>

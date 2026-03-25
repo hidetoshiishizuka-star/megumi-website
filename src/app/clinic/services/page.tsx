@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         {/* 在宅医療とは */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             在宅医療とは
           </h2>
           <div className="prose max-w-none text-text-secondary leading-relaxed space-y-4">
@@ -39,20 +39,20 @@ export default function ServicesPage() {
 
         {/* 対象となる患者さま */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             対象となる患者さま
           </h2>
           <ul className="space-y-3 text-text-secondary">
             <li className="flex items-start gap-3">
-              <span className="text-forest mt-1">●</span>
+              <span className="text-navy mt-1">●</span>
               がん末期・神経難病・慢性疾患などで通院が困難な方
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-forest mt-1">●</span>
+              <span className="text-navy mt-1">●</span>
               ターミナル期の在宅看取りを希望される方
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-forest mt-1">●</span>
+              <span className="text-navy mt-1">●</span>
               介護保険・医療保険いずれにも対応
             </li>
           </ul>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
 
         {/* 診療内容 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             診療内容
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -74,7 +74,7 @@ export default function ServicesPage() {
             ].map((item) => (
               <div
                 key={item}
-                className="bg-forest-light rounded-lg px-4 py-3 text-sm"
+                className="bg-navy-light rounded-lg px-4 py-3 text-sm"
               >
                 {item}
               </div>
@@ -84,13 +84,13 @@ export default function ServicesPage() {
 
         {/* 外来スケジュール */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             外来診療
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-forest text-white">
+                <tr className="bg-navy text-white">
                   <th className="px-4 py-3 text-left">時間</th>
                   <th className="px-4 py-3">月</th>
                   <th className="px-4 py-3">火</th>
@@ -102,10 +102,10 @@ export default function ServicesPage() {
               <tbody>
                 <tr className="border-b">
                   <td className="px-4 py-3 font-medium">9:00〜12:00</td>
-                  <td className="px-4 py-3 text-center text-forest font-medium">一般</td>
-                  <td className="px-4 py-3 text-center text-coral font-medium">緩和ケア</td>
+                  <td className="px-4 py-3 text-center text-navy font-medium">一般</td>
+                  <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
                   <td className="px-4 py-3 text-center text-text-muted">−</td>
-                  <td className="px-4 py-3 text-center text-forest font-medium">一般</td>
+                  <td className="px-4 py-3 text-center text-navy font-medium">一般</td>
                   <td className="px-4 py-3 text-center text-text-muted">−</td>
                 </tr>
               </tbody>
@@ -119,7 +119,7 @@ export default function ServicesPage() {
 
         {/* 対応エリア */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             訪問対応エリア
           </h2>
           <p className="text-text-secondary mb-4">
@@ -137,7 +137,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">
             訪問診療のご相談はお気軽にお電話ください
           </h2>
@@ -146,7 +146,7 @@ export default function ServicesPage() {
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors text-lg"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -154,7 +154,7 @@ export default function ServicesPage() {
             {CLINIC_INFO.tel}
           </a>
           <p className="mt-4">
-            <Link href="/clinic/contact" className="text-forest hover:text-forest-dark underline">
+            <Link href="/clinic/contact" className="text-navy hover:text-navy-dark underline">
               メールでのお問い合わせはこちら
             </Link>
           </p>

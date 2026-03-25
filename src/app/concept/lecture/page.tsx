@@ -17,7 +17,7 @@ export default function LecturePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             主な講演テーマ
           </h2>
           <div className="space-y-4">
@@ -43,22 +43,22 @@ export default function LecturePage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             講演実績
           </h2>
           <p className="text-text-secondary mb-4">
             全国の病院・介護施設・自治体・学会・学校などで多数の講演実績があります。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-secondary">
-            <div className="bg-forest-light rounded-lg px-4 py-3">TED×Tokyo登壇</div>
-            <div className="bg-forest-light rounded-lg px-4 py-3">全国の病院・医学部</div>
-            <div className="bg-forest-light rounded-lg px-4 py-3">介護施設・地域包括支援センター</div>
-            <div className="bg-forest-light rounded-lg px-4 py-3">自治体・教育委員会</div>
+            <div className="bg-navy-light rounded-lg px-4 py-3">TED×Tokyo登壇</div>
+            <div className="bg-navy-light rounded-lg px-4 py-3">全国の病院・医学部</div>
+            <div className="bg-navy-light rounded-lg px-4 py-3">介護施設・地域包括支援センター</div>
+            <div className="bg-navy-light rounded-lg px-4 py-3">自治体・教育委員会</div>
           </div>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             ご依頼について
           </h2>
           <div className="bg-warm-gray rounded-xl p-6 text-sm text-text-secondary space-y-2">
@@ -68,14 +68,14 @@ export default function LecturePage() {
           </div>
         </section>
 
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">講演・執筆のご依頼</h2>
           <p className="text-text-secondary mb-6 text-sm">
             お電話またはお問い合わせフォームよりご連絡ください
           </p>
           <a
             href={`tel:${CLINIC_INFO.telPlanning}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             {CLINIC_INFO.telPlanning}（企画運営係）
           </a>

@@ -25,7 +25,7 @@ export default function PartnershipPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             ご紹介の流れ
           </h2>
           <div className="space-y-4">
@@ -36,7 +36,7 @@ export default function PartnershipPage() {
               "診療開始後、経過を共有いたします",
             ].map((step, i) => (
               <div key={i} className="flex gap-4 items-start">
-                <span className="flex-shrink-0 w-8 h-8 bg-forest text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <span className="flex-shrink-0 w-8 h-8 bg-navy text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {i + 1}
                 </span>
                 <p className="text-text-secondary pt-1">{step}</p>
@@ -46,7 +46,7 @@ export default function PartnershipPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             当院の対応体制
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -58,19 +58,19 @@ export default function PartnershipPage() {
               "ディグニティセラピー対応",
               "グリーフケア（遺族支援）",
             ].map((item) => (
-              <div key={item} className="bg-forest-light rounded-lg px-4 py-3 text-sm">
+              <div key={item} className="bg-navy-light rounded-lg px-4 py-3 text-sm">
                 {item}
               </div>
             ))}
           </div>
         </section>
 
-        <section className="bg-forest-light rounded-2xl p-8 text-center">
+        <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">連携窓口</h2>
           <p className="text-text-secondary mb-2">地域連携室</p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}
-            className="inline-flex items-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors text-lg"
           >
             {CLINIC_INFO.tel}
           </a>

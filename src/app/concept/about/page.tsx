@@ -43,22 +43,22 @@ export default function AboutDirectorPage() {
 
         {/* 資格 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             資格・所属
           </h2>
           <ul className="space-y-2 text-text-secondary">
             {DIRECTOR.specialty.map((s) => (
               <li key={s} className="flex items-start gap-2">
-                <span className="text-forest">●</span>
+                <span className="text-navy">●</span>
                 {s}
               </li>
             ))}
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               常任世話人（日本死の臨床研究会）
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-forest">●</span>
+              <span className="text-navy">●</span>
               代表理事（一般社団法人エンドオブライフ・ケア協会）
             </li>
           </ul>
@@ -66,13 +66,13 @@ export default function AboutDirectorPage() {
 
         {/* 経歴 */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             経歴
           </h2>
           <div className="space-y-3">
             {DIRECTOR.career.map((item) => (
               <div key={item} className="flex items-start gap-3 text-text-secondary text-sm">
-                <span className="w-2 h-2 bg-forest rounded-full mt-2 flex-shrink-0" />
+                <span className="w-2 h-2 bg-navy rounded-full mt-2 flex-shrink-0" />
                 {item}
               </div>
             ))}
@@ -81,7 +81,7 @@ export default function AboutDirectorPage() {
 
         {/* メディア */}
         <section className="mb-16">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             主なメディア出演
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -100,7 +100,7 @@ export default function AboutDirectorPage() {
         </section>
 
         {/* 理念 */}
-        <section className="bg-forest-light rounded-2xl p-8 mb-12">
+        <section className="bg-navy-light rounded-2xl p-8 mb-12">
           <h2 className="text-xl font-bold mb-4 text-center">院長の想い</h2>
           <blockquote className="text-center text-lg text-text-primary leading-relaxed italic">
             「苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい」
@@ -115,13 +115,13 @@ export default function AboutDirectorPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/concept/training"
-            className="inline-flex items-center justify-center gap-2 bg-forest text-white px-8 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
           >
             見学・研修のご案内 →
           </Link>
           <Link
             href="/concept/lecture"
-            className="inline-flex items-center justify-center gap-2 bg-white text-forest border-2 border-forest px-8 py-4 rounded-lg font-medium hover:bg-forest-light transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-white text-navy border-2 border-navy px-8 py-4 rounded-lg font-medium hover:bg-navy-light transition-colors"
           >
             講演・執筆依頼 →
           </Link>

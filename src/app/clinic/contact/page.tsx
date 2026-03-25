@@ -19,15 +19,15 @@ export default function ContactPage() {
 
         {/* 電話 */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             お電話でのお問い合わせ
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="bg-forest-light rounded-xl p-6">
+            <div className="bg-navy-light rounded-xl p-6">
               <h3 className="font-bold mb-2">診療・採用について</h3>
               <a
                 href={`tel:${CLINIC_INFO.tel}`}
-                className="text-2xl font-bold text-forest hover:text-forest-dark"
+                className="text-2xl font-bold text-navy hover:text-navy-dark"
               >
                 {CLINIC_INFO.tel}
               </a>
@@ -37,11 +37,11 @@ export default function ContactPage() {
                 月〜金 9:00〜17:00
               </p>
             </div>
-            <div className="bg-forest-light rounded-xl p-6">
+            <div className="bg-navy-light rounded-xl p-6">
               <h3 className="font-bold mb-2">研修・講演・取材について</h3>
               <a
                 href={`tel:${CLINIC_INFO.telPlanning}`}
-                className="text-2xl font-bold text-forest hover:text-forest-dark"
+                className="text-2xl font-bold text-navy hover:text-navy-dark"
               >
                 {CLINIC_INFO.telPlanning}
               </a>
@@ -56,15 +56,15 @@ export default function ContactPage() {
 
         {/* フォーム */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             メールでのお問い合わせ
           </h2>
           <form className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">
-                ご用件 <span className="text-coral">*</span>
+                ご用件 <span className="text-sunrise">*</span>
               </label>
-              <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest">
+              <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy">
                 <option value="">選択してください</option>
                 <option>診療について</option>
                 <option>求人に関する問い合わせ</option>
@@ -79,21 +79,21 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  お名前 <span className="text-coral">*</span>
+                  お名前 <span className="text-sunrise">*</span>
                 </label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                   placeholder="例：山田 太郎"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  フリガナ <span className="text-coral">*</span>
+                  フリガナ <span className="text-sunrise">*</span>
                 </label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                   placeholder="例：ヤマダ タロウ"
                 />
               </div>
@@ -102,38 +102,38 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  メールアドレス <span className="text-coral">*</span>
+                  メールアドレス <span className="text-sunrise">*</span>
                 </label>
                 <input
                   type="email"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">
-                  電話番号 <span className="text-coral">*</span>
+                  電話番号 <span className="text-sunrise">*</span>
                 </label>
                 <input
                   type="tel"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
                 />
               </div>
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-2">
-                お問い合わせ内容 <span className="text-coral">*</span>
+                お問い合わせ内容 <span className="text-sunrise">*</span>
               </label>
               <textarea
                 rows={6}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-forest"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
               />
             </div>
 
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-forest text-white px-12 py-4 rounded-lg font-medium hover:bg-forest-dark transition-colors"
+                className="bg-navy text-white px-12 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
               >
                 送信する
               </button>
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
         {/* アクセス */}
         <section>
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-forest">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
             アクセス
           </h2>
           <div className="bg-warm-gray rounded-xl p-6">

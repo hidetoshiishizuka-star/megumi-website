@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { CLINIC_INFO } from "@/lib/constants";
@@ -121,9 +122,18 @@ export default function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="md:flex items-center gap-12">
             <div className="md:w-1/3 mb-8 md:mb-0">
-              <div className="aspect-[3/4] bg-gray-200 rounded-2xl flex items-center justify-center text-6xl">
-                🐰
+              <div className="aspect-[3/4] bg-gradient-to-b from-forest-light to-white rounded-2xl flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/images/usagi-original.png"
+                  alt="めぐみ在宅クリニック"
+                  width={200}
+                  height={200}
+                  className="object-contain opacity-20"
+                />
               </div>
+              <p className="text-xs text-text-muted text-center mt-2">
+                ※ 院長写真は後日差し替え予定
+              </p>
             </div>
             <div className="md:w-2/3">
               <p className="text-forest text-sm font-medium mb-2">院長紹介</p>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CLINIC_INFO, NAV_CLINIC, NAV_CONCEPT } from "@/lib/constants";
+import Logo from "@/components/ui/Logo";
 
 type HeaderVariant = "clinic" | "concept" | "top";
 
@@ -33,18 +34,11 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
 
         {/* Main nav */}
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl">🐰</span>
-            <div>
-              <span className={`font-bold text-lg ${accentColor}`}>
-                めぐみ在宅クリニック
-              </span>
-              {variant === "concept" && (
-                <span className="block text-xs text-text-muted">
-                  院長 小澤竹俊
-                </span>
-              )}
-            </div>
+          <Link href="/">
+            <Logo
+              size="md"
+              subtitle={variant === "concept" ? "院長 小澤竹俊" : undefined}
+            />
           </Link>
 
           {/* Desktop nav */}

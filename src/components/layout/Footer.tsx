@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CLINIC_INFO, NAV_CLINIC, NAV_CONCEPT } from "@/lib/constants";
 
 export default function Footer() {
@@ -8,8 +9,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Clinic info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🐰</span>
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden">
+                <Image
+                  src="/images/usagi-original.png"
+                  alt="めぐみうさぎ"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
               <span className="text-white font-bold text-lg">
                 めぐみ在宅クリニック
               </span>

@@ -45,17 +45,24 @@ export default function ServicesPage() {
           <ul className="space-y-3 text-text-secondary">
             <li className="flex items-start gap-3">
               <span className="text-navy mt-1">●</span>
-              がん末期・神経難病・慢性疾患などで通院が困難な方
+              加齢や病気のために通院が困難になった方
             </li>
             <li className="flex items-start gap-3">
               <span className="text-navy mt-1">●</span>
-              ターミナル期の在宅看取りを希望される方
+              退院後、ご自宅での医療継続が必要な方
             </li>
             <li className="flex items-start gap-3">
               <span className="text-navy mt-1">●</span>
-              介護保険・医療保険いずれにも対応
+              がん・神経難病・慢性疾患をお持ちの方
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-navy mt-1">●</span>
+              在宅での看取りを希望される方
             </li>
           </ul>
+          <p className="text-sm text-text-muted mt-3">
+            ※ 介護保険・医療保険いずれにも対応しています。
+          </p>
         </section>
 
         {/* 診療内容 */}

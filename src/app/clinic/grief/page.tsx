@@ -24,7 +24,7 @@ export default function GriefPage() {
           </p>
           <p className="text-text-secondary leading-relaxed">
             当院では、療養中の支援だけでなく、ご家族さまのその後のグリーフサポートも
-            積極的に必要だと考えています。
+            大切にしています。
           </p>
         </section>
 

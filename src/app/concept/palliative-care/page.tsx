@@ -21,6 +21,10 @@ export default function PalliativeCarePage() {
             ホスピスマインドとは
           </h2>
           <p className="text-text-secondary leading-relaxed mb-4">
+            緩和ケアは、終末期だけのものではありません。
+            病気の早い段階から、治療と並行して受けることができるケアです。
+          </p>
+          <p className="text-text-secondary leading-relaxed mb-4">
             当院が大切にしている「ホスピスマインド」とは、
             医療の技術だけではなく、苦しむ人への寄り添い方そのものを指します。
           </p>
@@ -70,7 +74,7 @@ export default function PalliativeCarePage() {
 
         <section className="mb-16">
           <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
-            当院の特色あるケア
+            当院が提供するケア
           </h2>
           <div className="space-y-6">
             <div className="border-l-4 border-navy pl-6">

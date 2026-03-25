@@ -24,7 +24,7 @@ export default function RecruitPage() {
             <h2 className="text-xl font-bold mb-4">院長メッセージ</h2>
             <p className="text-text-secondary leading-relaxed mb-4">
               めぐみ在宅クリニックは、在宅医療の技術だけでなく、
-              人生の終盤で「穏やかさ・尊厳・関係性」を実現するための対人援助の思想を大切にしています。
+              在宅医療の現場で「穏やかさ・尊厳・関係性」を実現するための対人援助の思想を大切にしています。
             </p>
             <p className="text-text-secondary leading-relaxed mb-4">
               ここは実践の場であると同時に、学びの場でもあります。
@@ -97,6 +97,15 @@ export default function RecruitPage() {
           <p className="text-sm text-text-muted mt-4">
             ※ 詳しい募集要項・待遇についてはお問い合わせください。
           </p>
+          <div className="mt-6 bg-twilight-light rounded-xl p-6">
+            <p className="font-medium mb-2">まずは見学から始めることもできます</p>
+            <p className="text-sm text-text-secondary mb-3">
+              1日見学や短期研修プログラムで、当院の雰囲気や診療スタイルを体験いただけます。
+            </p>
+            <Link href="/concept/training" className="text-sm text-navy font-medium hover:text-navy-dark">
+              見学・研修プログラムを見る →
+            </Link>
+          </div>
         </section>
 
         {/* CTA */}

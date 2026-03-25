@@ -74,7 +74,11 @@ export default function PartnershipPage() {
           >
             {CLINIC_INFO.tel}
           </a>
-          <p className="text-sm text-text-muted mt-3">月〜金 9:00〜17:00</p>
+          <p className="text-sm text-text-muted mt-3">
+            月〜金 9:00〜17:00
+            <br />
+            FAX: 045-300-6631（紹介状送付先）
+          </p>
         </section>
       </div>
     </>

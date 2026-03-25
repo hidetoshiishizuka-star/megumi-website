@@ -1,6 +1,6 @@
 export const SITE_NAME = "めぐみ在宅クリニック";
 export const SITE_DESCRIPTION =
-  "横浜市瀬谷区で20年。在宅医療・緩和ケア専門クリニック。24時間365日対応。";
+  "横浜市瀬谷区で20年。通院が困難な方の在宅医療を支えるクリニック。24時間365日対応。";
 export const SITE_URL = "https://www.megumizaitaku.jp";
 
 export const CLINIC_INFO = {
@@ -38,7 +38,7 @@ export const DIRECTOR = {
   ],
   activities: [
     "2000年より「いのちの授業」を全国展開",
-    "TED×Tokyo登壇",
+    "TEDxTokyo登壇",
     "NHK「プロフェッショナル 仕事の流儀」出演",
     "テレビ東京「主治医が見つかる診療所」出演",
     "日本テレビ「世界一受けたい授業」出演",

@@ -37,7 +37,7 @@ export default function Footer() {
               </a>
             </p>
             <p className="text-sm mt-2 text-gray-400">
-              {CLINIC_INFO.hours}
+              電話受付：{CLINIC_INFO.hours}
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-medium mb-4">クリニック</h3>
             <ul className="space-y-2">
-              {NAV_CLINIC.slice(0, 6).map((item) => (
+              {NAV_CLINIC.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm hover:text-white transition-colors">
                     {item.label}
@@ -70,8 +70,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; {new Date().getFullYear()} めぐみ在宅クリニック All Rights Reserved.</p>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-500">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>&copy; 2006–{new Date().getFullYear()} めぐみ在宅クリニック</p>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              プライバシーポリシー
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

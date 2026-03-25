@@ -50,7 +50,7 @@ export default function LecturePage() {
             全国の病院・介護施設・自治体・学会・学校などで多数の講演実績があります。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-secondary">
-            <div className="bg-navy-light rounded-lg px-4 py-3">TED×Tokyo登壇</div>
+            <div className="bg-navy-light rounded-lg px-4 py-3">TEDxTokyo登壇</div>
             <div className="bg-navy-light rounded-lg px-4 py-3">全国の病院・医学部</div>
             <div className="bg-navy-light rounded-lg px-4 py-3">介護施設・地域包括支援センター</div>
             <div className="bg-navy-light rounded-lg px-4 py-3">自治体・教育委員会</div>

@@ -25,10 +25,10 @@ export default function FirstVisitPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "通院が難しくなってきた方",
-              "がん末期で自宅療養を希望される方",
-              "神経難病・慢性疾患をお持ちの方",
               "退院後、ご自宅での医療継続が必要な方",
               "介護施設に入所中で医療が必要な方",
+              "慢性疾患・神経難病をお持ちの方",
+              "がんの療養で自宅を希望される方",
               "お一人暮らしで医療の不安がある方",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-navy-light rounded-lg p-4">

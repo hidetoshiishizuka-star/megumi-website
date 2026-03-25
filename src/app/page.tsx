@@ -13,15 +13,17 @@ export default function TopPage() {
         <section className="relative bg-navy-light">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center">
             <p className="text-navy text-sm font-medium tracking-widest mb-4">
-              横浜市瀬谷区 在宅医療・緩和ケア専門
+              横浜市瀬谷区 在宅医療・訪問診療
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text-primary leading-tight mb-6">
-              どんな病気であったとしても、
+              どんな病気であっても、
               <br className="hidden sm:block" />
-              安心して最期を迎える社会を目指します
+              住み慣れた場所で安心して
+              <br className="hidden sm:block" />
+              暮らし続けられる社会へ
             </h1>
             <p className="text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-              めぐみ在宅クリニックは2006年の開院以来、地域で悩み苦しむ患者さん・ご家族への支援に努めています。
+              めぐみ在宅クリニックは2006年の開院以来、通院が困難な方やご家族への支援に努めています。
               24時間365日の診療体制で、住み慣れたご自宅での療養を支えます。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -92,7 +94,7 @@ export default function TopPage() {
         <section className="bg-warm-gray py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 className="text-2xl font-bold text-center mb-4">
-              当院が選ばれる理由
+              当院の診療体制
             </h2>
             <p className="text-center text-text-secondary mb-10 max-w-xl mx-auto">
               地域で20年の実績と、チームで支える在宅医療体制
@@ -111,10 +113,33 @@ export default function TopPage() {
                 description="医師・看護師・ドライバーの3名体制。手厚い処置と相談しやすい環境を実現。"
               />
               <StrengthCard
-                title="緩和ケアの専門性"
-                description="院長は緩和医療専門医。ディグニティセラピー、グリーフケアにも対応。"
+                title="交通費の負担が少ない"
+                description="訪問診療時の交通費負担を抑え、安心して在宅医療を続けられる環境を整えています。"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Learning Place */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="bg-gradient-to-r from-twilight-light to-dawn-light rounded-2xl p-8 sm:p-12">
+            <p className="text-dawn text-sm font-medium mb-2">Learning Community</p>
+            <h2 className="text-2xl font-bold mb-4">学びの場としてのめぐみ</h2>
+            <p className="text-text-secondary leading-relaxed mb-4 max-w-3xl">
+              めぐみ在宅クリニックは、在宅医療の「実践の場」であると同時に「学びの場」です。
+              ホスピスマインドと対話の技術を体系的に学び、地域に持ち帰って伝えていく。
+              医療者の見学・研修も受け入れています。
+            </p>
+            <p className="text-text-secondary leading-relaxed mb-6 max-w-3xl">
+              2015年に設立したエンドオブライフ・ケア協会と連携し、
+              苦しむ人の傍らに寄り添える援助者を全国に広げる活動を続けています。
+            </p>
+            <Link
+              href="/concept/training"
+              className="inline-flex items-center gap-1 text-navy font-medium hover:text-navy-dark"
+            >
+              見学・研修プログラムについて →
+            </Link>
           </div>
         </section>
 
@@ -132,7 +157,6 @@ export default function TopPage() {
                 />
               </div>
               <p className="text-xs text-text-muted text-center mt-2">
-                ※ 院長写真は後日差し替え予定
               </p>
             </div>
             <div className="md:w-2/3">
@@ -145,8 +169,8 @@ export default function TopPage() {
                 在宅緩和ケアに取り組んでいます。
               </p>
               <p className="text-text-secondary leading-relaxed mb-6">
-                2000年より全国で「いのちの授業」を展開。2015年にはエンドオブライフ・ケア協会を設立。
-                NHK「プロフェッショナル 仕事の流儀」など多数のメディアにも出演。
+                2000年より全国で「いのちの授業」を展開。
+                2015年にはエンドオブライフ・ケア協会を設立し、援助者の養成に取り組んでいます。
               </p>
               <Link
                 href="/concept/about"

@@ -19,9 +19,9 @@ export default function BlogPage() {
           <div className="text-5xl mb-6">📝</div>
           <h2 className="text-xl font-bold mb-3">準備中です</h2>
           <p className="text-text-secondary">
-            microCMS連携後、院長のコラムをこちらに掲載します。
+            院長のコラムを掲載予定です。
             <br />
-            月1〜2回の更新を予定しています。
+            定期的に更新予定です。
           </p>
         </div>
       </div>

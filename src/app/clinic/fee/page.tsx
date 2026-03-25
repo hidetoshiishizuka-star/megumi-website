@@ -54,13 +54,13 @@ export default function FeePage() {
                   <td className="px-4 py-3">高齢者</td>
                   <td className="px-4 py-3 text-center">3割</td>
                   <td className="px-4 py-3 text-center">約24,000円</td>
-                  <td className="px-4 py-3 text-center">高額医療限度額</td>
+                  <td className="px-4 py-3 text-center">高額療養費制度の限度額</td>
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-4 py-3">一般（70歳未満）</td>
                   <td className="px-4 py-3 text-center">3割</td>
                   <td className="px-4 py-3 text-center">約24,000円</td>
-                  <td className="px-4 py-3 text-center">高額医療限度額</td>
+                  <td className="px-4 py-3 text-center">高額療養費制度の限度額</td>
                 </tr>
               </tbody>
             </table>

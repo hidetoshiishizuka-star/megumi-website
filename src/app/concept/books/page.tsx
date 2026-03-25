@@ -22,7 +22,7 @@ const media = [
   "NHK BS「偉大なる人生の先輩SP」",
   "朝日新聞・読売新聞・毎日新聞・日経新聞・産経新聞",
   "週刊朝日・週刊現代",
-  "TED×Tokyo",
+  "TEDxTokyo",
 ];
 
 export default function BooksPage() {
@@ -54,7 +54,7 @@ export default function BooksPage() {
             ))}
           </div>
           <p className="text-sm text-text-muted mt-4">
-            ほか著書多数。microCMS連携後に書影・購入リンクを掲載予定。
+            ほか著書多数。
           </p>
         </section>
 

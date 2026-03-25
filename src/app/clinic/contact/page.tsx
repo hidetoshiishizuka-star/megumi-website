@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import { CLINIC_INFO } from "@/lib/constants";
 
@@ -130,6 +131,16 @@ export default function ContactPage() {
               />
             </div>
 
+            <div className="flex items-start gap-3 bg-warm-gray rounded-lg p-4">
+              <input type="checkbox" id="privacy" required className="mt-1" />
+              <label htmlFor="privacy" className="text-sm text-text-secondary">
+                <Link href="/privacy" className="text-navy underline hover:text-navy-dark" target="_blank">
+                  プライバシーポリシー
+                </Link>
+                に同意の上、送信してください。
+              </label>
+            </div>
+
             <div className="text-center">
               <button
                 type="submit"
@@ -150,7 +161,7 @@ export default function ContactPage() {
             <p className="font-bold mb-2">めぐみ在宅クリニック</p>
             <p className="text-sm text-text-secondary">{CLINIC_INFO.address}</p>
             <p className="text-sm text-text-muted mt-2">
-              ※ 当院は在宅医療専門です。外来は月曜・木曜の午前のみです。
+              ※ 当院は在宅医療を中心とした診療を行っています。外来は月曜・木曜の午前のみです。
             </p>
           </div>
         </section>

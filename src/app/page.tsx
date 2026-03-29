@@ -162,7 +162,7 @@ export default function TopPage() {
                   src="/images/director-car.jpg"
                   alt="院長 小澤竹俊"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[75%_center]"
                 />
               </div>
               <p className="text-xs text-text-muted text-center mt-2">

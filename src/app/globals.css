@@ -24,9 +24,172 @@
   --color-sunrise-light: #FFF1E8;
 
   --color-warm-gray: #F7F6F9;
-  --color-text-primary: #192044;
+  --color-surface: #f5f5f7;
+  --color-text-primary: #1d1d1f;
   --color-text-secondary: #4A5068;
-  --color-text-muted: #8A8FA0;
+  --color-text-muted: #86868b;
 
-  --font-sans: "Noto Sans JP", sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Noto Sans JP", sans-serif;
+}
+
+/* === グラデーション === */
+.gradient-twilight {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-twilight) 40%, var(--color-dawn) 70%, var(--color-sunrise) 100%);
+}
+
+.gradient-dawn {
+  background: linear-gradient(135deg, var(--color-dawn) 0%, var(--color-sunrise) 100%);
+}
+
+.gradient-night {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-twilight) 100%);
+}
+
+/* === ベーススタイル === */
+body {
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Apple風アニメーション === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Apple風ボタン === */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border-radius: 980px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-pill-sm {
+  padding: 8px 20px;
+  font-size: 13px;
+}
+
+.btn-pill-primary {
+  background-color: var(--color-sunrise);
+  color: #fff;
+}
+
+.btn-pill-primary:hover {
+  background-color: var(--color-sunrise-dark);
+}
+
+.btn-pill-secondary {
+  background-color: transparent;
+  color: var(--color-sunrise);
+  border: 1.5px solid var(--color-sunrise);
+}
+
+.btn-pill-secondary:hover {
+  background-color: var(--color-sunrise-light);
+}
+
+.btn-pill-white {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.btn-pill-white:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* === Apple風フロストグラス === */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(1.8) blur(20px);
+  -webkit-backdrop-filter: saturate(1.8) blur(20px);
+}
+
+.frosted-glass-light {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: saturate(1.2) blur(16px);
+  -webkit-backdrop-filter: saturate(1.2) blur(16px);
+}
+
+/* === Apple風タイポグラフィ === */
+.heading-hero {
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  .heading-hero {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-section {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heading-section {
+    font-size: 2.75rem;
+  }
+}
+
+.subheading {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .subheading {
+    font-size: 1.375rem;
+  }
+}
+
+.overline {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }

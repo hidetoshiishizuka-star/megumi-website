@@ -4,6 +4,7 @@ type LogoProps = {
   size?: "sm" | "md" | "lg";
   showText?: boolean;
   subtitle?: string;
+  invertColors?: boolean;
 };
 
 const sizes = {
@@ -16,14 +17,18 @@ export default function Logo({
   size = "md",
   showText = true,
   subtitle,
+  invertColors = false,
 }: LogoProps) {
   const s = sizes[size];
 
   return (
     <div className="flex items-center gap-2.5">
-      {/* Rabbit in a styled green circle badge */}
       <div
-        className="relative flex-shrink-0 rounded-full bg-navy/10 border-2 border-navy/20 flex items-center justify-center overflow-hidden"
+        className={`relative flex-shrink-0 rounded-full flex items-center justify-center overflow-hidden border-2 transition-colors duration-300 ${
+          invertColors
+            ? "bg-white/10 border-white/20"
+            : "bg-navy/10 border-navy/20"
+        }`}
         style={{ width: s.badge, height: s.badge }}
       >
         <Image
@@ -31,21 +36,23 @@ export default function Logo({
           alt="めぐみうさぎ"
           width={s.img}
           height={s.img}
-          className="object-contain"
+          className={`object-contain transition-all duration-300 ${invertColors ? "brightness-0 invert" : ""}`}
           style={{ marginTop: 2 }}
         />
       </div>
       {showText && (
         <div>
           <span
-            className={`font-bold text-navy-dark tracking-tight ${
-              size === "lg" ? "text-2xl" : size === "md" ? "text-lg" : "text-base"
-            }`}
+            className={`font-semibold tracking-tight transition-colors duration-300 ${
+              size === "lg" ? "text-2xl" : size === "md" ? "text-lg" : "text-[15px]"
+            } ${invertColors ? "text-white" : "text-navy-dark"}`}
           >
             めぐみ在宅クリニック
           </span>
           {subtitle && (
-            <span className="block text-xs text-text-muted">{subtitle}</span>
+            <span className={`block text-xs transition-colors duration-300 ${invertColors ? "text-white/60" : "text-text-muted"}`}>
+              {subtitle}
+            </span>
           )}
         </div>
       )}

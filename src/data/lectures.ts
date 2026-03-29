@@ -7,12 +7,6 @@ export interface LectureRecord {
 
 export const lectureRecords: LectureRecord[] = [
  {
- "year": 2025,
- "date": "2025年2月　準備中",
- "title": "2025年2月　準備中",
- "location": ""
- },
- {
  "year": 2021,
  "date": "2021年1月21日（木）　ZOOM配信",
  "title": "超実践　エンドオブライフ・ケア",

@@ -72,28 +72,10 @@ export default function FeePage() {
           <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             交通費
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-navy text-white">
-                  <th className="px-4 py-3 text-left">距離</th>
-                  <th className="px-4 py-3">日中（6:00〜22:00）</th>
-                  <th className="px-4 py-3">夜間（22:00〜6:00）</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                <tr>
-                  <td className="px-4 py-3">5km未満</td>
-                  <td className="px-4 py-3 text-center">500円</td>
-                  <td className="px-4 py-3 text-center">3,000円</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-4 py-3">5km以上</td>
-                  <td className="px-4 py-3 text-center">1,000円</td>
-                  <td className="px-4 py-3 text-center">3,000円</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="bg-navy-light rounded-xl p-6">
+            <p className="text-base font-medium">
+              当院では訪問診療時の交通費はいただいておりません。
+            </p>
           </div>
         </section>
 

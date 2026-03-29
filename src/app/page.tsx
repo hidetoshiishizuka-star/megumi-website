@@ -23,7 +23,7 @@ export default function TopPage() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
             <p className="text-white/80 text-sm font-medium tracking-widest mb-4">
-              横浜市青葉区 在宅医療・訪問診療
+              横浜市瀬谷区 在宅医療・訪問診療
             </p>
             <h1 className="heading-hero text-white mb-6">
               通院が困難な方に、

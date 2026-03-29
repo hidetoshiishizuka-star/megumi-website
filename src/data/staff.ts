@@ -10,6 +10,7 @@ export interface StaffMember {
   description?: string;
   hasPhoto: boolean;
   photoFile?: string; // /images/staff/ 内のファイル名
+  photoPosition?: string; // object-position の値（例: "center 30%"）
 }
 
 export const staffMembers: StaffMember[] = [
@@ -29,6 +30,7 @@ export const staffMembers: StaffMember[] = [
       "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
     hasPhoto: true,
     photoFile: "director.jpg",
+    photoPosition: "center 20%",
   },
   {
     name: "岩渕敬介",
@@ -101,6 +103,7 @@ export const staffMembers: StaffMember[] = [
       "どんな病気であったとしても、安心して自宅で生活を送るため、豊富な経験をもとにお手伝いいたします。",
     hasPhoto: true,
     photoFile: "doc-3.jpg",
+    photoPosition: "center 25%",
   },
   {
     name: "栗田瑛里子",

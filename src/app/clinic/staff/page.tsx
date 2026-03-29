@@ -43,13 +43,15 @@ export default function StaffPage() {
                     <ScrollReveal key={staff.name} delay={i * 60}>
                       <div className="rounded-3xl bg-warm-gray overflow-hidden">
                         {/* 写真エリア */}
-                        <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                        <div className="aspect-square bg-gray-100 flex items-center justify-center relative overflow-hidden">
                           {staff.photoFile ? (
                             <Image
                               src={`/images/staff/${staff.photoFile}`}
                               alt={staff.name}
                               fill
                               className="object-cover"
+                              style={{ objectPosition: staff.photoPosition || "center 20%" }}
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />
                           ) : (
                             <div className="w-full h-full bg-white flex items-center justify-center">

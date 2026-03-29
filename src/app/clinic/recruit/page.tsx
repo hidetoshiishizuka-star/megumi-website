@@ -83,32 +83,111 @@ export default function RecruitPage() {
             </section>
           </ScrollReveal>
 
-          {/* 募集職種 */}
+          {/* 募集職種 — 医師 */}
           <ScrollReveal>
-            <section className="mb-16">
+            <section className="mb-12">
               <h2 className="heading-section text-navy mb-6">募集職種</h2>
+
+              <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
+                <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
+                  <h3 className="font-bold text-lg">常勤医師・非常勤医師</h3>
+                  <span className="text-xs bg-sunrise px-3 py-1 rounded-full">積極採用</span>
+                </div>
+                <div className="px-6 py-6 space-y-4 text-sm">
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務地</span>
+                    <span className="text-text-secondary">めぐみ在宅クリニック（クリニック半径5km圏内の訪問、9割以上が自宅訪問）</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務時間</span>
+                    <span className="text-text-secondary">月〜金 8:30〜17:30（非常勤は曜日・時短応相談）</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務日数</span>
+                    <span className="text-text-secondary">常勤：週3日以上 ／ 非常勤：週1日〜</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">給与</span>
+                    <span className="text-text-secondary">経験・スキル・勤務日数に応じて決定</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">その他</span>
+                    <span className="text-text-secondary">学会参加支援あり（規定による）、電子カルテ使用（基本的なPCスキル要）</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 看護師 */}
+              <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
+                <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
+                  <h3 className="font-bold text-lg">看護師</h3>
+                  <span className="text-xs bg-sunrise px-3 py-1 rounded-full">募集中</span>
+                </div>
+                <div className="px-6 py-6 space-y-4 text-sm">
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務地</span>
+                    <span className="text-text-secondary">めぐみ在宅クリニック</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務時間</span>
+                    <span className="text-text-secondary">8:30〜17:30</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">勤務日数</span>
+                    <span className="text-text-secondary">週5日（土日祝含む）</span>
+                  </div>
+                  <div className="grid grid-cols-[120px_1fr] gap-2">
+                    <span className="font-medium text-navy">給与</span>
+                    <span className="text-text-secondary">経験・スキルに応じて決定</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* サポーター / 事務 */}
               <div className="space-y-4">
                 {[
-                  { title: "医師（常勤・非常勤）", tag: "積極採用" },
-                  { title: "看護師", tag: "募集中" },
                   { title: "訪問診療サポーター/ドライバー", tag: "募集中" },
                   { title: "医療事務", tag: "" },
-                ].map((job, i) => (
-                  <ScrollReveal key={job.title} delay={i * 80}>
-                    <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
-                      <span className="font-medium">{job.title}</span>
-                      {job.tag && (
-                        <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
-                          {job.tag}
-                        </span>
-                      )}
+                ].map((job) => (
+                  <div key={job.title} className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
+                    <span className="font-medium">{job.title}</span>
+                    {job.tag && (
+                      <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
+                        {job.tag}
+                      </span>
+                    )}
+                  </div>
+                ))}
+                <p className="text-sm text-text-muted">
+                  ※ サポーター・事務職の詳しい募集要項はお問い合わせください。
+                </p>
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* 選考プロセス */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <h2 className="heading-section text-navy mb-6">選考の流れ</h2>
+              <div className="flex flex-col gap-0">
+                {[
+                  { step: "1", title: "書類選考", desc: "履歴書・職務経歴書をメールにてお送りください" },
+                  { step: "2", title: "面談・見学", desc: "個別面談と訪問診療の同行見学を行います" },
+                  { step: "3", title: "内定", desc: "入職日等の詳細を調整いたします" },
+                ].map((item, i) => (
+                  <ScrollReveal key={item.step} delay={i * 80}>
+                    <div className="flex items-start gap-4 py-5 border-b border-gray-100 last:border-b-0">
+                      <span className="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center text-sm font-bold shrink-0">
+                        {item.step}
+                      </span>
+                      <div>
+                        <p className="font-medium">{item.title}</p>
+                        <p className="text-sm text-text-secondary mt-0.5">{item.desc}</p>
+                      </div>
                     </div>
                   </ScrollReveal>
                 ))}
               </div>
-              <p className="text-sm text-text-muted mt-4">
-                ※ 詳しい募集要項・待遇についてはお問い合わせください。
-              </p>
               <div className="mt-6 bg-twilight-light rounded-xl p-6">
                 <p className="font-medium mb-2">まずは見学から始めることもできます</p>
                 <p className="text-sm text-text-secondary mb-3">
@@ -126,22 +205,23 @@ export default function RecruitPage() {
             <section className="bg-navy-light rounded-2xl p-8 text-center">
               <h2 className="heading-section text-navy mb-3">ご応募・お問い合わせ</h2>
               <p className="text-text-secondary mb-6 text-sm">
-                採用に関するお問い合わせは、お電話またはメールにて承っております
+                履歴書・職務経歴書をメールにてお送りください。お電話でのお問い合わせも承ります。
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href={`tel:${CLINIC_INFO.tel}`}
+                  href="mailto:megumi_zaitaku@miracle.ocn.ne.jp"
                   className="btn-pill btn-pill-primary inline-flex items-center justify-center gap-2"
+                >
+                  メールで応募する
+                </a>
+                <a
+                  href={`tel:${CLINIC_INFO.tel}`}
+                  className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
                 >
                   {CLINIC_INFO.tel}（採用係）
                 </a>
-                <Link
-                  href="/clinic/contact"
-                  className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
-                >
-                  お問い合わせフォーム
-                </Link>
               </div>
+              <p className="text-text-muted text-xs mt-4">受付：月〜金 9:00〜17:00</p>
             </section>
           </ScrollReveal>
         </div>

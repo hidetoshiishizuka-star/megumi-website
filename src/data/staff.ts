@@ -8,11 +8,28 @@ export interface StaffMember {
   societies?: string[];
   interests?: string[];
   description?: string;
-  hasPhoto: boolean; // true=実写真, false=うさぎロゴ
+  hasPhoto: boolean;
+  photoFile?: string; // /images/staff/ 内のファイル名
 }
 
 export const staffMembers: StaffMember[] = [
   // === 医師 ===
+  {
+    name: "小澤竹俊",
+    nameKana: "おざわ たけとし",
+    role: "院長",
+    department: "医師",
+    specialty: "緩和医療・総合内科",
+    certifications: [
+      "緩和医療専門医（日本緩和医療学会）",
+      "総合内科専門医（日本内科学会）",
+      "認定指導医（日本在宅医療連合学会）",
+    ],
+    description:
+      "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
+    hasPhoto: true,
+    photoFile: "director.jpg",
+  },
   {
     name: "岩渕敬介",
     nameKana: "いわぶち けいすけ",
@@ -36,6 +53,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "川崎市出身。2004年横浜市立大学医学部卒業。神奈川県足柄上郡・北海道砂川市など、地域医師が少ない地域で18年間勤務。",
     hasPhoto: true,
+    photoFile: "20230502.jpg",
   },
   {
     name: "津山梓",
@@ -57,6 +75,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "横浜市出身。山口大学卒業後、家族ぐるみで診れる家庭医を目指す。",
     hasPhoto: true,
+    photoFile: "20171128.jpg",
   },
   {
     name: "今井洋史",
@@ -81,6 +100,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "どんな病気であったとしても、安心して自宅で生活を送るため、豊富な経験をもとにお手伝いいたします。",
     hasPhoto: true,
+    photoFile: "doc-3.jpg",
   },
   {
     name: "栗田瑛里子",
@@ -115,6 +135,7 @@ export const staffMembers: StaffMember[] = [
     specialty: "在宅医療・緩和医療",
     societies: ["在宅医学会", "緩和医療学会"],
     hasPhoto: true,
+    photoFile: "20171211.jpg",
   },
   {
     name: "門田庸子",
@@ -126,6 +147,7 @@ export const staffMembers: StaffMember[] = [
     societies: ["日本麻酔科学会"],
     interests: ["緩和ケア", "ペインクリニック", "アニマルセラピー"],
     hasPhoto: true,
+    photoFile: "20171204.jpg",
   },
   {
     name: "小菅宇之",
@@ -142,6 +164,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "在宅医療と救急医学は表裏一体の関係。訪問診療患者の生活が全体的にレベルアップできることを目指します。",
     hasPhoto: true,
+    photoFile: "20171212-4.jpg",
   },
   {
     name: "太田一樹",
@@ -188,6 +211,7 @@ export const staffMembers: StaffMember[] = [
     ],
     interests: ["心臓病の地域リハビリテーション"],
     hasPhoto: true,
+    photoFile: "20190814-4.jpg",
   },
   {
     name: "張秀一",
@@ -212,6 +236,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "大学病院で新型コロナウィルス感染症診療や肺がん診療に携わってまいりました。",
     hasPhoto: true,
+    photoFile: "20230425-1.jpg",
   },
 
   // === 看護 ===
@@ -242,6 +267,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "地域に密着した在宅医療に興味を持ち、丁寧な対応を心がけ、患者さんやご家族が穏やかに過ごせるよう支援いたします。",
     hasPhoto: true,
+    photoFile: "nurse-2.jpg",
   },
   {
     name: "佐藤郁恵",
@@ -251,6 +277,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "在宅医療に関わってきて、患者さん、ご家族が在宅で穏やかに過ごせるようサポートいたします。",
     hasPhoto: true,
+    photoFile: "20190826.jpg",
   },
   {
     name: "島津綾子",
@@ -267,6 +294,7 @@ export const staffMembers: StaffMember[] = [
     role: "訪問診療サポーター",
     department: "看護",
     hasPhoto: true,
+    photoFile: "20190814-3.jpg",
   },
   {
     name: "久保田明日香",
@@ -276,6 +304,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "先生方と患者さんの診察がスムーズに運ぶよう、お手伝いさせていただきます。",
     hasPhoto: true,
+    photoFile: "20230306.jpg",
   },
   {
     name: "片桐文",
@@ -285,6 +314,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "患者さんとご家族の不安や苦痛に寄り添い、意思決定を支える看護師でありたいと思います。",
     hasPhoto: true,
+    photoFile: "20231010.jpg",
   },
 
   // === 地域連携室 ===
@@ -296,6 +326,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "訪問診療に関する相談とディグニティセラピーを担当。住み慣れた場所での過ごしをお手伝いいたします。",
     hasPhoto: true,
+    photoFile: "regional-cooperation-1.jpg",
   },
   {
     name: "野場久美子",
@@ -305,6 +336,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "患者さんが在宅生活を安心して過ごせるよう、お手伝いできればと思います。お気持ちに寄り添い、一緒に考えます。",
     hasPhoto: true,
+    photoFile: "20230307.jpg",
   },
 
   // === グリーフサポート ===

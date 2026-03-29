@@ -44,12 +44,13 @@ export default function StaffPage() {
                       <div className="rounded-3xl bg-warm-gray overflow-hidden">
                         {/* 写真エリア */}
                         <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                          {staff.hasPhoto ? (
-                            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                              <svg className="w-16 h-16 text-gray-400" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                              </svg>
-                            </div>
+                          {staff.photoFile ? (
+                            <Image
+                              src={`/images/staff/${staff.photoFile}`}
+                              alt={staff.name}
+                              fill
+                              className="object-cover"
+                            />
                           ) : (
                             <div className="w-full h-full bg-white flex items-center justify-center">
                               <Image

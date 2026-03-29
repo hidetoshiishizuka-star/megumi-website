@@ -23,14 +23,14 @@ export default function TopPage() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
             <p className="text-white/80 text-sm font-medium tracking-widest mb-4">
-              横浜市瀬谷区 在宅医療・訪問診療
+              横浜市青葉区 在宅医療・訪問診療
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-              どんな病気であっても、
+            <h1 className="heading-hero text-white mb-6">
+              通院が困難な方に、
               <br className="hidden sm:block" />
-              住み慣れた場所で安心して
+              住み慣れたご自宅で
               <br className="hidden sm:block" />
-              暮らし続けられる社会へ
+              継続した医療を届けたい。
             </h1>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
               めぐみ在宅クリニックは2006年の開院以来、通院が困難な方やご家族への支援に努めています。
@@ -63,13 +63,6 @@ export default function TopPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <NavCard
-              icon="🏠"
-              title="患者さま・ご家族の方"
-              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
-              href="/clinic/first-visit"
-              color="bg-navy-light"
-            />
-            <NavCard
               icon="🎓"
               title="見学・研修をお考えの方"
               description="緩和ケアの学びの場として、見学プログラム・研修をご案内します。"
@@ -97,6 +90,13 @@ export default function TopPage() {
               href="/concept/lecture"
               color="bg-twilight-light"
             />
+            <NavCard
+              icon="🏠"
+              title="患者さま・ご家族の方"
+              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
+              href="/clinic/first-visit"
+              color="bg-navy-light"
+            />
           </div>
         </section>
 
@@ -123,8 +123,8 @@ export default function TopPage() {
                 description="医師・看護師・ドライバーの3名体制。手厚い処置と相談しやすい環境を実現。"
               />
               <StrengthCard
-                title="交通費の負担が少ない"
-                description="訪問診療時の交通費負担を抑え、安心して在宅医療を続けられる環境を整えています。"
+                title="交通費無料"
+                description="当院では訪問診療時の交通費をいただいておりません。安心して在宅医療を続けられる環境を整えています。"
               />
             </div>
           </div>

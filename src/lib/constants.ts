@@ -1,16 +1,16 @@
 export const SITE_NAME = "めぐみ在宅クリニック";
 export const SITE_DESCRIPTION =
-  "横浜市瀬谷区で20年。通院が困難な方の在宅医療を支えるクリニック。24時間365日対応。";
+  "横浜市青葉区で20年。通院が困難な方の在宅医療を支えるクリニック。24時間365日対応。";
 export const SITE_URL = "https://www.megumizaitaku.jp";
 
 export const CLINIC_INFO = {
   name: "めぐみ在宅クリニック",
-  address: "神奈川県横浜市瀬谷区橋戸2丁目4-3",
-  tel: "045-300-6630",
+  address: "〒225-0011 神奈川県横浜市青葉区あざみ野1-3-5 2F",
+  tel: "045-507-6898",
   telPlanning: "045-442-6477",
   hours: "平日 9:00〜17:00",
   established: 2006,
-  areas: ["瀬谷区", "泉区", "旭区（一部）", "大和市"],
+  areas: ["青葉区", "都筑区", "港北区", "緑区", "旭区", "川崎市"],
   outpatient: {
     general: "月曜・木曜 午前（受付 8:45〜12:00）",
     palliative: "火曜 午前（予約制）",

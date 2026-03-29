@@ -45,6 +45,13 @@
   background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-twilight) 100%);
 }
 
+/* === レイアウト変数 === */
+:root {
+  --header-height: 48px;
+  --content-wide: 1120px;
+  --content-narrow: 740px;
+}
+
 /* === ベーススタイル === */
 body {
   color: var(--color-text-primary);

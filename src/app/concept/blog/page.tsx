@@ -20,7 +20,7 @@ export default function BlogPage() {
   return (
     <>
       <Header variant="concept" />
-      <main style={{ paddingTop: "48px" }}>
+      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
         {/* ヒーロー */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">

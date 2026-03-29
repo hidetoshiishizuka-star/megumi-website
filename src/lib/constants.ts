@@ -12,7 +12,7 @@ export const CLINIC_INFO = {
   hours: "月〜金 9:00〜17:00",
   established: 2006,
   areas: ["瀬谷区", "泉区", "旭区（一部）", "大和市"],
-  access: "相鉄線 三ツ境駅よりバス約10分",
+  access: "相鉄線 瀬谷駅より徒歩9分",
   outpatient: {
     general: "月曜・木曜 午前（受付 8:45〜12:00）",
     palliative: "火曜 午前（予約制）",

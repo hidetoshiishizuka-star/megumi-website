@@ -1,175 +1,151 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/ui/PageHeader";
+import Image from "next/image";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+import { staffMembers, departments } from "@/data/staff";
 
 export const metadata: Metadata = {
   title: "スタッフ紹介",
-  description: "めぐみ在宅クリニックの医師・スタッフをご紹介します。",
+  description: "めぐみ在宅クリニックの医師・看護師・スタッフをご紹介します。22名のチームで在宅医療を支えています。",
 };
-
-// TODO: microCMS連携後は動的に取得
-// 副院長ヒアリング：看護師・事務の個人特定情報は出さない（ヘッドハンティングリスク）
-// → 医師のみ個人名を掲載。その他は職種と人数で表現。
-
-const doctors = [
-  {
-    name: "小澤竹俊",
-    role: "院長",
-    specialty: "緩和医療専門医・総合内科専門医",
-    message:
-      "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
-  },
-  {
-    name: "岩渕敬介",
-    role: "副院長",
-    specialty: "",
-    message:
-      "継続性のある在宅医療を大切に、顔の見える関係で患者さんとご家族を支えます。",
-  },
-  {
-    name: "津山梓",
-    role: "常勤医師",
-    specialty: "",
-    message: "",
-  },
-  {
-    name: "今井洋史",
-    role: "常勤医師",
-    specialty: "",
-    message: "",
-  },
-  {
-    name: "栗田瑛里子",
-    role: "常勤医師",
-    specialty: "",
-    message: "",
-  },
-];
 
 export default function StaffPage() {
   return (
     <>
-      <PageHeader
-        title="スタッフ紹介"
-        subtitle="チーム一丸で在宅医療を支えています"
-      />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-        {/* 医師 */}
-        <section className="mb-16">
-          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-twilight">
-            医師
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {doctors.map((doc) => (
-              <div
-                key={doc.name}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden"
-              >
-                <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center text-4xl">
-                  🐰
-                </div>
-                <div className="p-5">
-                  <p className="text-xs text-navy font-medium mb-1">
-                    {doc.role}
-                  </p>
-                  <h3 className="font-bold text-lg mb-1">{doc.name}</h3>
-                  {doc.specialty && (
-                    <p className="text-xs text-text-muted mb-2">
-                      {doc.specialty}
-                    </p>
-                  )}
-                  {doc.message && (
-                    <p className="text-sm text-text-secondary leading-relaxed">
-                      {doc.message}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-text-muted mt-4">
-            ほか非常勤医師が多数在籍しています。
-          </p>
-        </section>
-
-        {/* チーム体制 */}
-        <section className="mb-16">
-          <h2 className="text-xl font-bold mb-8 pb-2 border-b-2 border-twilight">
-            チーム体制
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "看護師",
-                description:
-                  "緩和ケア認定看護師を含む看護チームが、訪問診療に同行し、きめ細やかなケアを提供します。",
-              },
-              {
-                title: "地域連携室",
-                description:
-                  "社会福祉士・看護師が在籍し、新規患者の受け入れ調整、地域の病院・訪問看護・ケアマネとの連携を行います。",
-              },
-              {
-                title: "グリーフサポート",
-                description:
-                  "専任のグリーフカウンセラーが、大切な方を亡くされたご遺族の心のケアに対応しています。",
-              },
-              {
-                title: "訪問診療サポーター",
-                description:
-                  "ドライバーを含むサポーターが訪問に同行。駐車場の確保、物品の運搬などを担います。",
-              },
-              {
-                title: "医療事務",
-                description:
-                  "受付・請求業務を担当し、患者さまやご家族からのお電話にも対応しています。",
-              },
-              {
-                title: "事務部",
-                description:
-                  "総務・経理を担当。クリニック全体の運営をバックオフィスから支えています。",
-              },
-            ].map((team) => (
-              <div key={team.title} className="bg-warm-gray rounded-xl p-6">
-                <h3 className="font-bold mb-2">{team.title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {team.description}
-                </p>
-              </div>
-            ))}
+      <Header variant="clinic" />
+      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
+        {/* ヒーロー */}
+        <section className="gradient-night text-white">
+          <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
+            <p className="overline text-sunrise-light mb-6">Staff</p>
+            <h1 className="heading-hero text-white mb-6">スタッフ紹介</h1>
+            <p className="subheading text-white/60">
+              チーム一丸で在宅医療を支えています
+            </p>
           </div>
         </section>
+
+        {/* 部門ごとにスタッフ表示 */}
+        {departments.map((dept) => {
+          const members = staffMembers.filter((m) => m.department === dept);
+          if (members.length === 0) return null;
+
+          return (
+            <section key={dept} className="py-16 md:py-24 border-b border-gray-100 last:border-0">
+              <div className="max-w-[var(--content-wide)] mx-auto px-6">
+                <ScrollReveal>
+                  <h2 className="heading-section text-navy mb-10">{dept}</h2>
+                </ScrollReveal>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {members.map((staff, i) => (
+                    <ScrollReveal key={staff.name} delay={i * 60}>
+                      <div className="rounded-3xl bg-warm-gray overflow-hidden">
+                        {/* 写真エリア */}
+                        <div className="aspect-[4/3] bg-gray-100 flex items-center justify-center relative overflow-hidden">
+                          {staff.hasPhoto ? (
+                            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                              <svg className="w-16 h-16 text-gray-400" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                              </svg>
+                            </div>
+                          ) : (
+                            <div className="w-full h-full bg-white flex items-center justify-center">
+                              <Image
+                                src="/images/usagi-original.png"
+                                alt="めぐみうさぎ"
+                                width={80}
+                                height={80}
+                                className="object-contain opacity-30"
+                              />
+                            </div>
+                          )}
+                        </div>
+
+                        {/* 情報 */}
+                        <div className="p-6">
+                          <p className="text-xs font-medium text-sunrise mb-1">{staff.role}</p>
+                          <h3 className="text-lg font-semibold text-navy mb-1">{staff.name}</h3>
+                          {staff.nameKana && (
+                            <p className="text-xs text-text-muted mb-2">{staff.nameKana}</p>
+                          )}
+                          {staff.specialty && (
+                            <p className="text-xs text-twilight font-medium mb-2">
+                              専門：{staff.specialty}
+                            </p>
+                          )}
+                          {staff.certifications && staff.certifications.length > 0 && (
+                            <div className="mb-2">
+                              <p className="text-[10px] text-text-muted font-medium mb-1">認定資格</p>
+                              <p className="text-[11px] text-text-secondary leading-relaxed">
+                                {staff.certifications.join(" / ")}
+                              </p>
+                            </div>
+                          )}
+                          {staff.societies && staff.societies.length > 0 && (
+                            <div className="mb-2">
+                              <p className="text-[10px] text-text-muted font-medium mb-1">所属学会</p>
+                              <p className="text-[11px] text-text-secondary leading-relaxed">
+                                {staff.societies.join("、")}
+                              </p>
+                            </div>
+                          )}
+                          {staff.interests && staff.interests.length > 0 && (
+                            <div className="mb-2">
+                              <p className="text-[10px] text-text-muted font-medium mb-1">興味ある分野</p>
+                              <p className="text-[11px] text-text-secondary leading-relaxed">
+                                {staff.interests.join("、")}
+                              </p>
+                            </div>
+                          )}
+                          {staff.description && (
+                            <p className="text-sm text-text-secondary leading-relaxed mt-3">
+                              {staff.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })}
 
         {/* 訪問の3名体制 */}
-        <section className="bg-navy-light rounded-2xl p-8">
-          <h2 className="text-xl font-bold mb-4 text-center">
-            訪問は3名体制で伺います
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="text-3xl mb-2">👨‍⚕️</div>
-              <h3 className="font-bold">医師</h3>
-              <p className="text-sm text-text-secondary mt-1">
-                診察・処方・治療方針の決定
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">👩‍⚕️</div>
-              <h3 className="font-bold">看護師</h3>
-              <p className="text-sm text-text-secondary mt-1">
-                処置・バイタル確認・療養相談
-              </p>
-            </div>
-            <div>
-              <div className="text-3xl mb-2">🚗</div>
-              <h3 className="font-bold">ドライバー</h3>
-              <p className="text-sm text-text-secondary mt-1">
-                運転・物品搬入・駐車場確保
-              </p>
+        <section className="bg-navy text-white py-16 md:py-24">
+          <div className="max-w-[var(--content-narrow)] mx-auto px-6">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <h2 className="heading-section text-white mb-4">
+                  日中の訪問は3名体制
+                </h2>
+                <p className="subheading text-white/50">
+                  医師・看護師・サポーターの3名でご自宅に伺います
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                { title: "医師", desc: "診察・処方・治療方針の決定" },
+                { title: "看護師", desc: "処置・バイタル確認・療養相談" },
+                { title: "サポーター", desc: "運転・物品搬入・駐車場確保" },
+              ].map((item, i) => (
+                <ScrollReveal key={item.title} delay={i * 100}>
+                  <div className="rounded-3xl bg-white/5 p-8 text-center">
+                    <h3 className="text-xl font-semibold text-sunrise-light mb-2">{item.title}</h3>
+                    <p className="text-white/50 text-sm">{item.desc}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
           </div>
         </section>
-      </div>
+      </main>
+      <Footer />
     </>
   );
 }

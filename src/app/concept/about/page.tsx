@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -30,14 +31,14 @@ export default function AboutDirectorPage() {
           <ScrollReveal>
             <section className="mb-16 md:flex gap-10">
               <div className="md:w-1/3 mb-8 md:mb-0">
-                <div className="aspect-[3/4] bg-gray-200 rounded-2xl flex items-center justify-center">
-                  <svg
-                    className="w-24 h-24 text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-                  </svg>
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
+                  <Image
+                    src="/images/director-portrait.jpg"
+                    alt="院長 小澤竹俊"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 </div>
               </div>
               <div className="md:w-2/3">

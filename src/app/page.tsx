@@ -159,7 +159,7 @@ export default function TopPage() {
             <div className="md:w-1/3 mb-8 md:mb-0">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/images/director-portrait.jpg"
+                  src="/images/director-car.jpg"
                   alt="院長 小澤竹俊"
                   fill
                   className="object-cover"

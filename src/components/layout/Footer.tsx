@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Clinic info */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-sm">
                 <Image
                   src="/images/usagi-original.png"
                   alt="めぐみうさぎ"

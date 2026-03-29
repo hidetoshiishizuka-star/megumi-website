@@ -2,16 +2,22 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { CLINIC_INFO, NAV_CLINIC, NAV_CONCEPT } from "@/lib/constants";
+import { CLINIC_INFO } from "@/lib/constants";
 import Logo from "@/components/ui/Logo";
 
 type HeaderVariant = "clinic" | "concept" | "top";
 
+const NAV_TOP = [
+  { label: "診療案内", href: "/clinic/services" },
+  { label: "院長・コンセプト", href: "/concept/about" },
+  { label: "採用・見学", href: "/clinic/recruit" },
+  { label: "連携先の方", href: "/clinic/partnership" },
+  { label: "お問い合わせ", href: "/clinic/contact" },
+];
+
 export default function Header({ variant = "top" }: { variant?: HeaderVariant }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  const navItems = variant === "concept" ? NAV_CONCEPT : NAV_CLINIC;
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 10);
@@ -19,7 +25,6 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // トップページはヒーロー上にオーバーレイ表示
   const isOverlay = variant === "top";
 
   return (
@@ -39,14 +44,13 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
             <Logo
               size="sm"
               showText={true}
-              subtitle={variant === "concept" ? "院長 小澤竹俊" : undefined}
               invertColors={isOverlay && !scrolled}
             />
           </Link>
 
-          {/* デスクトップナビ */}
+          {/* デスクトップナビ（中央） */}
           <nav className="hidden lg:flex items-center gap-1.5">
-            {navItems.map((item) => (
+            {NAV_TOP.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -61,26 +65,32 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
             ))}
           </nav>
 
-          {/* 右側 */}
-          <div className="flex items-center gap-3">
-            {/* デスクトップ: お問い合わせ */}
-            <Link
-              href={variant === "concept" ? "/concept/lecture" : "/clinic/contact"}
-              className="hidden lg:inline-flex btn-pill btn-pill-sm btn-pill-primary"
-            >
-              お問い合わせ
-            </Link>
-
-            {/* 電話アイコン */}
+          {/* 右側: 電話番号 + ハンバーガー */}
+          <div className="flex items-center gap-2">
+            {/* 電話番号（デスクトップ: テキスト表示） */}
             <a
               href={`tel:${CLINIC_INFO.tel}`}
-              className={`flex items-center justify-center w-9 h-9 transition-colors rounded-full ${
+              className={`hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors text-[13px] font-semibold ${
                 isOverlay && !scrolled
-                  ? "text-white/70 hover:text-white"
-                  : "text-text-muted hover:text-sunrise hover:bg-sunrise-light"
+                  ? "text-white hover:text-white/80"
+                  : "text-sunrise hover:text-sunrise-dark"
+              }`}
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              {CLINIC_INFO.tel}
+            </a>
+
+            {/* 電話アイコン（モバイル: アイコンのみ） */}
+            <a
+              href={`tel:${CLINIC_INFO.tel}`}
+              className={`sm:hidden flex items-center justify-center w-9 h-9 rounded-full transition-colors ${
+                isOverlay && !scrolled
+                  ? "text-white/80 hover:text-white"
+                  : "text-sunrise hover:bg-sunrise-light"
               }`}
               aria-label={`${CLINIC_INFO.tel}に電話をかける`}
-              title={`${CLINIC_INFO.tel}（${CLINIC_INFO.hours}）`}
             >
               <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -112,7 +122,7 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
         menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}>
         <nav className="flex flex-col items-center justify-center h-full gap-2 -mt-12">
-          {navItems.map((item) => (
+          {NAV_TOP.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -122,17 +132,8 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
               {item.label}
             </Link>
           ))}
-          {variant !== "top" && (
-            <Link
-              href={variant === "clinic" ? "/concept/about" : "/clinic/services"}
-              className="text-[18px] font-medium text-twilight py-3 mt-4 border-t border-gray-200 pt-6"
-              onClick={() => setMenuOpen(false)}
-            >
-              {variant === "clinic" ? "院長コンセプトサイトへ →" : "クリニック公式サイトへ →"}
-            </Link>
-          )}
-          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-            <a href={`tel:${CLINIC_INFO.tel}`} className="text-lg text-text-secondary hover:text-sunrise transition-colors">
+          <div className="mt-8 pt-6 border-t border-gray-200 text-center">
+            <a href={`tel:${CLINIC_INFO.tel}`} className="text-xl font-semibold text-sunrise hover:text-sunrise-dark transition-colors">
               {CLINIC_INFO.tel}
             </a>
             <p className="text-xs text-text-muted mt-1">{CLINIC_INFO.hours}・24時間365日対応</p>

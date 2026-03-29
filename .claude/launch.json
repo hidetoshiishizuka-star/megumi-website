@@ -2,10 +2,11 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "megumi-dev",
+      "name": "megumi-new",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "cwd": "/Users/ishizuka/Documents/megumi-website",
+      "port": 3001
     }
   ]
 }

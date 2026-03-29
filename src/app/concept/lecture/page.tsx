@@ -1,87 +1,198 @@
-import type { Metadata } from "next";
-import PageHeader from "@/components/ui/PageHeader";
-import { CLINIC_INFO } from "@/lib/constants";
+"use client";
 
-export const metadata: Metadata = {
-  title: "講演・執筆依頼",
-  description: "院長・小澤竹俊への講演・執筆依頼のご案内。",
-};
+import Image from "next/image";
+import { useState } from "react";
+import { CLINIC_INFO } from "@/lib/constants";
+import { lectureRecords, lectureYears } from "@/data/lectures";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function LecturePage() {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const filtered = selectedYear
+    ? lectureRecords.filter((l) => l.year === selectedYear)
+    : lectureRecords;
+
+  const displayed = showAll ? filtered : filtered.slice(0, 20);
+
   return (
     <>
-      <PageHeader
-        title="講演・執筆依頼"
-        subtitle="院長 小澤竹俊への講演・執筆のご依頼を承ります"
-      />
+      <Header variant="concept" />
+      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
+        {/* ヒーロー */}
+        <section className="gradient-twilight text-white">
+          <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
+            <p className="overline text-sunrise-light mb-6">Lecture Requests</p>
+            <h1 className="heading-hero text-white mb-6">講演・執筆依頼</h1>
+            <p className="subheading text-white/60">
+              院長 小澤竹俊への講演・執筆のご依頼を承ります
+            </p>
+          </div>
+        </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-        <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
-            主な講演テーマ
-          </h2>
-          <div className="space-y-4">
-            {[
-              "苦しむ人への援助 — ホスピスマインドの実践",
-              "いのちの授業 — 子どもたちに伝えたいこと",
-              "在宅緩和ケアの現場から",
-              "チームで支えるアドバンス・ケア・プランニング（ACP）",
-              "ユニバーサル・ホスピスマインド — 誰もが実践できるケア",
-              "エンドオブライフ・ケアにおける援助者養成",
-            ].map((theme) => (
-              <div
-                key={theme}
-                className="bg-warm-gray rounded-lg px-6 py-4 text-text-secondary"
-              >
-                {theme}
+        {/* 院長写真 + 概要 */}
+        <section className="py-24 md:py-32">
+          <div className="max-w-[740px] mx-auto px-6">
+            <ScrollReveal>
+              <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+                <div className="w-40 h-52 rounded-3xl overflow-hidden relative shadow-xl shrink-0">
+                  <Image
+                    src="/images/director-portrait.jpg"
+                    alt="院長 小澤竹俊"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold text-navy mb-2">小澤 竹俊</h2>
+                  <p className="text-text-muted text-sm mb-4">めぐみ在宅クリニック院長 / エンドオブライフ・ケア協会代表理事</p>
+                  <p className="text-text-secondary text-[15px] leading-relaxed">
+                    ホスピスマインド・エンドオブライフケア・対人援助の思想をテーマに、
+                    全国各地で講演活動を行っています。医療・介護関係者向けの研修会から、
+                    一般市民向けの講座、学校での「いのちの授業」まで幅広く対応します。
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
-          <p className="text-sm text-text-muted mt-4">
-            ※ 上記以外のテーマについてもご相談ください。
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
-            講演実績
-          </h2>
-          <p className="text-text-secondary mb-4">
-            全国の病院・介護施設・自治体・学会・学校などで多数の講演実績があります。
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-text-secondary">
-            <div className="bg-navy-light rounded-lg px-4 py-3">TEDxTokyo登壇</div>
-            <div className="bg-navy-light rounded-lg px-4 py-3">全国の病院・医学部</div>
-            <div className="bg-navy-light rounded-lg px-4 py-3">介護施設・地域包括支援センター</div>
-            <div className="bg-navy-light rounded-lg px-4 py-3">自治体・教育委員会</div>
+            </ScrollReveal>
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
-            ご依頼について
-          </h2>
-          <div className="bg-warm-gray rounded-xl p-6 text-sm text-text-secondary space-y-2">
-            <p>院長だけでなく、同テーマを語れるファシリテーターもご紹介できます。</p>
-            <p>費用・日程等はご相談の上で決定いたします。</p>
-            <p>まずはお気軽にお問い合わせください。</p>
+        {/* 講演テーマ */}
+        <section className="bg-surface py-24 md:py-32">
+          <div className="max-w-[1120px] mx-auto px-6">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <p className="overline text-dawn mb-4">Themes</p>
+                <h2 className="heading-section text-navy">主な講演テーマ</h2>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                "苦しむ人への援助 — ホスピスマインドの実践",
+                "いのちの授業 — 子どもたちに伝えたいこと",
+                "在宅緩和ケアの現場から",
+                "チームで支えるアドバンス・ケア・プランニング",
+                "ユニバーサル・ホスピスマインド — 誰もが実践できるケア",
+                "エンドオブライフ・ケアにおける援助者養成",
+              ].map((theme, i) => (
+                <ScrollReveal key={theme} delay={i * 80}>
+                  <div className="rounded-3xl bg-white p-8 text-center min-h-[100px] flex items-center justify-center">
+                    <p className="text-navy font-medium text-[15px]">{theme}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={500}>
+              <p className="text-center text-text-muted text-sm mt-6">
+                ※ 上記以外のテーマについてもご相談ください。
+                院長だけでなく、同テーマを語れる認定ファシリテーターもご紹介できます。
+              </p>
+            </ScrollReveal>
           </div>
         </section>
 
-        <section className="bg-navy-light rounded-2xl p-8 text-center">
-          <h2 className="text-xl font-bold mb-3">講演・執筆のご依頼</h2>
-          <p className="text-text-secondary mb-6 text-sm">
-            お電話またはお問い合わせフォームよりご連絡ください
-          </p>
-          <a
-            href={`tel:${CLINIC_INFO.telPlanning}`}
-            className="inline-flex items-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"
-          >
-            {CLINIC_INFO.telPlanning}（企画運営係）
-          </a>
-          <p className="text-sm text-text-muted mt-3">月〜金 9:00〜17:00</p>
+        {/* 講演実績（130件） */}
+        <section className="py-24 md:py-32">
+          <div className="max-w-[740px] mx-auto px-6">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <p className="overline text-twilight mb-4">Track Record</p>
+                <h2 className="heading-section text-navy">講演実績</h2>
+                <p className="subheading mt-4">
+                  全国の病院・自治体・学会・学校等で{lectureRecords.length}件以上の実績
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* 年別フィルタ */}
+            <div className="flex flex-wrap gap-2 mb-10 justify-center">
+              <button
+                onClick={() => { setSelectedYear(null); setShowAll(false); }}
+                className={`px-5 py-2 rounded-full text-sm transition-colors ${
+                  selectedYear === null
+                    ? "bg-navy text-white"
+                    : "bg-surface text-navy hover:bg-navy-light"
+                }`}
+              >
+                すべて ({lectureRecords.length})
+              </button>
+              {lectureYears.map((year) => (
+                <button
+                  key={year}
+                  onClick={() => { setSelectedYear(year); setShowAll(false); }}
+                  className={`px-5 py-2 rounded-full text-sm transition-colors ${
+                    selectedYear === year
+                      ? "bg-navy text-white"
+                      : "bg-surface text-navy hover:bg-navy-light"
+                  }`}
+                >
+                  {year}年
+                </button>
+              ))}
+            </div>
+
+            {/* 実績一覧 */}
+            <div className="divide-y divide-gray-100">
+              {displayed.map((lecture, i) => (
+                <div key={`${lecture.date}-${i}`} className="py-4">
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-text-muted text-xs shrink-0 tabular-nums w-20">
+                      {lecture.date.slice(0, 20)}
+                    </span>
+                    <div>
+                      <p className="text-navy font-medium text-[15px] leading-snug">{lecture.title}</p>
+                      {lecture.location && (
+                        <p className="text-text-muted text-xs mt-0.5">{lecture.location.slice(0, 60)}</p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {!showAll && filtered.length > 20 && (
+              <div className="text-center mt-10">
+                <button
+                  onClick={() => setShowAll(true)}
+                  className="btn-pill btn-pill-secondary"
+                >
+                  すべての実績を表示（{filtered.length}件）
+                </button>
+              </div>
+            )}
+
+            {filtered.length === 0 && (
+              <p className="text-center text-text-muted py-12">該当する実績がありません。</p>
+            )}
+          </div>
         </section>
-      </div>
+
+        {/* CTA */}
+        <section className="gradient-dawn text-white">
+          <div className="max-w-[740px] mx-auto px-6 py-24 md:py-32 text-center">
+            <ScrollReveal>
+              <h2 className="heading-section text-white mb-6">講演・執筆のご依頼</h2>
+              <p className="subheading text-white/60 mb-10">
+                費用・日程等はご相談の上で決定いたします。
+                まずはお気軽にお問い合わせください。
+              </p>
+              <a
+                href={`tel:${CLINIC_INFO.telPlanning}`}
+                className="btn-pill bg-white text-navy font-medium hover:bg-white/90"
+              >
+                {CLINIC_INFO.telPlanning}（企画運営係）
+              </a>
+              <p className="text-white/40 text-xs mt-4">月〜金 9:00〜17:00</p>
+            </ScrollReveal>
+          </div>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }

@@ -23,12 +23,9 @@ export default function Logo({
 
   return (
     <div className="flex items-center gap-2.5">
+      {/* 常に白背景の丸バッジ — 暗い背景でも透けない */}
       <div
-        className={`relative flex-shrink-0 rounded-full flex items-center justify-center overflow-hidden border-2 transition-colors duration-300 ${
-          invertColors
-            ? "bg-white/10 border-white/20"
-            : "bg-navy/10 border-navy/20"
-        }`}
+        className="relative flex-shrink-0 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-sm"
         style={{ width: s.badge, height: s.badge }}
       >
         <Image
@@ -36,7 +33,7 @@ export default function Logo({
           alt="めぐみうさぎ"
           width={s.img}
           height={s.img}
-          className={`object-contain transition-all duration-300 ${invertColors ? "brightness-0 invert" : ""}`}
+          className="object-contain"
           style={{ marginTop: 2 }}
         />
       </div>

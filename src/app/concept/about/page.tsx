@@ -18,8 +18,8 @@ export default function AboutDirectorPage() {
         {/* Hero */}
         <section className="gradient-twilight text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
-            <p className="overline text-sunrise-light mb-6">Director</p>
-            <h1 className="heading-hero text-white mb-6">院長 小澤竹俊</h1>
+            <p className="overline text-sunrise-light mb-6">Director & Concept</p>
+            <h1 className="heading-hero text-white mb-6">院長・コンセプト</h1>
             <p className="subheading text-white/90">Taketoshi Ozawa, M.D., Ph.D.</p>
           </div>
         </section>
@@ -194,18 +194,103 @@ export default function AboutDirectorPage() {
             </section>
           </ScrollReveal>
 
-          {/* 理念 */}
+          {/* 院長の想い — ユニバーサル・ホスピスマインド */}
           <ScrollReveal>
-            <section className="bg-navy-light rounded-2xl p-8 mb-12">
-              <h2 className="heading-section text-navy mb-4 text-center">院長の想い</h2>
-              <blockquote className="text-center text-lg text-text-primary leading-relaxed italic">
+            <section className="mb-16">
+              <h2 className="heading-section text-navy mb-6 text-center">院長の想い</h2>
+              <blockquote className="text-center text-xl text-text-primary leading-relaxed italic mb-8">
                 「苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい」
               </blockquote>
-              <p className="text-text-secondary text-center mt-4 text-sm leading-relaxed max-w-2xl mx-auto">
-                在宅医療の技術や仕組みだけでなく、人生の終盤で穏やかさ・尊厳・関係性を実現するための
-                対人援助の思想を大切にしています。それを実践するだけでなく、学びたい人に伝え、
-                全国へ波及させる使命を持って活動しています。
-              </p>
+
+              <div className="space-y-6 text-text-secondary leading-relaxed">
+                <p>
+                  医療に限らず、対人援助の目的は「幸せになること（Well-Beingを実感できること）」にあると考えています。
+                  これは医療だけではなく、福祉や教育の現場でも、あるいは子育てや親の介護においても普遍的な視点です。
+                </p>
+                <p>
+                  めぐみ在宅クリニックとして、関わる患者さんとご家族が幸せを実感できる援助を行えているかを、
+                  常に問い続けていきたいと考えています。
+                </p>
+
+                <h3 className="text-lg font-bold text-navy pt-4">問題解決思考の限界</h3>
+                <p>
+                  一般的に、何かで苦しんでいる人が幸せになるために、苦しみの原因を見つけ、適切な介入をすることを医療は提供してきました。
+                  適切な診断と治療は、その一つのアプローチです。しかし、どれほど医療が発達したとしても、
+                  すべての病気を完治することはできません。
+                </p>
+                <p>
+                  老いと喪失の社会において、従来の問題解決思考だけでは限界があります。
+                  たとえ解決が難しい苦しみを抱えたとしても、人が幸せを実感できるための関わり方を、
+                  めぐみ在宅クリニックとしてはこだわって提供したいと考えています。
+                </p>
+
+                <h3 className="text-lg font-bold text-navy pt-4">ユニバーサル・ホスピスマインド</h3>
+                <p>
+                  具体的には、ホスピスの現場で培ってきた対人援助のマインド
+                  ——「ユニバーサル・ホスピスマインド」を、スタッフ全員が習得し、
+                  実際の現場で具体的に関わることができるよう環境を整えています。
+                </p>
+              </div>
+
+              {/* 概念図 */}
+              <div className="my-8 rounded-2xl overflow-hidden bg-white p-4">
+                <Image
+                  src="/images/uhm-concept.png"
+                  alt="ユニバーサル・ホスピスマインド 概念図"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto"
+                />
+              </div>
+
+              <div className="space-y-6 text-text-secondary leading-relaxed">
+                <p>
+                  目標は、患者さんご本人、ご家族、そして援助者も穏やかであること。
+                  ここで言う「穏やか」とは、嬉しい・楽しい・ホッとする——そうしたプラスの気持ちを総称した言葉です。
+                </p>
+                <p>
+                  その上で、5つのステップを大切にしています。
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 my-6">
+                  {[
+                    { num: "1", text: "援助的コミュニケーション" },
+                    { num: "2", text: "相手の苦しみに気づく" },
+                    { num: "3", text: "相手の支えに気づく" },
+                    { num: "4", text: "相手の支えを強める" },
+                    { num: "5", text: "自らの支えを知る" },
+                  ].map((item) => (
+                    <div key={item.num} className="bg-navy-light rounded-xl p-4 text-center">
+                      <span className="text-xl font-bold text-navy block mb-1">{item.num}</span>
+                      <span className="text-xs text-text-secondary">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <h3 className="text-lg font-bold text-navy pt-4">「治す医療」ではなく「支える医療」</h3>
+                <p>
+                  苦しみとは「希望と現実の開き」。支えとは「穏やかになれる理由」。
+                  めぐみ在宅クリニックのコンピテンシーとは、解決が難しい苦しみを抱えたとしても、
+                  関わりを通して穏やかさを支えることができる能力です。
+                </p>
+                <p>
+                  その中核は、苦しみと支えを言語化し、対話を通して関係性を築く力にあります。
+                  在宅医療の技術や仕組みだけでなく、人生の終盤で穏やかさ・尊厳・関係性を実現するための
+                  対人援助の思想を大切にしています。
+                </p>
+                <p>
+                  それを実践するだけでなく、学びたい人に伝え、全国へ波及させる使命を持って活動しています。
+                </p>
+              </div>
+
+              <div className="mt-8 text-center">
+                <Link
+                  href="/concept/philosophy"
+                  className="btn-pill btn-pill-primary inline-flex items-center justify-center gap-2"
+                >
+                  ユニバーサル・ホスピスマインドについて詳しく →
+                </Link>
+              </div>
             </section>
           </ScrollReveal>
 

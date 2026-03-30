@@ -69,7 +69,8 @@ export const NAV_CLINIC = [
 ] as const;
 
 export const NAV_CONCEPT = [
-  { label: "院長について", href: "/concept/about" },
+  { label: "院長・コンセプト", href: "/concept/about" },
+  { label: "ユニバーサル・ホスピスマインド", href: "/concept/philosophy" },
   { label: "緩和ケアとは", href: "/concept/palliative-care" },
   { label: "見学・研修", href: "/concept/training" },
   { label: "講演・執筆依頼", href: "/concept/lecture" },

@@ -196,42 +196,15 @@ export default function PhilosophyPage() {
               ユニバーサル・ホスピスマインドの概論
             </h2>
 
-            {/* CSS概念図 */}
-            <div className="rounded-2xl bg-gradient-to-br from-navy-light via-twilight-light to-dawn-light p-8 mb-8">
-              <div className="text-center mb-8">
-                <p className="text-navy font-bold text-lg">目標</p>
-                <div className="inline-flex items-center gap-3 mt-2 flex-wrap justify-center">
-                  {["本人", "家族", "援助者"].map((label) => (
-                    <span key={label} className="bg-white/80 text-navy font-medium px-4 py-2 rounded-full text-sm shadow-sm">
-                      {label}が穏やかに
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex items-center justify-center mb-6">
-                <svg className="w-6 h-6 text-twilight" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-5 gap-3">
-                {[
-                  { num: "1", title: "援助的コミュニケーション", color: "bg-navy" },
-                  { num: "2", title: "苦しみに気づく", color: "bg-twilight" },
-                  { num: "3", title: "支えに気づく", color: "bg-dawn" },
-                  { num: "4", title: "支えを強める", color: "bg-sunrise" },
-                  { num: "5", title: "自らの支えを知る", color: "bg-navy" },
-                ].map((item) => (
-                  <div key={item.num} className={`${item.color} text-white rounded-xl p-4 text-center shadow-md`}>
-                    <span className="text-2xl font-bold block mb-1">{item.num}</span>
-                    <span className="text-xs font-medium leading-snug">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="text-center mt-6">
-                <p className="text-text-muted text-xs">
-                  この5つのステップを通じて、解決困難な苦しみの中でも穏やかさを支える
-                </p>
-              </div>
+            {/* 概念図（原本） */}
+            <div className="rounded-2xl overflow-hidden bg-white p-4 mb-8 shadow-sm">
+              <Image
+                src="/images/uhm-concept.png"
+                alt="ユニバーサル・ホスピスマインド 概念図"
+                width={1200}
+                height={900}
+                className="w-full h-auto"
+              />
             </div>
 
             <div className="space-y-4 text-text-secondary leading-relaxed">

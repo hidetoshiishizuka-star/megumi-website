@@ -40,7 +40,7 @@ export default function BooksPage() {
               <div className="text-center mb-16">
                 <p className="overline text-dawn mb-4">Publications</p>
                 <h2 className="heading-section text-navy">著書一覧</h2>
-                <p className="subheading mt-4">全{books.length}冊</p>
+                <p className="subheading mt-4 text-text-muted">全{books.length}冊</p>
               </div>
             </ScrollReveal>
 
@@ -77,7 +77,7 @@ export default function BooksPage() {
               <div className="text-center mb-16">
                 <p className="overline text-twilight mb-4">Media</p>
                 <h2 className="heading-section text-navy">メディア掲載・出演</h2>
-                <p className="subheading mt-4">全{mediaEntries.length}件</p>
+                <p className="subheading mt-4 text-text-muted">全{mediaEntries.length}件</p>
               </div>
             </ScrollReveal>
 

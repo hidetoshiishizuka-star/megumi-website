@@ -103,7 +103,7 @@ export default function LecturePage() {
               <div className="text-center mb-16">
                 <p className="overline text-twilight mb-4">Track Record</p>
                 <h2 className="heading-section text-navy">講演実績</h2>
-                <p className="subheading mt-4">
+                <p className="subheading mt-4 text-text-muted">
                   全国の病院・自治体・学会・学校等で{lectureRecords.length}件以上の実績
                 </p>
               </div>

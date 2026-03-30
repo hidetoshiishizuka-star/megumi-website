@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -43,6 +44,34 @@ export default function RecruitPage() {
                   そんな志を持った方をお待ちしています。
                 </p>
                 <p className="text-sm text-text-muted">院長 小澤竹俊</p>
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* 働く風景 */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {[
+                  { src: "/images/team-visit.jpg", alt: "訪問診療の様子 — 3名体制でご自宅を訪問", caption: "3名体制での訪問診療" },
+                  { src: "/images/recruit-team.jpg", alt: "チームカンファレンスの様子", caption: "チームカンファレンス" },
+                  { src: "/images/recruit-atmosphere.jpg", alt: "クリニックの日常風景", caption: "クリニックの日常" },
+                ].map((photo, i) => (
+                  <ScrollReveal key={photo.src} delay={i * 100}>
+                    <div className="rounded-2xl overflow-hidden">
+                      <div className="aspect-[4/3] relative">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, 33vw"
+                        />
+                      </div>
+                      <p className="text-xs text-text-muted text-center py-2">{photo.caption}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
               </div>
             </section>
           </ScrollReveal>

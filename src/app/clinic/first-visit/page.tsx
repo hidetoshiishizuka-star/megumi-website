@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
@@ -21,6 +22,22 @@ export default function FirstVisitPage() {
             </p>
           </div>
         </section>
+
+        {/* 訪問診療の写真 */}
+        <ScrollReveal>
+          <section className="max-w-[var(--content-wide)] mx-auto px-4 sm:px-6 -mt-8 mb-12">
+            <div className="rounded-2xl overflow-hidden shadow-lg aspect-[21/9] relative">
+              <Image
+                src="/images/visit-care.jpg"
+                alt="訪問診療の様子 — ご自宅で安心して療養いただけます"
+                fill
+                className="object-cover object-[center_30%]"
+                sizes="(max-width: 1120px) 100vw, 1120px"
+                priority
+              />
+            </div>
+          </section>
+        </ScrollReveal>
 
         <div className="max-w-[var(--content-narrow)] mx-auto px-4 sm:px-6 py-12">
           {/* こんな方が対象です */}
@@ -55,6 +72,18 @@ export default function FirstVisitPage() {
               <h2 className="heading-section text-navy mb-6">
                 訪問診療開始までの流れ
               </h2>
+
+              {/* チーム訪問写真 */}
+              <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/7] relative">
+                <Image
+                  src="/images/team-visit.jpg"
+                  alt="3名体制でのチーム訪問 — 医師・看護師・サポーターがご自宅に伺います"
+                  fill
+                  className="object-cover"
+                  sizes="740px"
+                />
+              </div>
+
               <div className="space-y-6">
                 {[
                   {
@@ -115,6 +144,22 @@ export default function FirstVisitPage() {
                   ※ すべてがわからなくても大丈夫です。お気軽にご相談ください。
                 </p>
               </div>
+            </section>
+          </ScrollReveal>
+
+          {/* クリニック写真 */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="rounded-2xl overflow-hidden aspect-[16/7] relative">
+                <Image
+                  src="/images/clinic-reception.jpg"
+                  alt="めぐみ在宅クリニック"
+                  fill
+                  className="object-cover"
+                  sizes="740px"
+                />
+              </div>
+              <p className="text-xs text-text-muted text-center mt-2">めぐみ在宅クリニック（横浜市瀬谷区）</p>
             </section>
           </ScrollReveal>
 

@@ -2,8 +2,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { columns } from "@/data/columns";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 export function generateStaticParams() {
   return columns.map((c) => ({ slug: c.slug }));
@@ -36,8 +34,6 @@ export default function ColumnDetailPage({
 
   return (
     <>
-      <Header variant="concept" />
-      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
         {/* ヒーロー */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-20 md:py-28 text-center">
@@ -99,8 +95,6 @@ export default function ColumnDetailPage({
             コラム一覧へ戻る
           </Link>
         </section>
-      </main>
-      <Footer />
     </>
   );
 }

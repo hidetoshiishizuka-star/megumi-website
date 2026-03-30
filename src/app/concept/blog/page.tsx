@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { columns, columnYears } from "@/data/columns";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function BlogPage() {
@@ -19,8 +17,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <Header variant="concept" />
-      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
         {/* ヒーロー */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -107,8 +103,6 @@ export default function BlogPage() {
             )}
           </div>
         </section>
-      </main>
-      <Footer />
     </>
   );
 }

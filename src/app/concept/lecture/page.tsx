@@ -4,8 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { CLINIC_INFO } from "@/lib/constants";
 import { lectureRecords, lectureYears } from "@/data/lectures";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function LecturePage() {
@@ -20,8 +18,6 @@ export default function LecturePage() {
 
   return (
     <>
-      <Header variant="concept" />
-      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
         {/* ヒーロー */}
         <section className="gradient-twilight text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -191,8 +187,6 @@ export default function LecturePage() {
             </ScrollReveal>
           </div>
         </section>
-      </main>
-      <Footer />
     </>
   );
 }

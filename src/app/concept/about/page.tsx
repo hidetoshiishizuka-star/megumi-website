@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { DIRECTOR } from "@/lib/constants";
 import { lectureRecords } from "@/data/lectures";
@@ -17,8 +15,6 @@ export const metadata: Metadata = {
 export default function AboutDirectorPage() {
   return (
     <>
-      <Header variant="concept" />
-      <main style={{ paddingTop: "var(--header-height, 48px)" }}>
         {/* Hero */}
         <section className="gradient-twilight text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -230,8 +226,6 @@ export default function AboutDirectorPage() {
             </div>
           </ScrollReveal>
         </div>
-      </main>
-      <Footer />
     </>
   );
 }

@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { CLINIC_INFO } from "@/lib/constants";
 import { lectureRecords, lectureYears } from "@/data/lectures";
+import { books } from "@/data/books";
+import { mediaEntries } from "@/data/media";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function LecturePage() {
@@ -89,6 +92,51 @@ export default function LecturePage() {
                 院長だけでなく、同テーマを語れる認定ファシリテーターもご紹介できます。
               </p>
             </ScrollReveal>
+          </div>
+        </section>
+
+        {/* 著書・執筆実績 */}
+        <section className="py-24 md:py-32">
+          <div className="max-w-[1120px] mx-auto px-6">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <p className="overline text-sunrise mb-4">Publications</p>
+                <h2 className="heading-section text-navy">著書・執筆実績</h2>
+                <p className="subheading mt-4 text-text-muted">
+                  著書{books.length}冊、専門誌・新聞等への寄稿{mediaEntries.filter(e => e.category === "専門誌・医療関係" || e.category === "新聞・雑誌").length}件
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* 主な著書（最新6冊） */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+              {books.slice(0, 6).map((book, i) => (
+                <ScrollReveal key={book.title} delay={i * 60}>
+                  <div className="group">
+                    <div className="aspect-[3/4] bg-gray-50 rounded-xl overflow-hidden mb-2 flex items-center justify-center p-1">
+                      <Image
+                        src={`/images/books/${book.coverImage}`}
+                        alt={book.title}
+                        width={200}
+                        height={300}
+                        className="object-contain w-full h-full drop-shadow-md group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <p className="text-xs text-navy font-medium leading-snug">{book.title}</p>
+                    <p className="text-[10px] text-text-muted">{book.publisher}（{book.date.slice(0, 4)}年）</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/concept/books"
+                className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
+              >
+                全{books.length}冊の著書・メディア{mediaEntries.length}件を見る →
+              </Link>
+            </div>
           </div>
         </section>
 

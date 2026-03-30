@@ -21,7 +21,7 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Services</p>
             <h1 className="heading-hero text-white mb-6">診療案内</h1>
-            <p className="subheading text-white/60">
+            <p className="subheading text-white/90">
               在宅医療を中心に、外来診療・緩和ケア外来を提供しています
             </p>
           </div>

@@ -47,7 +47,7 @@ export default function Logo({
             めぐみ在宅クリニック
           </span>
           {subtitle && (
-            <span className={`block text-xs transition-colors duration-300 ${invertColors ? "text-white/60" : "text-text-muted"}`}>
+            <span className={`block text-xs transition-colors duration-300 ${invertColors ? "text-white/90" : "text-text-muted"}`}>
               {subtitle}
             </span>
           )}

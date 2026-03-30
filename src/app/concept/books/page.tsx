@@ -27,7 +27,7 @@ export default function BooksPage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Books & Media</p>
             <h1 className="heading-hero text-white mb-6">著書・メディア</h1>
-            <p className="subheading text-white/60">
+            <p className="subheading text-white/90">
               院長 小澤竹俊の著書{books.length}冊とメディア掲載・出演{mediaEntries.length}件
             </p>
           </div>

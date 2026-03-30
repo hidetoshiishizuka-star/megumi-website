@@ -20,7 +20,7 @@ export default function StaffPage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Staff</p>
             <h1 className="heading-hero text-white mb-6">スタッフ紹介</h1>
-            <p className="subheading text-white/60">
+            <p className="subheading text-white/90">
               チーム一丸で在宅医療を支えています
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function StaffPage() {
                 <h2 className="heading-section text-white mb-4">
                   日中の訪問は3名体制
                 </h2>
-                <p className="subheading text-white/50">
+                <p className="subheading text-white/80">
                   医師・看護師・サポーターの3名でご自宅に伺います
                 </p>
               </div>
@@ -140,7 +140,7 @@ export default function StaffPage() {
                 <ScrollReveal key={item.title} delay={i * 100}>
                   <div className="rounded-3xl bg-white/5 p-8 text-center">
                     <h3 className="text-xl font-semibold text-sunrise-light mb-2">{item.title}</h3>
-                    <p className="text-white/50 text-sm">{item.desc}</p>
+                    <p className="text-white/80 text-sm">{item.desc}</p>
                   </div>
                 </ScrollReveal>
               ))}

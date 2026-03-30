@@ -24,7 +24,7 @@ export default function AboutDirectorPage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Director</p>
             <h1 className="heading-hero text-white mb-6">院長 小澤竹俊</h1>
-            <p className="subheading text-white/60">Taketoshi Ozawa, M.D., Ph.D.</p>
+            <p className="subheading text-white/90">Taketoshi Ozawa, M.D., Ph.D.</p>
           </div>
         </section>
 

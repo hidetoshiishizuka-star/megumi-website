@@ -19,7 +19,7 @@ export default function TrainingPage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Training</p>
             <h1 className="heading-hero text-white mb-6">見学・研修</h1>
-            <p className="subheading text-white/60">
+            <p className="subheading text-white/90">
               緩和ケアの実践を学ぶ場として
             </p>
           </div>

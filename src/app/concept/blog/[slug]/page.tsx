@@ -42,7 +42,7 @@ export default function ColumnDetailPage({
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-20 md:py-28 text-center">
             <p className="overline text-sunrise-light mb-4">Column</p>
-            <time className="text-white/50 text-sm">{column.date}</time>
+            <time className="text-white/80 text-sm">{column.date}</time>
             <h1 className="text-2xl md:text-3xl font-semibold text-white mt-4 leading-snug">
               {column.title}
             </h1>

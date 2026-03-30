@@ -27,7 +27,7 @@ export default function LecturePage() {
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Lecture Requests</p>
             <h1 className="heading-hero text-white mb-6">講演・執筆依頼</h1>
-            <p className="subheading text-white/60">
+            <p className="subheading text-white/90">
               院長 小澤竹俊への講演・執筆のご依頼を承ります
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function LecturePage() {
           <div className="max-w-[740px] mx-auto px-6 py-24 md:py-32 text-center">
             <ScrollReveal>
               <h2 className="heading-section text-white mb-6">講演・執筆のご依頼</h2>
-              <p className="subheading text-white/60 mb-10">
+              <p className="subheading text-white/90 mb-10">
                 費用・日程等はご相談の上で決定いたします。
                 まずはお気軽にお問い合わせください。
               </p>
@@ -187,7 +187,7 @@ export default function LecturePage() {
               >
                 {CLINIC_INFO.telPlanning}（企画運営係）
               </a>
-              <p className="text-white/40 text-xs mt-4">月〜金 9:00〜17:00</p>
+              <p className="text-white/70 text-xs mt-4">月〜金 9:00〜17:00</p>
             </ScrollReveal>
           </div>
         </section>

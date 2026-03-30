@@ -147,6 +147,32 @@ export default function ServicesPage() {
             </section>
           </ScrollReveal>
 
+          {/* 関連ページ */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <h2 className="heading-section text-navy mb-6">関連情報</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { label: "費用について", href: "/clinic/fee", desc: "訪問診療にかかる費用の目安" },
+                  { label: "よくあるご質問", href: "/clinic/faq", desc: "在宅医療に関するQ&A" },
+                  { label: "スタッフ紹介", href: "/clinic/staff", desc: "医師・看護師・スタッフ一覧" },
+                  { label: "ご遺族の方へ", href: "/clinic/grief", desc: "グリーフサポートのご案内" },
+                ].map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="bg-warm-gray rounded-xl p-5 hover:shadow-md transition-shadow group block"
+                  >
+                    <p className="font-bold text-navy group-hover:text-twilight transition-colors">
+                      {item.label}
+                    </p>
+                    <p className="text-xs text-text-muted mt-1">{item.desc}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </ScrollReveal>
+
           {/* CTA */}
           <ScrollReveal>
             <section className="bg-navy-light rounded-2xl p-8 text-center">

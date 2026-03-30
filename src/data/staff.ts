@@ -29,7 +29,7 @@ export const staffMembers: StaffMember[] = [
     description:
       "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
     hasPhoto: true,
-    photoFile: "director.jpg",
+    photoFile: "director-portrait.jpg",
     photoPosition: "center 20%",
   },
   {
@@ -289,7 +289,7 @@ export const staffMembers: StaffMember[] = [
     department: "看護",
     description:
       "在宅医療に関わって5年。様々な問題に直面する患者さん、ご家族のお手伝いができればと思います。",
-    hasPhoto: true,
+    hasPhoto: false,
   },
   {
     name: "伊東知子",

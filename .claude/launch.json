@@ -4,7 +4,7 @@
     {
       "name": "megumi-new",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": ["run", "dev", "--", "--port", "3001"],
       "cwd": "/Users/ishizuka/Documents/megumi-website",
       "port": 3001
     }

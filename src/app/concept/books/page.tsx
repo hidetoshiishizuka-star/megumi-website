@@ -28,7 +28,7 @@ export default function BooksPage() {
             <p className="overline text-sunrise-light mb-6">Books & Media</p>
             <h1 className="heading-hero text-white mb-6">著書・メディア</h1>
             <p className="subheading text-white/60">
-              院長 小澤竹俊の著書{books.length}冊とメディア掲載{mediaEntries.length}件
+              院長 小澤竹俊の著書{books.length}冊とメディア掲載・出演{mediaEntries.length}件
             </p>
           </div>
         </section>
@@ -70,13 +70,13 @@ export default function BooksPage() {
           </div>
         </section>
 
-        {/* メディア掲載 */}
+        {/* メディア掲載・出演 */}
         <section className="bg-surface py-24 md:py-32">
           <div className="max-w-[var(--content-wide)] mx-auto px-6">
             <ScrollReveal>
               <div className="text-center mb-16">
                 <p className="overline text-twilight mb-4">Media</p>
-                <h2 className="heading-section text-navy">メディア掲載</h2>
+                <h2 className="heading-section text-navy">メディア掲載・出演</h2>
                 <p className="subheading mt-4">全{mediaEntries.length}件</p>
               </div>
             </ScrollReveal>

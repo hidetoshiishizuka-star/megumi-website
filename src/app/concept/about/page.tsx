@@ -210,7 +210,7 @@ export default function AboutDirectorPage() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
               <Link
                 href="/concept/training"
                 className="btn-pill btn-pill-primary inline-flex items-center justify-center gap-2"
@@ -222,6 +222,12 @@ export default function AboutDirectorPage() {
                 className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
               >
                 講演・執筆依頼 →
+              </Link>
+              <Link
+                href="/clinic/recruit"
+                className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
+              >
+                採用情報 →
               </Link>
             </div>
           </ScrollReveal>

@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { DIRECTOR } from "@/lib/constants";
+import { lectureRecords } from "@/data/lectures";
+import { columns } from "@/data/columns";
 
 export const metadata: Metadata = {
   title: "院長 小澤竹俊について",
@@ -129,6 +131,69 @@ export default function AboutDirectorPage() {
                     週刊朝日・週刊現代ほか多数
                   </div>
                 </ScrollReveal>
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* 講演実績 */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="flex items-baseline justify-between mb-6">
+                <h2 className="heading-section text-navy">講演実績</h2>
+                <span className="text-sm text-text-muted">{lectureRecords.length}件</span>
+              </div>
+              <div className="divide-y divide-gray-100">
+                {lectureRecords.slice(0, 5).map((lecture, i) => (
+                  <ScrollReveal key={`${lecture.date}-${i}`} delay={i * 60}>
+                    <div className="py-3 flex items-baseline gap-3">
+                      <span className="text-text-muted text-xs shrink-0 tabular-nums w-20">
+                        {lecture.date.slice(0, 12)}
+                      </span>
+                      <p className="text-sm text-text-secondary leading-snug">{lecture.title}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+              <div className="mt-4 text-center">
+                <Link
+                  href="/concept/lecture"
+                  className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
+                >
+                  全{lectureRecords.length}件の講演実績を見る →
+                </Link>
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* 院長コラム */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="flex items-baseline justify-between mb-6">
+                <h2 className="heading-section text-navy">院長コラム</h2>
+                <span className="text-sm text-text-muted">{columns.length}件</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {columns.slice(0, 4).map((col, i) => (
+                  <ScrollReveal key={col.slug} delay={i * 80}>
+                    <Link
+                      href={`/concept/blog/${col.slug}`}
+                      className="block bg-warm-gray rounded-xl p-5 hover:shadow-md transition-shadow group"
+                    >
+                      <p className="text-xs text-text-muted mb-1">{col.date}</p>
+                      <p className="text-sm font-medium text-navy group-hover:text-twilight transition-colors leading-snug">
+                        {col.title}
+                      </p>
+                    </Link>
+                  </ScrollReveal>
+                ))}
+              </div>
+              <div className="mt-4 text-center">
+                <Link
+                  href="/concept/blog"
+                  className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"
+                >
+                  全{columns.length}件のコラムを読む →
+                </Link>
               </div>
             </section>
           </ScrollReveal>

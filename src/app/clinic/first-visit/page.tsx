@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
+import { staffMembers } from "@/data/staff";
 
 export const metadata: Metadata = {
   title: "はじめての方へ",
@@ -160,6 +161,51 @@ export default function FirstVisitPage() {
                 />
               </div>
               <p className="text-xs text-text-muted text-center mt-2">めぐみ在宅クリニック（横浜市瀬谷区）</p>
+            </section>
+          </ScrollReveal>
+
+          {/* 地域連携室スタッフ */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <h2 className="heading-section text-navy mb-4">
+                ご相談窓口 — 地域連携室
+              </h2>
+              <p className="text-sm text-text-secondary mb-6">
+                まずはお気軽にお電話ください。地域連携室のスタッフが対応いたします。
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {staffMembers
+                  .filter((s) => s.department === "地域連携室")
+                  .map((staff) => (
+                    <div
+                      key={staff.name}
+                      className="bg-warm-gray rounded-xl overflow-hidden flex gap-4 p-4"
+                    >
+                      <div className="w-20 h-20 rounded-full overflow-hidden relative shrink-0">
+                        {staff.photoFile ? (
+                          <Image
+                            src={`/images/staff/${staff.photoFile}`}
+                            alt={staff.name}
+                            fill
+                            className="object-cover"
+                            style={{ objectPosition: staff.photoPosition || "center 20%" }}
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-200" />
+                        )}
+                      </div>
+                      <div>
+                        <p className="text-xs text-sunrise font-medium">{staff.role}</p>
+                        <p className="font-bold text-navy">{staff.name}</p>
+                        {staff.description && (
+                          <p className="text-xs text-text-secondary mt-1 leading-relaxed">
+                            {staff.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </section>
           </ScrollReveal>
 

@@ -7,12 +7,13 @@ export function generateStaticParams() {
   return columns.map((c) => ({ slug: c.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const column = columns.find((c) => c.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const column = columns.find((c) => c.slug === slug);
   if (!column) return {};
   return {
     title: column.title,
@@ -20,15 +21,16 @@ export function generateMetadata({
   };
 }
 
-export default function ColumnDetailPage({
+export default async function ColumnDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const column = columns.find((c) => c.slug === params.slug);
+  const { slug } = await params;
+  const column = columns.find((c) => c.slug === slug);
   if (!column) notFound();
 
-  const idx = columns.findIndex((c) => c.slug === params.slug);
+  const idx = columns.findIndex((c) => c.slug === slug);
   const prev = idx < columns.length - 1 ? columns[idx + 1] : null;
   const next = idx > 0 ? columns[idx - 1] : null;
 

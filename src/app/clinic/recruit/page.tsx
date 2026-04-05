@@ -137,18 +137,10 @@ export default function RecruitPage() {
             <section className="mb-12">
               <h2 className="heading-section text-navy mb-6">募集職種</h2>
 
-              {/* ドライバー */}
-              <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4 mb-4">
-                <span className="font-medium">ドライバー</span>
-                <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
-                  募集中
-                </span>
-              </div>
-
-              {/* 常勤医師 */}
+              {/* 医師 */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
                 <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
-                  <h3 className="font-bold text-lg">常勤医師</h3>
+                  <h3 className="font-bold text-lg">医師</h3>
                   <span className="text-xs bg-white/20 px-3 py-1 rounded-full">条件調整中</span>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
@@ -178,10 +170,10 @@ export default function RecruitPage() {
                 </div>
               </div>
 
-              {/* 看護師 */}
+              {/* 看護師・診療サポーター */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
                 <div className="bg-navy text-white px-6 py-4">
-                  <h3 className="font-bold text-lg">看護師</h3>
+                  <h3 className="font-bold text-lg">看護師・診療サポーター</h3>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
                   <div className="grid grid-cols-[120px_1fr] gap-2">
@@ -204,21 +196,21 @@ export default function RecruitPage() {
                 </div>
               </div>
 
-              {/* 訪問診療サポーター / 医療事務 */}
-              <div className="space-y-4">
-                <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
-                  <div>
-                    <span className="font-medium">訪問診療サポーター</span>
-                    <p className="text-sm text-text-muted mt-1">※ 現在募集しておりません</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
-                  <span className="font-medium">医療事務</span>
-                </div>
-                <p className="text-sm text-text-muted">
-                  ※ 事務職の詳しい募集要項はお問い合わせください。
-                </p>
+              {/* ドライバー */}
+              <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4 mb-4">
+                <span className="font-medium">ドライバー</span>
+                <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
+                  募集中
+                </span>
               </div>
+
+              {/* 医療事務 */}
+              <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
+                <span className="font-medium">医療事務</span>
+              </div>
+              <p className="text-sm text-text-muted mt-4">
+                ※ 詳しい募集要項はお問い合わせください。
+              </p>
             </section>
           </ScrollReveal>
 

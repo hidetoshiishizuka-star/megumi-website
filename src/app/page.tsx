@@ -63,6 +63,20 @@ export default function TopPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <NavCard
+              icon="🏠"
+              title="患者さま・ご家族の方"
+              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
+              href="/clinic/first-visit"
+              color="bg-navy-light"
+            />
+            <NavCard
+              icon="🤝"
+              title="医療機関・連携先の方"
+              description="患者さまのご紹介の手順、連携窓口のご案内です。"
+              href="/clinic/partnership"
+              color="bg-dawn-light"
+            />
+            <NavCard
               icon="🎓"
               title="見学・研修をお考えの方"
               description="緩和ケアの学びの場として、見学プログラム・研修をご案内します。"
@@ -77,25 +91,11 @@ export default function TopPage() {
               color="bg-sunrise-light"
             />
             <NavCard
-              icon="🤝"
-              title="医療機関・連携先の方"
-              description="患者さまのご紹介の手順、連携窓口のご案内です。"
-              href="/clinic/partnership"
-              color="bg-dawn-light"
-            />
-            <NavCard
               icon="🎤"
               title="講演・執筆を依頼したい方"
               description="院長の講演テーマ・実績、ご依頼方法をご案内します。"
               href="/concept/lecture"
               color="bg-twilight-light"
-            />
-            <NavCard
-              icon="🏠"
-              title="患者さま・ご家族の方"
-              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
-              href="/clinic/first-visit"
-              color="bg-navy-light"
             />
           </div>
         </section>

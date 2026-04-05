@@ -146,8 +146,8 @@ export const staffMembers: StaffMember[] = [
     societies: ["在宅医学会", "緩和医療学会"],
     hasPhoto: true,
     photoFile: "20171211.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.5,
+    photoPosition: "center 20%",
+    photoScale: 2.0,
   },
   {
     name: "門田庸子",
@@ -179,8 +179,8 @@ export const staffMembers: StaffMember[] = [
       "在宅医療と救急医学は表裏一体の関係。訪問診療患者の生活が全体的にレベルアップできることを目指します。",
     hasPhoto: true,
     photoFile: "20171212-4.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.5,
+    photoPosition: "center 20%",
+    photoScale: 2.0,
   },
   {
     name: "太田一樹",
@@ -255,8 +255,8 @@ export const staffMembers: StaffMember[] = [
       "大学病院で新型コロナウィルス感染症診療や肺がん診療に携わってまいりました。",
     hasPhoto: true,
     photoFile: "20230425-1.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.5,
+    photoPosition: "center 20%",
+    photoScale: 2.0,
   },
   {
     name: "岡田知也",

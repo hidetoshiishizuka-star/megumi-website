@@ -152,8 +152,9 @@ export default function RecruitPage() {
 
               {/* 医師 */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
-                <div className="bg-navy text-white px-6 py-4">
+                <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
                   <h3 className="font-bold text-lg">医師</h3>
+                  <span className="text-xs bg-sunrise px-3 py-1 rounded-full">募集中</span>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
                   <div className="grid grid-cols-[120px_1fr] gap-2">

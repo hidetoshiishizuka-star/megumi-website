@@ -109,8 +109,8 @@ export const staffMembers: StaffMember[] = [
       "どんな病気であったとしても、安心して自宅で生活を送るため、豊富な経験をもとにお手伝いいたします。",
     hasPhoto: true,
     photoFile: "doc-3.jpg",
-    photoPosition: "center 20%",
-    photoScale: 1.8,
+    photoPosition: "40% 15%",
+    photoScale: 2.5,
   },
   {
     name: "栗田瑛里子",

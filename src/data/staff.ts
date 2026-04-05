@@ -228,8 +228,8 @@ export const staffMembers: StaffMember[] = [
     interests: ["心臓病の地域リハビリテーション"],
     hasPhoto: true,
     photoFile: "20190814-4.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.5,
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "張秀一",

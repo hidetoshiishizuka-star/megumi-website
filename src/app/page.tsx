@@ -100,6 +100,25 @@ export default function TopPage() {
           </div>
         </section>
 
+        {/* お知らせ */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+          <h2 className="text-xl font-bold mb-4">お知らせ</h2>
+          <div className="divide-y divide-gray-200 bg-white rounded-2xl overflow-hidden border border-gray-100">
+            {[
+              { date: "2026.02.05", title: "2月オンライン・イベントのお知らせ" },
+              { date: "2025.12.17", title: "小澤院長メディア掲載・出演＜専門誌・医療関係＞を更新しました" },
+              { date: "2025.12.01", title: "医師/看護師採用情報を掲載しています" },
+            ].map((item, i) => (
+              <div key={i} className="px-6 py-4 hover:bg-gray-50 transition-colors">
+                <div className="flex items-baseline gap-4">
+                  <time className="text-xs text-text-muted shrink-0 tabular-nums">{item.date}</time>
+                  <p className="text-sm text-text-primary">{item.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* 採用バナー */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
           <Link

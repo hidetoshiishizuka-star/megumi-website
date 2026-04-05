@@ -196,7 +196,7 @@ export default function ServicesPage() {
               </a>
               <p className="mt-4">
                 <Link href="/clinic/contact" className="text-navy hover:text-navy-dark underline">
-                  メールでのお問い合わせはこちら
+                  お問い合わせフォームはこちら
                 </Link>
               </p>
             </section>

@@ -77,7 +77,7 @@ export default function ContactPage() {
           <ScrollReveal>
             <section className="mb-12">
               <h2 className="heading-section text-navy mb-6">
-                メールでのお問い合わせ
+                お問い合わせフォーム
               </h2>
               <form className="space-y-6">
                 <div>

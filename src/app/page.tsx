@@ -50,7 +50,7 @@ export default function TopPage() {
                 href="/clinic/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white/20 text-white border-2 border-white/40 px-8 py-4 rounded-lg font-medium hover:bg-white/30 transition-colors text-lg backdrop-blur-sm"
               >
-                メールでお問い合わせ
+                お問い合わせフォーム
               </Link>
             </div>
           </div>

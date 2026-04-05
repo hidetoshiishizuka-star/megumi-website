@@ -245,7 +245,7 @@ export default function TopPage() {
               <div>
                 <h3 className="font-medium text-navy-light mb-2">対応エリア</h3>
                 <p className="text-sm">{CLINIC_INFO.areas.join("・")}など</p>
-                <p className="text-sm mt-1">おおむね5km圏内（要相談可）</p>
+                <p className="text-sm mt-1">クリニックから5km以内</p>
               </div>
             </div>
           </div>

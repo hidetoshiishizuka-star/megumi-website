@@ -143,7 +143,7 @@ export default function ServicesPage() {
                   {CLINIC_INFO.areas.join("・")}
                 </p>
                 <p className="text-sm text-text-muted mt-2">
-                  ※ 上記エリア外の方もまずはご相談ください。
+                  ※ 対応エリアはクリニックから5km以内です。
                 </p>
               </div>
             </section>

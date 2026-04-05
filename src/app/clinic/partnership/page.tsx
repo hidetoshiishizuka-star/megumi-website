@@ -67,8 +67,8 @@ export default function PartnershipPage() {
             ))}
           </div>
           <p className="text-xs text-text-muted mt-4">
-            ※ 対応エリア：{CLINIC_INFO.areas.join("・")}（クリニックからおおむね5km圏内）。
-            エリア外の場合もまずはご相談ください。
+            ※ 対応エリア：{CLINIC_INFO.areas.join("・")}（クリニックから5km以内）。
+            対応エリアはクリニックから5km以内です。
           </p>
         </section>
 

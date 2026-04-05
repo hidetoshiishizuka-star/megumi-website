@@ -348,6 +348,13 @@ export const staffMembers: StaffMember[] = [
     hasPhoto: true,
     photoFile: "20230307.jpg",
   },
+  {
+    name: "村田英理子",
+    nameKana: "むらた えりこ",
+    role: "社会福祉士",
+    department: "地域連携室",
+    hasPhoto: false,
+  },
 
   // === グリーフサポート ===
   {

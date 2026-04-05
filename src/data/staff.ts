@@ -313,7 +313,7 @@ export const staffMembers: StaffMember[] = [
   {
     name: "島津綾子",
     nameKana: "しまづ あやこ",
-    role: "訪問診療サポーター",
+    role: "診療サポーター",
     department: "看護",
     description:
       "在宅医療に関わって5年。様々な問題に直面する患者さん、ご家族のお手伝いができればと思います。",
@@ -322,7 +322,7 @@ export const staffMembers: StaffMember[] = [
   {
     name: "伊東知子",
     nameKana: "いとう ともこ",
-    role: "訪問診療サポーター",
+    role: "診療サポーター",
     department: "看護",
     hasPhoto: true,
     photoFile: "20190814-3.jpg",

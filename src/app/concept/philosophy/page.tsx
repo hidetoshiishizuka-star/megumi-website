@@ -230,14 +230,14 @@ export default function PhilosophyPage() {
             <div className="rounded-2xl overflow-hidden aspect-[16/7] relative">
               <Image
                 src="/images/team-visit.jpg"
-                alt="チーム訪問の様子 — 医師・看護師・サポーターの3名体制"
+                alt="チーム訪問の様子 — 医師・看護師・ドライバーの3名体制"
                 fill
                 className="object-cover"
                 sizes="740px"
               />
             </div>
             <p className="text-xs text-text-muted text-center mt-2">
-              医師・看護師・サポーターの3名体制で訪問。チームで支える在宅医療を実践しています。
+              医師・看護師・ドライバーの3名体制で訪問。チームで支える在宅医療を実践しています。
             </p>
           </section>
         </ScrollReveal>

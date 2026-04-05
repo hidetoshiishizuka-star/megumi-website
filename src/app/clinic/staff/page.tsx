@@ -126,7 +126,7 @@ export default function StaffPage() {
                   日中の訪問は3名体制
                 </h2>
                 <p className="subheading text-white/80">
-                  医師・看護師・サポーターの3名でご自宅に伺います
+                  医師・看護師・ドライバーの3名でご自宅に伺います
                 </p>
               </div>
             </ScrollReveal>
@@ -135,7 +135,7 @@ export default function StaffPage() {
               {[
                 { title: "医師", desc: "診察・処方・治療方針の決定" },
                 { title: "看護師", desc: "処置・バイタル確認・療養相談" },
-                { title: "サポーター", desc: "運転・物品搬入・駐車場確保" },
+                { title: "ドライバー", desc: "運転・物品搬入・駐車場確保" },
               ].map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 100}>
                   <div className="rounded-3xl bg-white/5 p-8 text-center">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import ServiceAreaMap from "@/components/ui/ServiceAreaMap";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -132,16 +133,17 @@ export default function ServicesPage() {
           <ScrollReveal>
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">訪問対応エリア</h2>
-              <p className="text-text-secondary mb-4">
-                おおむねクリニックから5km圏内を中心に対応しています。
+              <p className="text-text-secondary mb-6">
+                クリニックから5km圏内を対象としています。
               </p>
-              <div className="bg-warm-gray rounded-xl p-6">
+              <ServiceAreaMap />
+              <div className="bg-warm-gray rounded-xl p-6 mt-6">
                 <p className="font-medium mb-2">主な対応地域</p>
                 <p className="text-text-secondary">
                   {CLINIC_INFO.areas.join("・")}
                 </p>
                 <p className="text-sm text-text-muted mt-2">
-                  ※ 5km以上の地域もご相談ください。
+                  ※ 上記エリア外の方もまずはご相談ください。
                 </p>
               </div>
             </section>

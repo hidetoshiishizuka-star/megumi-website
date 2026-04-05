@@ -117,6 +117,7 @@ export default function FeePage() {
             </svg>
             {CLINIC_INFO.tel}
           </a>
+          <p className="text-sm text-text-muted mt-3">受付：月〜金 9:00〜17:00</p>
         </section>
       </div>
     </>

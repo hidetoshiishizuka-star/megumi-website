@@ -58,8 +58,8 @@ export const staffMembers: StaffMember[] = [
       "川崎市出身。2004年横浜市立大学医学部卒業。神奈川県足柄上郡・北海道砂川市など、地域医師が少ない地域で18年間勤務。",
     hasPhoto: true,
     photoFile: "20230502.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.5,
+    photoPosition: "center 20%",
+    photoScale: 2.0,
   },
   {
     name: "津山梓",

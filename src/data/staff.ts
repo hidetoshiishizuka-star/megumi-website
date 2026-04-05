@@ -11,6 +11,7 @@ export interface StaffMember {
   hasPhoto: boolean;
   photoFile?: string; // /images/staff/ 内のファイル名
   photoPosition?: string; // object-position の値（例: "center 30%"）
+  photoScale?: number; // 拡大倍率（例: 1.8 = 180%）顔面積70%用
 }
 
 export const staffMembers: StaffMember[] = [
@@ -30,7 +31,8 @@ export const staffMembers: StaffMember[] = [
       "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
     hasPhoto: true,
     photoFile: "director-portrait.jpg",
-    photoPosition: "center 20%",
+    photoPosition: "center 15%",
+    photoScale: 1.8,
   },
   {
     name: "岩渕敬介",
@@ -56,6 +58,8 @@ export const staffMembers: StaffMember[] = [
       "川崎市出身。2004年横浜市立大学医学部卒業。神奈川県足柄上郡・北海道砂川市など、地域医師が少ない地域で18年間勤務。",
     hasPhoto: true,
     photoFile: "20230502.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "津山梓",
@@ -78,6 +82,8 @@ export const staffMembers: StaffMember[] = [
       "横浜市出身。山口大学卒業後、家族ぐるみで診れる家庭医を目指す。",
     hasPhoto: true,
     photoFile: "20171128.jpg",
+    photoPosition: "center 15%",
+    photoScale: 1.6,
   },
   {
     name: "今井洋史",
@@ -103,7 +109,8 @@ export const staffMembers: StaffMember[] = [
       "どんな病気であったとしても、安心して自宅で生活を送るため、豊富な経験をもとにお手伝いいたします。",
     hasPhoto: true,
     photoFile: "doc-3.jpg",
-    photoPosition: "center 25%",
+    photoPosition: "center 20%",
+    photoScale: 2.5,
   },
   {
     name: "栗田瑛里子",
@@ -139,6 +146,8 @@ export const staffMembers: StaffMember[] = [
     societies: ["在宅医学会", "緩和医療学会"],
     hasPhoto: true,
     photoFile: "20171211.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "門田庸子",
@@ -151,6 +160,8 @@ export const staffMembers: StaffMember[] = [
     interests: ["緩和ケア", "ペインクリニック", "アニマルセラピー"],
     hasPhoto: true,
     photoFile: "20171204.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "小菅宇之",
@@ -168,6 +179,8 @@ export const staffMembers: StaffMember[] = [
       "在宅医療と救急医学は表裏一体の関係。訪問診療患者の生活が全体的にレベルアップできることを目指します。",
     hasPhoto: true,
     photoFile: "20171212-4.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "太田一樹",
@@ -215,6 +228,8 @@ export const staffMembers: StaffMember[] = [
     interests: ["心臓病の地域リハビリテーション"],
     hasPhoto: true,
     photoFile: "20190814-4.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "張秀一",
@@ -240,6 +255,8 @@ export const staffMembers: StaffMember[] = [
       "大学病院で新型コロナウィルス感染症診療や肺がん診療に携わってまいりました。",
     hasPhoto: true,
     photoFile: "20230425-1.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "岡田知也",
@@ -278,6 +295,8 @@ export const staffMembers: StaffMember[] = [
       "地域に密着した在宅医療に興味を持ち、丁寧な対応を心がけ、患者さんやご家族が穏やかに過ごせるよう支援いたします。",
     hasPhoto: true,
     photoFile: "nurse-2.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "佐藤郁恵",
@@ -288,6 +307,8 @@ export const staffMembers: StaffMember[] = [
       "在宅医療に関わってきて、患者さん、ご家族が在宅で穏やかに過ごせるようサポートいたします。",
     hasPhoto: true,
     photoFile: "20190826.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "島津綾子",
@@ -305,6 +326,8 @@ export const staffMembers: StaffMember[] = [
     department: "看護",
     hasPhoto: true,
     photoFile: "20190814-3.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "久保田明日香",
@@ -315,6 +338,8 @@ export const staffMembers: StaffMember[] = [
       "先生方と患者さんの診察がスムーズに運ぶよう、お手伝いさせていただきます。",
     hasPhoto: true,
     photoFile: "20230306.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "片桐文",
@@ -325,6 +350,8 @@ export const staffMembers: StaffMember[] = [
       "患者さんとご家族の不安や苦痛に寄り添い、意思決定を支える看護師でありたいと思います。",
     hasPhoto: true,
     photoFile: "20231010.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
 
   // === 地域連携室 ===
@@ -337,6 +364,8 @@ export const staffMembers: StaffMember[] = [
       "訪問診療に関する相談とディグニティセラピーを担当。住み慣れた場所での過ごしをお手伝いいたします。",
     hasPhoto: true,
     photoFile: "regional-cooperation-1.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "野場久美子",
@@ -347,6 +376,8 @@ export const staffMembers: StaffMember[] = [
       "患者さんが在宅生活を安心して過ごせるよう、お手伝いできればと思います。お気持ちに寄り添い、一緒に考えます。",
     hasPhoto: true,
     photoFile: "20230307.jpg",
+    photoPosition: "center 15%",
+    photoScale: 2.0,
   },
   {
     name: "村田英理子",

@@ -46,7 +46,10 @@ export default function StaffPage() {
                               alt={staff.name}
                               fill
                               className="object-cover"
-                              style={{ objectPosition: staff.photoPosition || "center 20%" }}
+                              style={{
+                                objectPosition: staff.photoPosition || "center 20%",
+                                transform: `scale(${staff.photoScale || 1})`,
+                              }}
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />
                           ) : (

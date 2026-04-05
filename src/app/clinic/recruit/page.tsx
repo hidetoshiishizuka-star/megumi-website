@@ -139,9 +139,8 @@ export default function RecruitPage() {
 
               {/* 医師 */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
-                <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
+                <div className="bg-navy text-white px-6 py-4">
                   <h3 className="font-bold text-lg">医師</h3>
-                  <span className="text-xs bg-white/20 px-3 py-1 rounded-full">条件調整中</span>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
                   <div className="grid grid-cols-[120px_1fr] gap-2">
@@ -164,9 +163,6 @@ export default function RecruitPage() {
                     <span className="font-medium text-navy">その他</span>
                     <span className="text-text-secondary">学会参加支援あり（規定による）、電子カルテ使用（基本的なPCスキル要）</span>
                   </div>
-                  <p className="text-sm text-text-muted mt-2">
-                    ※ 勤務条件を調整中です。詳しくはお問い合わせください。
-                  </p>
                 </div>
               </div>
 

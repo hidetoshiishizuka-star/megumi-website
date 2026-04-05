@@ -8,7 +8,7 @@ export const CLINIC_INFO = {
   address: "〒246-0037 神奈川県横浜市瀬谷区橋戸2-4-3",
   tel: "045-300-6630",
   fax: "045-300-6631",
-  telPlanning: "045-442-6477",
+  telPlanning: "045-300-6630",
   hours: "月〜金 9:00〜17:00",
   established: 2006,
   areas: ["瀬谷区", "泉区", "旭区（一部）", "大和市"],

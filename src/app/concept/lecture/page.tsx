@@ -226,10 +226,10 @@ export default function LecturePage() {
                 まずはお気軽にお問い合わせください。
               </p>
               <a
-                href={`tel:${CLINIC_INFO.telPlanning}`}
+                href={`tel:${CLINIC_INFO.tel}`}
                 className="btn-pill bg-white text-navy font-medium hover:bg-white/90"
               >
-                {CLINIC_INFO.telPlanning}（企画運営係）
+                {CLINIC_INFO.tel}
               </a>
               <p className="text-white/70 text-xs mt-4">月〜金 9:00〜17:00</p>
             </ScrollReveal>

@@ -100,6 +100,23 @@ export default function TopPage() {
           </div>
         </section>
 
+        {/* 採用バナー */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
+          <Link
+            href="/clinic/recruit"
+            className="block bg-gradient-to-r from-navy to-twilight rounded-2xl p-8 text-white hover:shadow-xl transition-shadow group"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sunrise-light text-sm font-medium mb-1">Recruitment</p>
+                <h3 className="text-xl font-bold mb-1">一緒に働く仲間を募集しています</h3>
+                <p className="text-white/70 text-sm">ドライバー募集中。在宅医療チームの一員として働きませんか。</p>
+              </div>
+              <span className="text-white/50 text-3xl group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </Link>
+        </section>
+
         {/* Strengths */}
         <section className="bg-warm-gray py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">

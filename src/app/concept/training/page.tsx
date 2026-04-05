@@ -103,10 +103,10 @@ export default function TrainingPage() {
                 お電話またはお問い合わせフォームよりお申し込みください
               </p>
               <a
-                href={`tel:${CLINIC_INFO.telPlanning}`}
+                href={`tel:${CLINIC_INFO.tel}`}
                 className="btn-pill btn-pill-primary inline-flex items-center gap-2"
               >
-                {CLINIC_INFO.telPlanning}（企画運営係）
+                {CLINIC_INFO.tel}
               </a>
               <p className="text-sm text-text-muted mt-3">月〜金 9:00〜17:00</p>
             </section>

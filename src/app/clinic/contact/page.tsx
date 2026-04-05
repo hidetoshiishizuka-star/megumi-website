@@ -59,14 +59,12 @@ export default function ContactPage() {
                   <div className="bg-navy-light rounded-xl p-6">
                     <h3 className="font-bold mb-2">研修・講演・取材について</h3>
                     <a
-                      href={`tel:${CLINIC_INFO.telPlanning}`}
+                      href={`tel:${CLINIC_INFO.tel}`}
                       className="text-2xl font-bold text-navy hover:text-navy-dark"
                     >
-                      {CLINIC_INFO.telPlanning}
+                      {CLINIC_INFO.tel}
                     </a>
                     <p className="text-sm text-text-muted mt-2">
-                      企画運営係
-                      <br />
                       月〜金 9:00〜17:00
                     </p>
                   </div>

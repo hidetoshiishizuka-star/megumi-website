@@ -241,6 +241,13 @@ export const staffMembers: StaffMember[] = [
     hasPhoto: true,
     photoFile: "20230425-1.jpg",
   },
+  {
+    name: "岡田知也",
+    nameKana: "おかだ ともや",
+    role: "非常勤医師",
+    department: "医師",
+    hasPhoto: false,
+  },
 
   // === 看護 ===
   {

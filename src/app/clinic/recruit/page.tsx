@@ -108,15 +108,48 @@ export default function RecruitPage() {
             </section>
           </ScrollReveal>
 
-          {/* 募集職種 — 医師 */}
+          {/* ユニバーサル・ホスピスマインド */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="bg-gradient-to-r from-twilight-light to-dawn-light rounded-2xl p-8">
+                <p className="text-dawn text-sm font-medium mb-2">Philosophy</p>
+                <h2 className="heading-section text-navy mb-4">ユニバーサル・ホスピスマインド</h2>
+                <p className="text-text-secondary leading-relaxed mb-4">
+                  めぐみ在宅クリニックでは「治す医療」ではなく「支える医療」を実践しています。
+                  解決が難しい苦しみを抱えたとしても、関わりを通して穏やかさを支えることができる
+                  ——そのための対人援助の思想「ユニバーサル・ホスピスマインド」を全スタッフで共有しています。
+                </p>
+                <p className="text-text-secondary leading-relaxed mb-6">
+                  入職後はロールプレイやケース振り返り、シャドーイングを通じて体系的に学べる環境を整えています。
+                </p>
+                <Link
+                  href="/concept/philosophy"
+                  className="btn-pill btn-pill-secondary inline-flex"
+                >
+                  ユニバーサル・ホスピスマインドについて →
+                </Link>
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* 募集職種 */}
           <ScrollReveal>
             <section className="mb-12">
               <h2 className="heading-section text-navy mb-6">募集職種</h2>
 
+              {/* ドライバー */}
+              <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4 mb-4">
+                <span className="font-medium">ドライバー</span>
+                <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
+                  募集中
+                </span>
+              </div>
+
+              {/* 常勤医師 */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
                 <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
-                  <h3 className="font-bold text-lg">常勤医師・非常勤医師</h3>
-                  <span className="text-xs bg-sunrise px-3 py-1 rounded-full">積極採用</span>
+                  <h3 className="font-bold text-lg">常勤医師</h3>
+                  <span className="text-xs bg-white/20 px-3 py-1 rounded-full">条件調整中</span>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
                   <div className="grid grid-cols-[120px_1fr] gap-2">
@@ -125,11 +158,11 @@ export default function RecruitPage() {
                   </div>
                   <div className="grid grid-cols-[120px_1fr] gap-2">
                     <span className="font-medium text-navy">勤務時間</span>
-                    <span className="text-text-secondary">月〜金 8:30〜17:30（非常勤は曜日・時短応相談）</span>
+                    <span className="text-text-secondary">月〜金 8:30〜17:30</span>
                   </div>
                   <div className="grid grid-cols-[120px_1fr] gap-2">
                     <span className="font-medium text-navy">勤務日数</span>
-                    <span className="text-text-secondary">常勤：週3日以上 ／ 非常勤：週1日〜</span>
+                    <span className="text-text-secondary">週3日以上</span>
                   </div>
                   <div className="grid grid-cols-[120px_1fr] gap-2">
                     <span className="font-medium text-navy">給与</span>
@@ -139,14 +172,16 @@ export default function RecruitPage() {
                     <span className="font-medium text-navy">その他</span>
                     <span className="text-text-secondary">学会参加支援あり（規定による）、電子カルテ使用（基本的なPCスキル要）</span>
                   </div>
+                  <p className="text-sm text-text-muted mt-2">
+                    ※ 勤務条件を調整中です。詳しくはお問い合わせください。
+                  </p>
                 </div>
               </div>
 
               {/* 看護師 */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden mb-6">
-                <div className="bg-navy text-white px-6 py-4 flex items-center justify-between">
+                <div className="bg-navy text-white px-6 py-4">
                   <h3 className="font-bold text-lg">看護師</h3>
-                  <span className="text-xs bg-sunrise px-3 py-1 rounded-full">募集中</span>
                 </div>
                 <div className="px-6 py-6 space-y-4 text-sm">
                   <div className="grid grid-cols-[120px_1fr] gap-2">
@@ -165,26 +200,23 @@ export default function RecruitPage() {
                     <span className="font-medium text-navy">給与</span>
                     <span className="text-text-secondary">経験・スキルに応じて決定</span>
                   </div>
+                  <p className="text-sm text-text-muted mt-2">※ 現在募集しておりません</p>
                 </div>
               </div>
 
-              {/* サポーター / 事務 */}
+              {/* 訪問診療サポーター / 医療事務 */}
               <div className="space-y-4">
-                {[
-                  { title: "訪問診療サポーター/ドライバー", tag: "募集中" },
-                  { title: "医療事務", tag: "" },
-                ].map((job) => (
-                  <div key={job.title} className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
-                    <span className="font-medium">{job.title}</span>
-                    {job.tag && (
-                      <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
-                        {job.tag}
-                      </span>
-                    )}
+                <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
+                  <div>
+                    <span className="font-medium">訪問診療サポーター</span>
+                    <p className="text-sm text-text-muted mt-1">※ 現在募集しておりません</p>
                   </div>
-                ))}
+                </div>
+                <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4">
+                  <span className="font-medium">医療事務</span>
+                </div>
                 <p className="text-sm text-text-muted">
-                  ※ サポーター・事務職の詳しい募集要項はお問い合わせください。
+                  ※ 事務職の詳しい募集要項はお問い合わせください。
                 </p>
               </div>
             </section>
@@ -230,15 +262,15 @@ export default function RecruitPage() {
             <section className="bg-navy-light rounded-2xl p-8 text-center">
               <h2 className="heading-section text-navy mb-3">ご応募・お問い合わせ</h2>
               <p className="text-text-secondary mb-6 text-sm">
-                履歴書・職務経歴書をメールにてお送りください。お電話でのお問い合わせも承ります。
+                お問い合わせフォームまたはお電話にてご連絡ください。
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:megumi_zaitaku@miracle.ocn.ne.jp"
+                <Link
+                  href="/clinic/contact?type=recruit"
                   className="btn-pill btn-pill-primary inline-flex items-center justify-center gap-2"
                 >
-                  メールで応募する
-                </a>
+                  応募フォームへ
+                </Link>
                 <a
                   href={`tel:${CLINIC_INFO.tel}`}
                   className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"

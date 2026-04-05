@@ -1,133 +1,158 @@
 "use client";
 
 export default function ServiceAreaMap() {
-  // 瀬谷区橋戸2-4-3を中心とした5km圏内の区配置
-  // 実際の地理的位置関係に基づいて配置
-  const areas = [
-    // 対応エリア（圏内）
-    { name: "瀬谷区", x: 50, y: 50, inRange: true, note: "クリニック所在地" },
-    { name: "泉区", x: 62, y: 68, inRange: true, note: "" },
-    { name: "旭区", x: 62, y: 35, inRange: "partial" as const, note: "一部" },
-    { name: "大和市", x: 30, y: 48, inRange: true, note: "" },
-    // 圏外（参考表示）
-    { name: "緑区", x: 75, y: 22, inRange: false, note: "" },
-    { name: "戸塚区", x: 75, y: 75, inRange: false, note: "" },
-    { name: "栄区", x: 82, y: 85, inRange: false, note: "" },
-    { name: "港南区", x: 80, y: 60, inRange: false, note: "" },
-    { name: "藤沢市", x: 42, y: 82, inRange: false, note: "" },
-    { name: "海老名市", x: 18, y: 35, inRange: false, note: "" },
-    { name: "綾瀬市", x: 25, y: 65, inRange: false, note: "" },
-    { name: "座間市", x: 15, y: 50, inRange: false, note: "" },
-  ];
-
   return (
-    <div className="relative w-full max-w-[600px] mx-auto">
-      <svg viewBox="0 0 100 100" className="w-full h-auto">
+    <div className="relative w-full max-w-[640px] mx-auto">
+      <svg viewBox="0 0 500 500" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
         {/* 背景 */}
-        <rect x="0" y="0" width="100" height="100" fill="#f5f5f7" rx="4" />
+        <rect x="0" y="0" width="500" height="500" fill="#f8f9fa" rx="16" />
 
-        {/* 5km圏の円 */}
+        {/* === 区・市の塗り分け === */}
+        {/* 大和市（対応エリア） */}
+        <path
+          d="M 40 100 L 40 400 L 185 420 L 195 380 L 200 340 L 195 280 L 200 220 L 195 160 L 190 120 L 170 80 Z"
+          fill="#E8EEF8" stroke="#b0bec5" strokeWidth="1.5"
+        />
+        {/* 瀬谷区（クリニック所在地） */}
+        <path
+          d="M 190 120 L 195 160 L 200 220 L 195 280 L 200 340 L 195 380 L 300 400 L 310 340 L 305 280 L 310 220 L 305 170 L 290 120 Z"
+          fill="#D5E0F0" stroke="#b0bec5" strokeWidth="1.5"
+        />
+        {/* 旭区（一部対応） */}
+        <path
+          d="M 290 120 L 305 170 L 310 220 L 305 280 L 310 340 L 300 400 L 300 340 L 410 300 L 430 230 L 420 160 L 380 100 L 320 80 Z"
+          fill="#EDF1F6" stroke="#b0bec5" strokeWidth="1.5"
+        />
+        {/* 泉区（対応エリア） */}
+        <path
+          d="M 195 380 L 185 420 L 200 470 L 340 470 L 370 430 L 340 380 L 300 400 Z"
+          fill="#E8EEF8" stroke="#b0bec5" strokeWidth="1.5"
+        />
+        {/* 戸塚区（圏外） */}
+        <path
+          d="M 300 400 L 340 380 L 370 430 L 410 400 L 460 430 L 460 470 L 340 470 Z"
+          fill="#f0f0f0" stroke="#b0bec5" strokeWidth="1"
+        />
+        {/* 緑区（圏外） */}
+        <path
+          d="M 380 100 L 420 160 L 430 230 L 460 220 L 460 80 L 400 60 Z"
+          fill="#f0f0f0" stroke="#b0bec5" strokeWidth="1"
+        />
+        {/* 港南区付近（圏外） */}
+        <path
+          d="M 410 300 L 430 230 L 460 220 L 460 340 L 460 430 L 410 400 L 370 430 L 340 380 Z"
+          fill="#f0f0f0" stroke="#b0bec5" strokeWidth="1"
+        />
+        {/* 綾瀬市・座間市方面（圏外） */}
+        <path
+          d="M 40 100 L 170 80 L 190 120 L 290 120 L 320 80 L 380 100 L 400 60 L 460 80 L 460 30 L 0 30 L 0 100 Z"
+          fill="#f0f0f0" stroke="#b0bec5" strokeWidth="1"
+        />
+        {/* 藤沢市方面（圏外） */}
+        <path
+          d="M 40 400 L 185 420 L 200 470 L 0 470 L 0 400 Z"
+          fill="#f0f0f0" stroke="#b0bec5" strokeWidth="1"
+        />
+
+        {/* === 区界線（はっきりと） === */}
+        {/* 瀬谷区−大和市の境界 */}
+        <path
+          d="M 190 120 L 195 160 L 200 220 L 195 280 L 200 340 L 195 380"
+          fill="none" stroke="#78909c" strokeWidth="2"
+        />
+        {/* 瀬谷区−旭区の境界 */}
+        <path
+          d="M 290 120 L 305 170 L 310 220 L 305 280 L 310 340 L 300 400"
+          fill="none" stroke="#78909c" strokeWidth="2"
+        />
+        {/* 瀬谷区−泉区の境界 */}
+        <path
+          d="M 195 380 L 300 400"
+          fill="none" stroke="#78909c" strokeWidth="2"
+        />
+        {/* 大和市−泉区の境界 */}
+        <path
+          d="M 185 420 L 195 380"
+          fill="none" stroke="#78909c" strokeWidth="1.5"
+        />
+        {/* 泉区−戸塚区の境界 */}
+        <path
+          d="M 300 400 L 340 380 L 370 430"
+          fill="none" stroke="#78909c" strokeWidth="1.5"
+        />
+        {/* 旭区−緑区の境界 */}
+        <path
+          d="M 380 100 L 420 160 L 430 230"
+          fill="none" stroke="#78909c" strokeWidth="1.5"
+        />
+        {/* 旭区−港南区等の境界 */}
+        <path
+          d="M 430 230 L 410 300 L 340 380"
+          fill="none" stroke="#78909c" strokeWidth="1.5"
+        />
+
+        {/* === 5km圏の円 === */}
         <circle
-          cx="50" cy="50" r="28"
+          cx="248" cy="270" r="145"
           fill="none"
-          stroke="#4A6AAE"
-          strokeWidth="0.4"
-          strokeDasharray="1.5 0.8"
-          opacity="0.5"
-        />
-        <circle
-          cx="50" cy="50" r="28"
-          fill="#4A6AAE"
-          opacity="0.06"
+          stroke="#E87430"
+          strokeWidth="2"
+          strokeDasharray="8 4"
+          opacity="0.7"
         />
 
-        {/* 3km圏の円（参考） */}
+        {/* === 3km圏の円 === */}
         <circle
-          cx="50" cy="50" r="17"
+          cx="248" cy="270" r="87"
           fill="none"
-          stroke="#4A6AAE"
-          strokeWidth="0.3"
-          strokeDasharray="1 0.8"
-          opacity="0.3"
+          stroke="#E87430"
+          strokeWidth="1.2"
+          strokeDasharray="5 4"
+          opacity="0.4"
         />
 
-        {/* 区界線（概略） */}
-        {/* 瀬谷区と泉区の境界 */}
-        <path d="M 42 58 Q 55 56 68 60" fill="none" stroke="#86868b" strokeWidth="0.3" opacity="0.4" />
-        {/* 瀬谷区と旭区の境界 */}
-        <path d="M 45 38 Q 58 42 72 38" fill="none" stroke="#86868b" strokeWidth="0.3" opacity="0.4" />
-        {/* 瀬谷区と大和市の境界 */}
-        <path d="M 38 35 Q 40 48 38 65" fill="none" stroke="#86868b" strokeWidth="0.3" opacity="0.4" />
-        {/* 旭区と緑区の境界 */}
-        <path d="M 68 20 Q 72 28 75 35" fill="none" stroke="#86868b" strokeWidth="0.2" opacity="0.3" />
+        {/* === クリニック位置 === */}
+        <circle cx="248" cy="270" r="6" fill="#192044" />
+        <circle cx="248" cy="270" r="10" fill="none" stroke="#E87430" strokeWidth="2" />
 
-        {/* クリニック位置マーカー */}
-        <circle cx="50" cy="50" r="1.5" fill="#192044" />
-        <circle cx="50" cy="50" r="2.5" fill="none" stroke="#192044" strokeWidth="0.4" />
-        <circle cx="50" cy="50" r="4" fill="none" stroke="#E87430" strokeWidth="0.3" opacity="0.6" />
+        {/* === 区・市名ラベル === */}
+        {/* 瀬谷区 */}
+        <text x="248" y="215" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#192044">瀬谷区</text>
 
-        {/* 距離ラベル */}
-        <text x="50" y="33.5" textAnchor="middle" fontSize="2.2" fill="#4A6AAE" opacity="0.6">3km</text>
-        <text x="50" y="22.5" textAnchor="middle" fontSize="2.2" fill="#4A6AAE" opacity="0.6">5km</text>
+        {/* 大和市 */}
+        <text x="120" y="260" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#192044">大和市</text>
 
-        {/* 区名ラベル */}
-        {areas.map((area) => {
-          const isIn = area.inRange === true;
-          const isPartial = area.inRange === "partial";
-          const isOut = area.inRange === false;
+        {/* 泉区 */}
+        <text x="260" y="435" textAnchor="middle" fontSize="18" fontWeight="bold" fill="#192044">泉区</text>
 
-          return (
-            <g key={area.name}>
-              {/* 背景の丸角四角 */}
-              {(isIn || isPartial) && (
-                <rect
-                  x={area.x - (area.name.length * 1.5 + 1)}
-                  y={area.y - 2.8}
-                  width={area.name.length * 3 + 2}
-                  height={area.note ? 7.5 : 5.5}
-                  rx="1.2"
-                  fill={isIn ? "#192044" : "#4A6AAE"}
-                  opacity={isIn ? 0.9 : 0.7}
-                />
-              )}
-              <text
-                x={area.x}
-                y={area.y}
-                textAnchor="middle"
-                fontSize={isOut ? "2.5" : "3"}
-                fontWeight={isOut ? "normal" : "bold"}
-                fill={isOut ? "#86868b" : "#ffffff"}
-              >
-                {area.name}
-              </text>
-              {area.note && (
-                <text
-                  x={area.x}
-                  y={area.y + 3.2}
-                  textAnchor="middle"
-                  fontSize="2"
-                  fill={isOut ? "#86868b" : "#ffffff"}
-                  opacity={0.8}
-                >
-                  {area.note}
-                </text>
-              )}
-            </g>
-          );
-        })}
+        {/* 旭区 */}
+        <text x="355" y="230" textAnchor="middle" fontSize="16" fill="#4A6AAE" fontWeight="bold">旭区</text>
+        <text x="355" y="248" textAnchor="middle" fontSize="11" fill="#4A6AAE">（一部）</text>
+
+        {/* 圏外エリア名 */}
+        <text x="440" y="170" textAnchor="middle" fontSize="13" fill="#aaa">緑区</text>
+        <text x="430" y="360" textAnchor="middle" fontSize="13" fill="#aaa">港南区</text>
+        <text x="430" y="450" textAnchor="middle" fontSize="13" fill="#aaa">戸塚区</text>
+        <text x="100" y="455" textAnchor="middle" fontSize="13" fill="#aaa">藤沢市</text>
+        <text x="80" y="95" textAnchor="middle" fontSize="13" fill="#aaa">座間市</text>
+        <text x="230" y="75" textAnchor="middle" fontSize="13" fill="#aaa">綾瀬市</text>
 
         {/* クリニック名 */}
-        <text x="50" y="46" textAnchor="middle" fontSize="1.8" fill="#E87430" fontWeight="bold">
-          めぐみ在宅クリニック
-        </text>
+        <text x="248" y="298" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#E87430">めぐみ在宅クリニック</text>
 
-        {/* 凡例 */}
-        <rect x="3" y="90" width="3" height="2" rx="0.5" fill="#192044" opacity="0.9" />
-        <text x="7.5" y="91.8" fontSize="2" fill="#4A5068">対応エリア</text>
-        <rect x="22" y="90" width="3" height="2" rx="0.5" fill="#4A6AAE" opacity="0.7" />
-        <text x="26.5" y="91.8" fontSize="2" fill="#4A5068">一部対応</text>
-        <line x1="45" y1="91" x2="49" y2="91" stroke="#4A6AAE" strokeWidth="0.4" strokeDasharray="1.5 0.8" opacity="0.5" />
-        <text x="50.5" y="91.8" fontSize="2" fill="#4A5068">5km圏</text>
+        {/* 距離ラベル */}
+        <text x="248" y="178" textAnchor="middle" fontSize="11" fill="#E87430" opacity="0.7">5km</text>
+        <text x="248" y="198" textAnchor="middle" fontSize="10" fill="#E87430" opacity="0.5">3km</text>
+
+        {/* === 凡例 === */}
+        <rect x="20" y="475" width="12" height="10" rx="2" fill="#D5E0F0" stroke="#78909c" strokeWidth="0.5" />
+        <text x="36" y="484" fontSize="10" fill="#4A5068">対応エリア</text>
+        <rect x="110" y="475" width="12" height="10" rx="2" fill="#EDF1F6" stroke="#78909c" strokeWidth="0.5" />
+        <text x="126" y="484" fontSize="10" fill="#4A5068">一部対応</text>
+        <line x1="200" y1="480" x2="220" y2="480" stroke="#E87430" strokeWidth="2" strokeDasharray="5 3" opacity="0.7" />
+        <text x="225" y="484" fontSize="10" fill="#4A5068">5km圏</text>
+        <circle cx="290" cy="480" r="4" fill="#192044" />
+        <text x="298" y="484" fontSize="10" fill="#4A5068">クリニック</text>
       </svg>
     </div>
   );

@@ -45,7 +45,7 @@ export default function FirstVisitPage() {
           <ScrollReveal>
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">
-                こんな方が在宅医療の対象です
+                このような方々が在宅医療の対象です
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[

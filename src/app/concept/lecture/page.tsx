@@ -9,6 +9,30 @@ import { books } from "@/data/books";
 import { mediaEntries } from "@/data/media";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
+function Linkify({ text }: { text: string }) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const parts = text.split(urlRegex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        urlRegex.test(part) ? (
+          <a
+            key={i}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-twilight underline hover:text-navy break-all"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
 export default function LecturePage() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -189,9 +213,13 @@ export default function LecturePage() {
                       {lecture.date.slice(0, 20)}
                     </span>
                     <div>
-                      <p className="text-navy font-medium text-[15px] leading-snug">{lecture.title}</p>
+                      <p className="text-navy font-medium text-[15px] leading-snug">
+                        <Linkify text={lecture.title} />
+                      </p>
                       {lecture.location && (
-                        <p className="text-text-muted text-xs mt-0.5">{lecture.location.slice(0, 60)}</p>
+                        <p className="text-text-muted text-xs mt-0.5">
+                          <Linkify text={lecture.location} />
+                        </p>
                       )}
                     </div>
                   </div>

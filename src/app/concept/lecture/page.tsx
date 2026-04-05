@@ -253,13 +253,12 @@ export default function LecturePage() {
                 費用・日程等はご相談の上で決定いたします。
                 まずはお気軽にお問い合わせください。
               </p>
-              <a
-                href={`tel:${CLINIC_INFO.tel}`}
-                className="btn-pill bg-white text-navy font-medium hover:bg-white/90"
+              <Link
+                href="/clinic/contact?type=lecture"
+                className="btn-pill bg-white text-navy font-medium hover:bg-white/90 inline-flex items-center justify-center gap-2"
               >
-                {CLINIC_INFO.tel}
-              </a>
-              <p className="text-white/70 text-xs mt-4">月〜金 9:00〜17:00</p>
+                お問い合わせフォームへ
+              </Link>
             </ScrollReveal>
           </div>
         </section>

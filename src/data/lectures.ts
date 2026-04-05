@@ -39,7 +39,7 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2019,
  "date": "2019年9月25日（水）終了",
- "title": "福島県立医科大学附属病院　患者サポートセンター主催　講演会 「人生の最終段階 あなたの意思を実現してくれるのは誰でしょうか？」 　https://www.fmu.ac.jp/home/renkei/document/pdf/h31kouen/0925kansapo.pdf",
+ "title": "福島県立医科大学附属病院　患者サポートセンター主催　講演会 「人生の最終段階 あなたの意思を実現してくれるのは誰でしょうか？」",
  "location": "福島県立医科大学　講堂 （福島市光が丘１番地）"
  },
  {
@@ -87,7 +87,7 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2019,
  "date": "2019年1月22日（火）終了",
- "title": "神奈川区サービス事業所連絡協議会研修会 https://www.facebook.com/events/118982272373352/",
+ "title": "神奈川区サービス事業所連絡協議会研修会",
  "location": "神奈川公会堂　ホール 横浜市神奈川区富家町１－３"
  },
  {
@@ -141,13 +141,13 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2018,
  "date": "3月30日（金）終了",
- "title": "よみうりカルチャー横浜「在宅緩和ケアとは」 http://www.ync.ne.jp/yokohama/kouza/201804-18110007.htm",
+ "title": "よみうりカルチャー横浜「在宅緩和ケアとは」",
  "location": "横浜新都市ビル（そごう）９階"
  },
  {
  "year": 2018,
  "date": "3月13日（火）終了",
- "title": "五井平和財団　第51回講演会 https://www.goipeace.or.jp/work/lecture/",
+ "title": "五井平和財団　第51回講演会",
  "location": "いきいきプラザ一番町　カスケードホール 東京都千代田区一番町１２　B１階"
  },
  {
@@ -183,7 +183,7 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2018,
  "date": "2018年7月11日（水）終了",
- "title": "住まい×介護×医療展　２０１８in東京 「在宅看取り援助の実際」 https://www.koureisha-jutaku.com/exhibition-2018/",
+ "title": "住まい×介護×医療展　２０１８in東京 「在宅看取り援助の実際」",
  "location": "東京ビッグサイト　東３ホール　A会場"
  },
  {
@@ -195,13 +195,13 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2018,
  "date": "2018年12月16日（日）終了",
- "title": "広島市安芸区在宅医療・介護連携推進事業　多職種連携研修会 https://www.pref.hiroshima.lg.jp/uploaded/attachment/329608.pdf",
+ "title": "広島市安芸区在宅医療・介護連携推進事業　多職種連携研修会",
  "location": "ホテル広島ガーデンパレス　２階　鳳凰の間 広島市東区光町１－１５"
  },
  {
  "year": 2018,
  "date": "2018年12月15日（土）終了",
- "title": "第12回 岡山県がん診療連携拠点病院　公開講座 http://www.okayama-ganshinryo.jp/seminar/event.shtml",
+ "title": "第12回 岡山県がん診療連携拠点病院　公開講座",
  "location": "三木記念ホール（岡山県医師会館２階） 岡山市北区駅元町19番2号"
  },
  {
@@ -237,7 +237,7 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2017,
  "date": "8月19日（土）　終了",
- "title": "第11回ホスピス・緩和ケアの夏期セミナーin仙台 https://www.facebook.com/hospice.kanwa.sendai/",
+ "title": "第11回ホスピス・緩和ケアの夏期セミナーin仙台",
  "location": "仙台市医師会館 仙台市若林区舟丁６４－１２"
  },
  {
@@ -351,7 +351,7 @@ export const lectureRecords: LectureRecord[] = [
  {
  "year": 2017,
  "date": "12月10日（日）終了",
- "title": "在宅医療・介護推進シンポジウム http://www.city.kitakyushu.lg.jp/files/000785034.pdf",
+ "title": "在宅医療・介護推進シンポジウム",
  "location": "北九州国際会議場"
  },
  {
@@ -514,7 +514,7 @@ export const lectureRecords: LectureRecord[] = [
  "year": 2016,
  "date": "2016年1月14日（木）15：00～17：00 ⇒終了",
  "title": "わが家で暮らしたい！ ～人生の最期を穏やかに過ごすために～",
- "location": "メロンディアあざみ野 http://www.mitsubishielectric-union.or.jp/access.html"
+ "location": "メロンディアあざみ野"
  },
  {
  "year": 2016,
@@ -592,7 +592,7 @@ export const lectureRecords: LectureRecord[] = [
  "year": 2015,
  "date": "2015年11月22日(日)　15：00～18：00 ⇒終了",
  "title": "第3回東東京メディカルラーニングバー",
- "location": "ザ サードカフェ 品川シーズンテラス店 http://standard-coffee.jp/"
+ "location": "ザ サードカフェ 品川シーズンテラス店"
  },
  {
  "year": 2015,

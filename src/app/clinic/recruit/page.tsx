@@ -39,6 +39,13 @@ export default function RecruitPage() {
                   ホスピスマインドを体系的に学び、地域に持ち帰って伝えていく。
                   そんな志を持った方をお待ちしています。
                 </p>
+                <p className="text-text-secondary leading-relaxed mb-4">
+                  人生の目的は幸せになること。
+                  解決できる苦しみは他の医療でも提供できますが、解決が難しい苦しみを抱えた人が幸せになれる援助を学ぶ機会は少ないのが現状です。
+                </p>
+                <p className="text-text-secondary leading-relaxed mb-4">
+                  ACPは差し控えの医療でもあります。具体的に患者や家族との関わりを学べる場としてもご検討ください。
+                </p>
                 <p className="text-sm text-text-muted">院長 小澤竹俊</p>
               </div>
             </section>

@@ -31,8 +31,8 @@ export const staffMembers: StaffMember[] = [
       "苦しんでいる人は、自分の苦しみをわかってくれる人がいると嬉しい。その信念のもと、在宅緩和ケアに取り組んでいます。",
     hasPhoto: true,
     photoFile: "director-portrait.jpg",
-    photoPosition: "center 25%",
-    photoScale: 1.4,
+    photoPosition: "center 20%",
+    photoScale: 1.8,
   },
   {
     name: "岩渕敬介",

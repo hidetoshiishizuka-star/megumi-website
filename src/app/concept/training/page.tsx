@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
 
@@ -100,15 +101,14 @@ export default function TrainingPage() {
             <section className="bg-navy-light rounded-2xl p-8 text-center">
               <h2 className="heading-section text-navy mb-3">見学・研修のお申し込み</h2>
               <p className="text-text-secondary mb-6 text-sm">
-                お電話またはお問い合わせフォームよりお申し込みください
+                下記フォームよりお申し込みください
               </p>
-              <a
-                href={`tel:${CLINIC_INFO.tel}`}
+              <Link
+                href="/clinic/contact?type=training"
                 className="btn-pill btn-pill-primary inline-flex items-center gap-2"
               >
-                {CLINIC_INFO.tel}
-              </a>
-              <p className="text-sm text-text-muted mt-3">月〜金 9:00〜17:00</p>
+                お申し込みフォームへ
+              </Link>
             </section>
           </ScrollReveal>
         </div>

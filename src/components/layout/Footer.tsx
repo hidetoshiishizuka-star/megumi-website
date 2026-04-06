@@ -32,9 +32,9 @@ export default function Footer() {
             </p>
             <p className="text-sm">
               <span className="text-gray-400">研修・講演・取材：</span>
-              <a href={`tel:${CLINIC_INFO.tel}`} className="text-white hover:text-navy-light">
-                {CLINIC_INFO.tel}
-              </a>
+              <Link href="/clinic/contact" className="text-white hover:text-navy-light underline">
+                お問い合わせフォーム
+              </Link>
             </p>
             <p className="text-sm mt-2 text-gray-400">
               電話受付：{CLINIC_INFO.hours}

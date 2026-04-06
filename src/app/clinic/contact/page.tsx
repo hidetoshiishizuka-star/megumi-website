@@ -58,14 +58,8 @@ export default function ContactPage() {
                 <ScrollReveal delay={80}>
                   <div className="bg-navy-light rounded-xl p-6">
                     <h3 className="font-bold mb-2">研修・講演・取材について</h3>
-                    <a
-                      href={`tel:${CLINIC_INFO.tel}`}
-                      className="text-2xl font-bold text-navy hover:text-navy-dark"
-                    >
-                      {CLINIC_INFO.tel}
-                    </a>
-                    <p className="text-sm text-text-muted mt-2">
-                      月〜金 9:00〜17:00
+                    <p className="text-sm text-text-secondary mb-3">
+                      下記のお問い合わせフォームよりご連絡ください。
                     </p>
                   </div>
                 </ScrollReveal>

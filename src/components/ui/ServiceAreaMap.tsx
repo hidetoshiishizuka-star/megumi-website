@@ -57,16 +57,32 @@ export default function ServiceAreaMap() {
 
       // クリニックマーカー
       const icon = L.divIcon({
-        html: `<div style="
-          width: 28px; height: 28px;
-          background: #192044;
-          border: 3px solid #E87430;
-          border-radius: 50%;
-          display: flex; align-items: center; justify-content: center;
-          color: white; font-size: 14px; font-weight: bold;
-        ">+</div>`,
-        iconSize: [28, 28],
-        iconAnchor: [14, 14],
+        html: `<div style="position:relative;width:36px;height:48px;">
+          <div style="
+            width:36px;height:36px;
+            background:linear-gradient(135deg,#E87430 0%,#CC6020 100%);
+            border-radius:50% 50% 50% 0;
+            transform:rotate(-45deg);
+            box-shadow:2px 2px 8px rgba(0,0,0,0.3);
+            display:flex;align-items:center;justify-content:center;
+          ">
+            <div style="
+              transform:rotate(45deg);
+              color:white;font-size:18px;font-weight:bold;
+              text-shadow:0 1px 2px rgba(0,0,0,0.3);
+            ">+</div>
+          </div>
+          <div style="
+            position:absolute;bottom:0;left:50%;
+            transform:translateX(-50%);
+            width:8px;height:8px;
+            background:rgba(0,0,0,0.2);
+            border-radius:50%;
+            filter:blur(2px);
+          "></div>
+        </div>`,
+        iconSize: [36, 48],
+        iconAnchor: [18, 48],
         className: "",
       });
 

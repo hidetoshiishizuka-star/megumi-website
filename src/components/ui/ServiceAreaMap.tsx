@@ -32,7 +32,7 @@ export default function ServiceAreaMap() {
 
       const map = L.map(mapRef.current, {
         center: [CLINIC_LAT, CLINIC_LNG],
-        zoom: 13,
+        zoom: 12,
         zoomControl: true,
         scrollWheelZoom: false,
       });

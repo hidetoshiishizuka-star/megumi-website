@@ -5,7 +5,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import MedicalSupervision from "@/components/ui/MedicalSupervision";
 import { CLINIC_INFO } from "@/lib/constants";
-import { staffMembers } from "@/data/staff";
+import { staffMembers as fallbackStaff } from "@/data/staff";
+import { getStaffList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "はじめての方へ｜瀬谷区の訪問診療の流れ",
@@ -13,7 +14,9 @@ export const metadata: Metadata = {
     "在宅医療・訪問診療をご検討中の方へ。横浜市瀬谷区のめぐみ在宅クリニックが訪問診療開始までの流れをわかりやすくご説明します。瀬谷駅徒歩9分。まずはお電話ください。",
 };
 
-export default function FirstVisitPage() {
+export default async function FirstVisitPage() {
+  const cmsStaff = await getStaffList().catch(() => []);
+  const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;
   return (
     <>
         <Breadcrumb items={[
@@ -189,9 +192,9 @@ export default function FirstVisitPage() {
                       className="bg-warm-gray rounded-xl overflow-hidden flex gap-4 p-4"
                     >
                       <div className="w-20 h-20 rounded-full overflow-hidden relative shrink-0">
-                        {staff.photoFile ? (
+                        {(staff.photoFile || staff.photoUrl) ? (
                           <Image
-                            src={`/images/staff/${staff.photoFile}`}
+                            src={staff.photoUrl || `/images/staff/${staff.photoFile}`}
                             alt={staff.name}
                             fill
                             className="object-cover"

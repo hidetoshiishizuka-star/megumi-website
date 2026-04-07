@@ -4,7 +4,8 @@ import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
-import { staffMembers } from "@/data/staff";
+import { staffMembers as fallbackStaff } from "@/data/staff";
+import { getStaffList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "医療機関・介護事業所の方へ｜瀬谷区の在宅医療",
@@ -12,7 +13,9 @@ export const metadata: Metadata = {
     "医療機関・介護事業所・ケアマネジャーの皆さまへ。横浜市瀬谷区のめぐみ在宅クリニックへの患者さまご紹介・地域連携のご案内。24時間365日対応。",
 };
 
-export default function PartnershipPage() {
+export default async function PartnershipPage() {
+  const cmsStaff = await getStaffList().catch(() => []);
+  const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;
   return (
     <>
       <Breadcrumb items={[
@@ -240,9 +243,9 @@ export default function PartnershipPage() {
                   className="bg-warm-gray rounded-xl overflow-hidden flex gap-4 p-4"
                 >
                   <div className="w-20 h-20 rounded-full overflow-hidden relative shrink-0">
-                    {staff.photoFile ? (
+                    {(staff.photoFile || staff.photoUrl) ? (
                       <Image
-                        src={`/images/staff/${staff.photoFile}`}
+                        src={staff.photoUrl || `/images/staff/${staff.photoFile}`}
                         alt={staff.name}
                         fill
                         className="object-cover"

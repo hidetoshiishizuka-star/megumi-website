@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { CLINIC_INFO } from "@/lib/constants";
+import { getNewsList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "めぐみ在宅クリニック｜瀬谷区の在宅医療・訪問診療",
@@ -11,7 +12,15 @@ export const metadata: Metadata = {
     "横浜市瀬谷区の在宅医療・訪問診療クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。通院が困難な方のご自宅に医師が訪問します。まずはお電話ください。",
 };
 
-export default function TopPage() {
+const fallbackNews: { date: string; title: string; link?: string }[] = [
+  { date: "2026.02.05", title: "2月オンライン・イベントのお知らせ" },
+  { date: "2025.12.17", title: "小澤院長メディア掲載・出演＜専門誌・医療関係＞を更新しました" },
+  { date: "2025.12.01", title: "医師/看護師採用情報を掲載しています" },
+];
+
+export default async function TopPage() {
+  const cmsNews = await getNewsList(5).catch(() => []);
+  const newsItems = cmsNews.length > 0 ? cmsNews : fallbackNews;
   return (
     <>
       <Header variant="top" />
@@ -108,15 +117,17 @@ export default function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
           <h2 className="text-xl font-bold mb-4">お知らせ</h2>
           <div className="divide-y divide-gray-200 bg-white rounded-2xl overflow-hidden border border-gray-100">
-            {[
-              { date: "2026.02.05", title: "2月オンライン・イベントのお知らせ" },
-              { date: "2025.12.17", title: "小澤院長メディア掲載・出演＜専門誌・医療関係＞を更新しました" },
-              { date: "2025.12.01", title: "医師/看護師採用情報を掲載しています" },
-            ].map((item, i) => (
+            {newsItems.map((item, i) => (
               <div key={i} className="px-6 py-4 hover:bg-gray-50 transition-colors">
                 <div className="flex items-baseline gap-4">
                   <time className="text-xs text-text-muted shrink-0 tabular-nums">{item.date}</time>
-                  <p className="text-sm text-text-primary">{item.title}</p>
+                  {item.link ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-text-primary hover:text-navy transition-colors">
+                      {item.title}
+                    </a>
+                  ) : (
+                    <p className="text-sm text-text-primary">{item.title}</p>
+                  )}
                 </div>
               </div>
             ))}

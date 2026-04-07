@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { staffMembers, departments } from "@/data/staff";
+import { staffMembers as fallbackStaff, departments } from "@/data/staff";
+import { getStaffList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "スタッフ紹介｜めぐみ在宅クリニック瀬谷区",
@@ -10,7 +11,9 @@ export const metadata: Metadata = {
     "めぐみ在宅クリニックの医師・看護師・スタッフをご紹介。緩和医療専門医の院長を中心に、チームで在宅医療を支えています。横浜市瀬谷区。",
 };
 
-export default function StaffPage() {
+export default async function StaffPage() {
+  const cmsStaff = await getStaffList().catch(() => []);
+  const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;
   return (
     <>
         <Breadcrumb items={[
@@ -46,9 +49,9 @@ export default function StaffPage() {
                       <div className="rounded-3xl bg-warm-gray overflow-hidden">
                         {/* 写真エリア */}
                         <div className="aspect-square bg-gray-100 flex items-center justify-center relative overflow-hidden">
-                          {staff.photoFile ? (
+                          {(staff.photoFile || staff.photoUrl) ? (
                             <Image
-                              src={`/images/staff/${staff.photoFile}`}
+                              src={staff.photoUrl || `/images/staff/${staff.photoFile}`}
                               alt={staff.name}
                               fill
                               className="object-cover"

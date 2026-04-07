@@ -10,6 +10,7 @@ export interface StaffMember {
   description?: string;
   hasPhoto: boolean;
   photoFile?: string; // /images/staff/ 内のファイル名
+  photoUrl?: string; // microCMS CDN の完全URL
   photoPosition?: string; // object-position の値（例: "center 30%"）
   photoScale?: number; // 拡大倍率（例: 1.8 = 180%）顔面積70%用
 }

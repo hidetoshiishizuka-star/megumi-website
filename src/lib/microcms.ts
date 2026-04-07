@@ -1,4 +1,5 @@
 import { createClient } from "microcms-js-sdk";
+import type { StaffMember } from "@/data/staff";
 
 const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 const apiKey = process.env.MICROCMS_API_KEY ?? "";
@@ -7,15 +8,6 @@ export const client =
   serviceDomain && apiKey
     ? createClient({ serviceDomain, apiKey })
     : null;
-
-function getClient() {
-  if (!client) {
-    throw new Error(
-      "microCMS client is not configured. Set MICROCMS_SERVICE_DOMAIN and MICROCMS_API_KEY."
-    );
-  }
-  return client;
-}
 
 // ========================================
 // 型定義
@@ -38,8 +30,8 @@ export type Staff = {
 export type NewsItem = {
   id: string;
   title: string;
-  body: string;
-  category: string[];
+  tag?: string;
+  link?: string;
   publishedAt: string;
 };
 
@@ -73,24 +65,66 @@ export type Book = {
 // API関数
 // ========================================
 
-export async function getStaffList() {
-  const data = await getClient().getList<Staff>({
+/**
+ * microCMS staff APIからスタッフ一覧を取得し、StaffMember型にマッピング
+ * microCMS未設定時は空配列を返す（呼び出し側でフォールバック処理）
+ */
+export async function getStaffList(): Promise<StaffMember[]> {
+  if (!client) return [];
+  const data = await client.getList<Record<string, unknown>>({
     endpoint: "staff",
     queries: { orders: "order", limit: 50 },
   });
-  return data.contents;
+  return data.contents.map((item) => ({
+    name: (item.name as string) || "",
+    nameKana: (item.nameKana as string) || undefined,
+    role: (item.role as string) || "",
+    department:
+      ((item.department as string) as StaffMember["department"]) || "マネジメント",
+    specialty: (item.specialty as string) || undefined,
+    certifications: item.certifications
+      ? (item.certifications as string).split(" / ").filter(Boolean)
+      : undefined,
+    societies: item.societies
+      ? (item.societies as string).split(" / ").filter(Boolean)
+      : undefined,
+    interests: item.interests
+      ? (item.interests as string).split(" / ").filter(Boolean)
+      : undefined,
+    description: (item.message as string) || undefined,
+    hasPhoto: !!(item.photo as Record<string, unknown> | undefined),
+    photoFile: undefined,
+    // microCMS CDNの完全URLをphotoUrlに格納
+    photoUrl:
+      (item.photo as { url?: string } | undefined)?.url || undefined,
+  }));
 }
 
-export async function getNewsList(limit = 10) {
-  const data = await getClient().getList<NewsItem>({
+/**
+ * microCMS news APIからお知らせ一覧を取得
+ * microCMS未設定時は空配列を返す
+ */
+export async function getNewsList(
+  limit = 10
+): Promise<
+  { date: string; title: string; category?: string; link?: string }[]
+> {
+  if (!client) return [];
+  const data = await client.getList<NewsItem>({
     endpoint: "news",
     queries: { orders: "-publishedAt", limit },
   });
-  return data.contents;
+  return data.contents.map((item) => ({
+    date: formatDate(item.publishedAt),
+    title: item.title,
+    category: item.tag || undefined,
+    link: item.link || undefined,
+  }));
 }
 
 export async function getBlogPosts(limit = 10) {
-  const data = await getClient().getList<BlogPost>({
+  if (!client) return [];
+  const data = await client.getList<BlogPost>({
     endpoint: "blog",
     queries: { orders: "-publishedAt", limit },
   });
@@ -98,16 +132,31 @@ export async function getBlogPosts(limit = 10) {
 }
 
 export async function getBlogPost(id: string) {
-  return getClient().get<BlogPost>({
+  if (!client) return null;
+  return client.get<BlogPost>({
     endpoint: "blog",
     contentId: id,
   });
 }
 
 export async function getBooks() {
-  const data = await getClient().getList<Book>({
+  if (!client) return [];
+  const data = await client.getList<Book>({
     endpoint: "books",
     queries: { orders: "-publishedDate", limit: 50 },
   });
   return data.contents;
+}
+
+// ========================================
+// ユーティリティ
+// ========================================
+
+/** ISO日付文字列を "YYYY.MM.DD" 形式に変換 */
+function formatDate(isoDate: string): string {
+  const d = new Date(isoDate);
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}.${m}.${day}`;
 }

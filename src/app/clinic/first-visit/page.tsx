@@ -141,7 +141,7 @@ export default function FirstVisitPage() {
           <ScrollReveal>
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">
-                お電話時にお伝えいただきたいこと
+                お電話時に<br />お伝えいただきたいこと
               </h2>
               <div className="bg-warm-gray rounded-xl p-6 space-y-3 text-sm text-text-secondary">
                 <p>① ご本人・ご家族のお名前・ご連絡先</p>

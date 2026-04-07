@@ -132,7 +132,7 @@ export default function StaffPage() {
                   日中の訪問は3名体制
                 </h2>
                 <p className="subheading text-white/80">
-                  医師・看護師（またはサポーター）・ドライバーの3名でご自宅に伺います
+                  医師・看護師（またはサポーター）・ドライバーの<br />3名でご自宅に伺います
                 </p>
               </div>
             </ScrollReveal>

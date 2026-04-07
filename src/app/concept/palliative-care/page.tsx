@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import MedicalSupervision from "@/components/ui/MedicalSupervision";
 
 export const metadata: Metadata = {
   title: "緩和ケアとは｜瀬谷区の在宅緩和ケア",
@@ -11,6 +13,11 @@ export const metadata: Metadata = {
 export default function PalliativeCarePage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "院長・コンセプト", href: "/concept/about" },
+        { label: "緩和ケアとは" },
+      ]} />
       <PageHeader
         title="緩和ケアとは"
         subtitle="苦しむ人の傍らに寄り添い、その人らしく生きることを支える"
@@ -102,7 +109,9 @@ export default function PalliativeCarePage() {
           </div>
         </section>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <MedicalSupervision lastUpdated="2026-04-07" />
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <Link
             href="/concept/training"
             className="inline-flex items-center justify-center gap-2 bg-navy text-white px-8 py-4 rounded-lg font-medium hover:bg-navy-dark transition-colors"

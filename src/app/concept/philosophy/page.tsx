@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import MedicalSupervision from "@/components/ui/MedicalSupervision";
 
 export const metadata: Metadata = {
   title: "ユニバーサル・ホスピスマインド｜めぐみ在宅",
@@ -12,6 +14,11 @@ export const metadata: Metadata = {
 export default function PhilosophyPage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "院長・コンセプト", href: "/concept/about" },
+        { label: "ユニバーサル・ホスピスマインド" },
+      ]} />
       {/* Hero */}
       <section className="gradient-twilight text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -437,9 +444,11 @@ export default function PhilosophyPage() {
           </section>
         </ScrollReveal>
 
+        <MedicalSupervision lastUpdated="2026-04-07" />
+
         {/* CTA */}
         <ScrollReveal>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-12">
             <Link
               href="/concept/about"
               className="btn-pill btn-pill-secondary inline-flex items-center justify-center gap-2"

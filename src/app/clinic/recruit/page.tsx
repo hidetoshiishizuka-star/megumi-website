@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -13,6 +14,10 @@ export const metadata: Metadata = {
 export default function RecruitPage() {
   return (
     <>
+        <Breadcrumb items={[
+          { label: "ホーム", href: "/" },
+          { label: "採用情報" },
+        ]} />
         {/* Hero */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
 export default function GriefPage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "ご遺族の方へ" },
+      ]} />
       <PageHeader
         title="ご遺族の方へ"
         subtitle="大切な方を亡くされた後も、私たちはそばにいます"

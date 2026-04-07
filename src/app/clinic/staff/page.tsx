@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { staffMembers, departments } from "@/data/staff";
 
 export const metadata: Metadata = {
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function StaffPage() {
   return (
     <>
+        <Breadcrumb items={[
+          { label: "ホーム", href: "/" },
+          { label: "スタッフ紹介" },
+        ]} />
         {/* ヒーロー */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function FeePage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "費用について" },
+      ]} />
       <PageHeader
         title="費用について"
         subtitle="訪問診療にかかる費用の目安をご案内します"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import BooksClient from "./BooksClient";
 
 export const metadata: Metadata = {
@@ -8,5 +9,14 @@ export const metadata: Metadata = {
 };
 
 export default function BooksPage() {
-  return <BooksClient />;
+  return (
+    <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "院長・コンセプト", href: "/concept/about" },
+        { label: "著書・メディア掲載" },
+      ]} />
+      <BooksClient />
+    </>
+  );
 }

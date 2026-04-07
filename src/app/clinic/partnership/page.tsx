@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 import { staffMembers } from "@/data/staff";
 
@@ -14,6 +15,10 @@ export const metadata: Metadata = {
 export default function PartnershipPage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "医療機関・介護事業所の方へ" },
+      ]} />
       <PageHeader
         title="医療機関・介護事業所の皆さまへ"
         subtitle="患者さまのご紹介・地域連携のご案内"

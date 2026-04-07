@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import ServiceAreaMap from "@/components/ui/ServiceAreaMap";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import MedicalSupervision from "@/components/ui/MedicalSupervision";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -13,6 +15,10 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+        <Breadcrumb items={[
+          { label: "ホーム", href: "/" },
+          { label: "診療案内" },
+        ]} />
         {/* Hero */}
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
@@ -175,9 +181,11 @@ export default function ServicesPage() {
             </section>
           </ScrollReveal>
 
+          <MedicalSupervision lastUpdated="2026-04-07" />
+
           {/* CTA */}
           <ScrollReveal>
-            <section className="bg-navy-light rounded-2xl p-8 text-center">
+            <section className="bg-navy-light rounded-2xl p-8 text-center mt-16">
               <h2 className="heading-section text-navy mb-3">
                 訪問診療のご相談はお気軽にお電話ください
               </h2>

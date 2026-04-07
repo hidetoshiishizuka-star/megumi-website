@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -47,6 +48,10 @@ const faqs = [
 export default function FaqPage() {
   return (
     <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "よくあるご質問" },
+      ]} />
       <PageHeader
         title="よくあるご質問"
         subtitle="在宅医療・訪問診療についてよくいただくご質問にお答えします"

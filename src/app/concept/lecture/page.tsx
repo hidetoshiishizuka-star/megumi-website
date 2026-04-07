@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import LectureClient from "./LectureClient";
 
 export const metadata: Metadata = {
@@ -8,5 +9,14 @@ export const metadata: Metadata = {
 };
 
 export default function LecturePage() {
-  return <LectureClient />;
+  return (
+    <>
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "院長・コンセプト", href: "/concept/about" },
+        { label: "講演・執筆依頼" },
+      ]} />
+      <LectureClient />
+    </>
+  );
 }

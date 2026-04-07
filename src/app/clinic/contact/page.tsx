@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -12,6 +13,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+        <Breadcrumb items={[
+          { label: "ホーム", href: "/" },
+          { label: "お問い合わせ" },
+        ]} />
         {/* Hero */}
         <section className="gradient-dawn text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">

@@ -2,7 +2,7 @@ export interface StaffMember {
   name: string;
   nameKana?: string;
   role: string;
-  department: "医師" | "看護" | "看護・サポーター" | "地域連携室" | "グリーフサポート";
+  department: "マネジメント" | "医師" | "看護・サポーター" | "地域連携室" | "グリーフサポート";
   specialty?: string;
   certifications?: string[];
   societies?: string[];
@@ -15,12 +15,12 @@ export interface StaffMember {
 }
 
 export const staffMembers: StaffMember[] = [
-  // === 医師 ===
+  // === マネジメント ===
   {
     name: "小澤竹俊",
     nameKana: "おざわ たけとし",
     role: "院長",
-    department: "医師",
+    department: "マネジメント",
     specialty: "緩和医療・総合内科",
     certifications: [
       "緩和医療専門医（日本緩和医療学会）",
@@ -38,7 +38,7 @@ export const staffMembers: StaffMember[] = [
     name: "岩渕敬介",
     nameKana: "いわぶち けいすけ",
     role: "副院長",
-    department: "医師",
+    department: "マネジメント",
     specialty: "総合診療",
     certifications: [
       "日本内科学会認定内科医",
@@ -61,6 +61,15 @@ export const staffMembers: StaffMember[] = [
     photoPosition: "center center",
     photoScale: 1,
   },
+  {
+    name: "石塚美絵",
+    nameKana: "いしづか みえ",
+    role: "事務長",
+    department: "マネジメント",
+    hasPhoto: false,
+  },
+
+  // === 医師 ===
   {
     name: "津山梓",
     nameKana: "つやま あずさ",
@@ -372,4 +381,4 @@ export const staffMembers: StaffMember[] = [
   },
 ];
 
-export const departments = ["医師", "看護・サポーター", "地域連携室", "グリーフサポート"] as const;
+export const departments = ["マネジメント", "医師", "看護・サポーター", "地域連携室", "グリーフサポート"] as const;

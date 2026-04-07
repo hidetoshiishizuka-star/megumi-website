@@ -14,8 +14,8 @@ export const CLINIC_INFO = {
   areas: ["瀬谷区", "泉区", "旭区（一部）", "大和市"],
   access: "相鉄線 瀬谷駅より徒歩9分",
   outpatient: {
-    general: "月曜 午前（受付 8:45〜12:00）",
-    palliative: "木曜 午前（予約制）",
+    general: "月曜・木曜 午前（予約制・受付 8:45〜12:00）",
+    palliative: "緩和ケア外来",
   },
 } as const;
 

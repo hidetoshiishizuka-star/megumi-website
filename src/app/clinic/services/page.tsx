@@ -113,7 +113,7 @@ export default function ServicesPage() {
                   <tbody>
                     <tr className="border-b">
                       <td className="px-4 py-3 font-medium">9:00〜12:00</td>
-                      <td className="px-4 py-3 text-center text-navy font-medium">一般</td>
+                      <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
                       <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>

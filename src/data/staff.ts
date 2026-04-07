@@ -243,6 +243,28 @@ export const staffMembers: StaffMember[] = [
     photoScale: 1,
   },
 
+  {
+    name: "米村るい",
+    nameKana: "よねむら るい",
+    role: "非常勤医師",
+    department: "医師",
+    hasPhoto: false,
+  },
+  {
+    name: "郷佳洋",
+    nameKana: "ごう よしひろ",
+    role: "非常勤医師",
+    department: "医師",
+    hasPhoto: false,
+  },
+  {
+    name: "本田有正",
+    nameKana: "ほんだ ありまさ",
+    role: "非常勤医師",
+    department: "医師",
+    hasPhoto: false,
+  },
+
   // === 看護 ===
   {
     name: "洲濱良子",
@@ -329,6 +351,28 @@ export const staffMembers: StaffMember[] = [
     photoFile: "20231010.jpg",
     photoPosition: "center center",
     photoScale: 1,
+  },
+
+  {
+    name: "清田美香",
+    nameKana: "きよた みか",
+    role: "診療サポーター",
+    department: "看護・サポーター",
+    hasPhoto: false,
+  },
+  {
+    name: "吉川美和",
+    nameKana: "よしかわ みわ",
+    role: "看護師",
+    department: "看護・サポーター",
+    hasPhoto: false,
+  },
+  {
+    name: "出津多恵",
+    nameKana: "いでづ たえ",
+    role: "看護師",
+    department: "看護・サポーター",
+    hasPhoto: false,
   },
 
   // === 地域連携室 ===

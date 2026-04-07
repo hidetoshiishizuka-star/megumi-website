@@ -64,8 +64,8 @@ export default function StaffPage() {
                               <Image
                                 src="/images/usagi-original.png"
                                 alt="めぐみうさぎ"
-                                width={80}
-                                height={80}
+                                width={160}
+                                height={160}
                                 className="object-contain opacity-30"
                               />
                             </div>

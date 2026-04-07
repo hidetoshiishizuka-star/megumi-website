@@ -33,11 +33,8 @@ export default function TopPage() {
               横浜市瀬谷区 在宅医療・訪問診療
             </p>
             <h1 className="heading-hero text-white mb-6">
-              通院が困難な方に、
-              <br className="hidden sm:block" />
-              住み慣れたご自宅で
-              <br className="hidden sm:block" />
-              継続した医療を届けたい。
+              <span className="sm:hidden">通院が困難な方に、<br />住み慣れたご自宅で<br />継続した医療を<br />届けたい。</span>
+              <span className="hidden sm:inline">通院が困難な方に、<br />住み慣れたご自宅で<br />継続した医療を届けたい。</span>
             </h1>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
               めぐみ在宅クリニックは2006年の開院以来、通院が困難な方やご家族への支援に努めています。

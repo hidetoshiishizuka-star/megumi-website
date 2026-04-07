@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import ContactForm from "@/components/ui/ContactForm";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -79,96 +80,7 @@ export default function ContactPage() {
               <h2 className="heading-section text-navy mb-6">
                 お問い合わせフォーム
               </h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    ご用件 <span className="text-sunrise">*</span>
-                  </label>
-                  <select className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy">
-                    <option value="">選択してください</option>
-                    <option>診療について</option>
-                    <option>求人に関する問い合わせ</option>
-                    <option>研修会・勉強会について</option>
-                    <option>在宅医療・緩和ケアを学びたい</option>
-                    <option>講演依頼</option>
-                    <option>取材の申し込み</option>
-                    <option>その他</option>
-                  </select>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      お名前 <span className="text-sunrise">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
-                      placeholder="例：山田 太郎"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      フリガナ <span className="text-sunrise">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
-                      placeholder="例：ヤマダ タロウ"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      メールアドレス <span className="text-sunrise">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      電話番号 <span className="text-sunrise">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    お問い合わせ内容 <span className="text-sunrise">*</span>
-                  </label>
-                  <textarea
-                    rows={6}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy"
-                  />
-                </div>
-
-                <div className="flex items-start gap-3 bg-warm-gray rounded-lg p-4">
-                  <input type="checkbox" id="privacy" required className="mt-1" />
-                  <label htmlFor="privacy" className="text-sm text-text-secondary">
-                    <Link href="/privacy" className="text-navy underline hover:text-navy-dark" target="_blank">
-                      プライバシーポリシー
-                    </Link>
-                    に同意の上、送信してください。
-                  </label>
-                </div>
-
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="btn-pill btn-pill-primary"
-                  >
-                    送信する
-                  </button>
-                </div>
-              </form>
+              <ContactForm />
             </section>
           </ScrollReveal>
 

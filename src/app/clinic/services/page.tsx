@@ -83,16 +83,17 @@ export default function ServicesPage() {
               <h2 className="heading-section text-navy mb-6">診療内容</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "定期訪問診療（月2回または月1回など、症状によって異なります）",
-                  "緊急往診（24時間365日対応）",
-                  "疼痛管理・緩和ケア",
-                  "看取り・ACP（アドバンス・ケア・プランニング）",
-                  "介護認定意見書・各種診断書",
-                  "特定健診（予約制）",
+                  { title: "定期訪問診療", sub: "月2回または月1回（症状により異なります）" },
+                  { title: "緊急往診", sub: "24時間365日対応" },
+                  { title: "疼痛管理・緩和ケア", sub: "痛みの緩和と心身の支え" },
+                  { title: "看取り・ACP", sub: "意思決定支援と穏やかな最期" },
+                  { title: "介護認定意見書・各種診断書", sub: "書類作成に対応" },
+                  { title: "特定健診", sub: "予約制" },
                 ].map((item, i) => (
-                  <ScrollReveal key={item} delay={i * 80}>
-                    <div className="bg-navy-light rounded-lg px-4 py-3 text-sm">
-                      {item}
+                  <ScrollReveal key={item.title} delay={i * 80}>
+                    <div className="bg-navy-light rounded-lg px-5 py-4">
+                      <p className="text-sm font-medium">{item.title}</p>
+                      <p className="text-xs text-text-muted mt-0.5">{item.sub}</p>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -187,7 +188,7 @@ export default function ServicesPage() {
           <ScrollReveal>
             <section className="bg-navy-light rounded-2xl p-8 text-center mt-16">
               <h2 className="heading-section text-navy mb-3">
-                訪問診療のご相談はお気軽にお電話ください
+                訪問診療のご相談は<br />お気軽にお電話ください
               </h2>
               <p className="text-text-secondary mb-2">
                 新規ご相談：月〜金 9:00〜17:00

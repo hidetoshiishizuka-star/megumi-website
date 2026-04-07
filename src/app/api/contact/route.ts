@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "megumi_zaitaku@miracle.ocn.ne.jp";
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "noreply@megumizaitaku.jp";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
 function getResend() {
   const key = process.env.RESEND_API_KEY;

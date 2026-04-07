@@ -4,8 +4,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "お問い合わせ",
-  description: "めぐみ在宅クリニックへのお問い合わせ。診療・採用・研修・講演に関するご連絡先。",
+  title: "お問い合わせ｜めぐみ在宅クリニック瀬谷区",
+  description:
+    "めぐみ在宅クリニックへのお問い合わせ。訪問診療・採用・見学研修・講演依頼など。横浜市瀬谷区橋戸2-4-3。電話045-300-6630。フォームからもお問い合わせいただけます。",
 };
 
 export default function ContactPage() {

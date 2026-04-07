@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { CLINIC_INFO } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "めぐみ在宅クリニック｜瀬谷区の在宅医療・訪問診療",
+  description:
+    "横浜市瀬谷区の在宅医療・訪問診療クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。通院が困難な方のご自宅に医師が訪問します。まずはお電話ください。",
+};
 
 export default function TopPage() {
   return (

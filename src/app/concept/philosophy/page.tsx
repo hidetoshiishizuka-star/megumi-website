@@ -4,9 +4,9 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "ユニバーサル・ホスピスマインド",
+  title: "ユニバーサル・ホスピスマインド｜めぐみ在宅",
   description:
-    "めぐみ在宅クリニックのコンセプト「ユニバーサル・ホスピスマインド」。治す医療ではなく支える医療。",
+    "めぐみ在宅クリニックのコンセプト「ユニバーサル・ホスピスマインド」。治す医療ではなく支える医療。苦しみの中でも穏やかさを支える対人援助の思想をご紹介します。",
 };
 
 export default function PhilosophyPage() {

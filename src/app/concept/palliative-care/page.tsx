@@ -3,8 +3,9 @@ import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 
 export const metadata: Metadata = {
-  title: "緩和ケアとは",
-  description: "めぐみ在宅クリニックが実践する緩和ケア・ホスピスマインドについて。",
+  title: "緩和ケアとは｜瀬谷区の在宅緩和ケア",
+  description:
+    "緩和ケアとは何か。めぐみ在宅クリニックが実践するホスピスマインドに基づく在宅緩和ケアをご紹介。横浜市瀬谷区で緩和医療専門医が対応します。",
 };
 
 export default function PalliativeCarePage() {

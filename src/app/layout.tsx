@@ -4,10 +4,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_NAME,
+    default: "めぐみ在宅クリニック｜瀬谷区の在宅医療・訪問診療・往診",
     template: `%s | ${SITE_NAME}`,
   },
-  description: SITE_DESCRIPTION,
+  description: "横浜市瀬谷区の在宅医療・訪問診療・往診クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。三ツ境駅周辺も対応。通院が困難な方のご自宅に医師が訪問します。",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     title: SITE_NAME,

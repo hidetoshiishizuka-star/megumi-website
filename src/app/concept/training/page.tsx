@@ -4,8 +4,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "見学・研修プログラム",
-  description: "めぐみ在宅クリニックの見学・研修プログラム。緩和ケア・ホスピスマインドを学ぶ。",
+  title: "見学・研修｜在宅緩和ケアを学ぶ｜瀬谷区",
+  description:
+    "めぐみ在宅クリニックの見学・研修プログラム。在宅緩和ケア・ホスピスマインドを実践的に学べます。医師・看護師・医学生対象。お申し込みはフォームから。",
 };
 
 export default function TrainingPage() {

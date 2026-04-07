@@ -6,8 +6,9 @@ import { CLINIC_INFO } from "@/lib/constants";
 import { staffMembers } from "@/data/staff";
 
 export const metadata: Metadata = {
-  title: "はじめての方へ",
-  description: "在宅医療とは何か、訪問診療を開始するまでの流れをご説明します。",
+  title: "はじめての方へ｜瀬谷区の訪問診療の流れ",
+  description:
+    "在宅医療・訪問診療をご検討中の方へ。横浜市瀬谷区のめぐみ在宅クリニックが訪問診療開始までの流れをわかりやすくご説明します。瀬谷駅徒歩9分。まずはお電話ください。",
 };
 
 export default function FirstVisitPage() {

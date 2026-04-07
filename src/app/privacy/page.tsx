@@ -4,8 +4,9 @@ import Footer from "@/components/layout/Footer";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー",
-  description: "めぐみ在宅クリニックの個人情報保護方針（プライバシーポリシー）。",
+  title: "プライバシーポリシー｜めぐみ在宅クリニック",
+  description:
+    "めぐみ在宅クリニックのプライバシーポリシー。個人情報の取り扱いについて。横浜市瀬谷区橋戸2-4-3。",
 };
 
 export default function PrivacyPage() {

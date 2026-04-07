@@ -3,9 +3,9 @@ import PageHeader from "@/components/ui/PageHeader";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "ご遺族の方へ（グリーフサポート）",
+  title: "グリーフサポート｜ご遺族の方へ｜瀬谷区",
   description:
-    "大切な方を亡くされたご家族へ。めぐみ在宅クリニックのグリーフサポートのご案内。",
+    "めぐみ在宅クリニックのグリーフサポート。わかちあいの会・個別面談でご遺族を支えます。横浜市瀬谷区。費用無料。お気軽にご相談ください。",
 };
 
 export default function GriefPage() {

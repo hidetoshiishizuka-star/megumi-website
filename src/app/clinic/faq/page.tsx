@@ -4,8 +4,9 @@ import PageHeader from "@/components/ui/PageHeader";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "よくあるご質問",
-  description: "めぐみ在宅クリニックへの在宅医療・訪問診療に関するよくあるご質問。",
+  title: "よくあるご質問｜瀬谷区の在宅医療・訪問診療",
+  description:
+    "めぐみ在宅クリニックへのよくあるご質問。訪問診療の費用・夜間対応・看取り・エリアなど。横浜市瀬谷区で24時間365日の在宅医療を提供しています。",
 };
 
 const faqs = [

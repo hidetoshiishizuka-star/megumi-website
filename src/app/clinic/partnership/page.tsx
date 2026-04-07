@@ -6,9 +6,9 @@ import { CLINIC_INFO } from "@/lib/constants";
 import { staffMembers } from "@/data/staff";
 
 export const metadata: Metadata = {
-  title: "医療機関・介護事業所の皆さまへ",
+  title: "医療機関・介護事業所の方へ｜瀬谷区の在宅医療",
   description:
-    "医療機関・介護事業所・ケアマネジャーの皆さまへ。患者さまのご紹介・地域連携のご案内。",
+    "医療機関・介護事業所・ケアマネジャーの皆さまへ。横浜市瀬谷区のめぐみ在宅クリニックへの患者さまご紹介・地域連携のご案内。24時間365日対応。",
 };
 
 export default function PartnershipPage() {

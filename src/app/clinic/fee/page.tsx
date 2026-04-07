@@ -4,8 +4,9 @@ import PageHeader from "@/components/ui/PageHeader";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "費用について",
-  description: "めぐみ在宅クリニックの訪問診療にかかる費用の目安をご案内します。",
+  title: "費用について｜瀬谷区の訪問診療の料金目安",
+  description:
+    "めぐみ在宅クリニックの訪問診療にかかる費用の目安。1割負担で月約8,000円から。交通費無料。横浜市瀬谷区を中心に在宅医療を提供しています。",
 };
 
 export default function FeePage() {

@@ -4,8 +4,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { staffMembers, departments } from "@/data/staff";
 
 export const metadata: Metadata = {
-  title: "スタッフ紹介",
-  description: "めぐみ在宅クリニックの医師・看護師・スタッフをご紹介します。22名のチームで在宅医療を支えています。",
+  title: "スタッフ紹介｜めぐみ在宅クリニック瀬谷区",
+  description:
+    "めぐみ在宅クリニックの医師・看護師・スタッフをご紹介。緩和医療専門医の院長を中心に、チームで在宅医療を支えています。横浜市瀬谷区。",
 };
 
 export default function StaffPage() {

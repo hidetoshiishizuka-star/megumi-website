@@ -7,9 +7,9 @@ import { lectureRecords } from "@/data/lectures";
 import { columns } from "@/data/columns";
 
 export const metadata: Metadata = {
-  title: "院長 小澤竹俊について",
+  title: "院長・コンセプト｜小澤竹俊｜瀬谷区の在宅医療",
   description:
-    "めぐみ在宅クリニック院長・小澤竹俊のプロフィール。緩和医療専門医・エンドオブライフケア協会代表理事。",
+    "めぐみ在宅クリニック院長・小澤竹俊のプロフィールとコンセプト。緩和医療専門医。ユニバーサル・ホスピスマインドで在宅医療を実践。横浜市瀬谷区。",
 };
 
 export default function AboutDirectorPage() {

@@ -5,9 +5,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "採用情報",
+  title: "採用情報｜めぐみ在宅クリニック瀬谷区",
   description:
-    "めぐみ在宅クリニックの採用情報。医師・看護師・コメディカルスタッフを募集しています。",
+    "めぐみ在宅クリニックの採用情報。医師・看護師・診療サポーターを募集中。在宅緩和ケアを学べる環境。横浜市瀬谷区、瀬谷駅徒歩9分。応募フォームはこちら。",
 };
 
 export default function RecruitPage() {

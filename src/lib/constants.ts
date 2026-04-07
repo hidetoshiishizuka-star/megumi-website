@@ -1,6 +1,6 @@
 export const SITE_NAME = "めぐみ在宅クリニック";
 export const SITE_DESCRIPTION =
-  "横浜市瀬谷区で20年。通院が困難な方の在宅医療を支えるクリニック。24時間365日対応。";
+  "横浜市瀬谷区の在宅医療・訪問診療・往診クリニック。瀬谷駅徒歩9分。24時間365日対応。";
 export const SITE_URL = "https://www.megumizaitaku.jp";
 
 export const CLINIC_INFO = {

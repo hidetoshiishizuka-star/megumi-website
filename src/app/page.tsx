@@ -129,7 +129,7 @@ export default function TopPage() {
               <div>
                 <p className="text-sunrise-light text-sm font-medium mb-1">Recruitment</p>
                 <h3 className="text-xl font-bold mb-1">一緒に働く仲間を募集しています</h3>
-                <p className="text-white/70 text-sm">ドライバー募集中。在宅医療チームの一員として働きませんか。</p>
+                <p className="text-white/70 text-sm">在宅医療チームの一員として働きませんか。</p>
               </div>
               <span className="text-white/50 text-3xl group-hover:translate-x-1 transition-transform">→</span>
             </div>
@@ -152,11 +152,11 @@ export default function TopPage() {
               />
               <StrengthCard
                 title="継続性のある診療"
-                description="同じ医師が継続して診察。毎回医師が変わる不安がありません。"
+                description="医師がコロコロ変わるのではなく、チームでみていますので、途切れなく安心して診療が受けられます。"
               />
               <StrengthCard
                 title="3名体制の訪問"
-                description="医師・看護師・ドライバーの3名体制。手厚い処置と相談しやすい環境を実現。"
+                description="医師・看護師（またはサポーター）・ドライバーの3名体制。手厚い処置と相談しやすい環境を実現。"
               />
               <StrengthCard
                 title="交通費無料"

@@ -78,7 +78,7 @@ export default function FirstVisitPage() {
               <div className="rounded-2xl overflow-hidden mb-8 aspect-[16/7] relative">
                 <Image
                   src="/images/team-visit.jpg"
-                  alt="3名体制でのチーム訪問 — 医師・看護師・ドライバーがご自宅に伺います"
+                  alt="3名体制でのチーム訪問 — 医師・看護師（またはサポーター）・ドライバーがご自宅に伺います"
                   fill
                   className="object-cover"
                   sizes="740px"
@@ -109,7 +109,7 @@ export default function FirstVisitPage() {
                     step: "4",
                     title: "定期訪問の開始",
                     description:
-                      "月2回の定期訪問を基本に、状態に応じて頻度を調整します。24時間365日、緊急往診にも対応します。",
+                      "月2回または月1回の定期訪問を基本に（症状によって異なります）、状態に応じて頻度を調整します。24時間365日、緊急往診にも対応します。",
                   },
                 ].map((item, i) => (
                   <ScrollReveal key={item.step} delay={i * 80}>

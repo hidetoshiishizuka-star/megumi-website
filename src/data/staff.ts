@@ -2,7 +2,7 @@ export interface StaffMember {
   name: string;
   nameKana?: string;
   role: string;
-  department: "医師" | "看護" | "地域連携室" | "グリーフサポート";
+  department: "医師" | "看護" | "看護・サポーター" | "地域連携室" | "グリーフサポート";
   specialty?: string;
   certifications?: string[];
   societies?: string[];
@@ -111,31 +111,6 @@ export const staffMembers: StaffMember[] = [
     photoFile: "doc-3.jpg",
     photoPosition: "center center",
     photoScale: 1,
-  },
-  {
-    name: "栗田瑛里子",
-    nameKana: "くりた えりこ",
-    role: "常勤医師",
-    department: "医師",
-    specialty: "脳神経内科",
-    certifications: [
-      "日本内科学会認定内科医",
-      "日本内科学会総合内科専門医",
-      "日本神経学会脳神経内科専門医",
-      "日本認知症学会認知症専門医・指導医",
-    ],
-    societies: [
-      "日本内科学会",
-      "日本神経学会",
-      "日本脳卒中学会",
-      "日本認知症学会",
-      "日本頭痛学会",
-      "日本在宅医療連合学会",
-    ],
-    interests: ["認知症", "神経変性疾患", "終末期医療"],
-    description:
-      "病気と闘う患者さん・ご家族への敬意を胸に日々精進してまいります。",
-    hasPhoto: false,
   },
   {
     name: "町田雄樹",
@@ -258,20 +233,13 @@ export const staffMembers: StaffMember[] = [
     photoPosition: "center center",
     photoScale: 1,
   },
-  {
-    name: "岡田知也",
-    nameKana: "おかだ ともや",
-    role: "非常勤医師",
-    department: "医師",
-    hasPhoto: false,
-  },
 
   // === 看護 ===
   {
     name: "洲濱良子",
     nameKana: "すはま よしこ",
     role: "緩和ケア認定看護師",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "どなたでも明るく優しく安心して過ごせるよう、一緒に考えさせていただければと思います。",
     hasPhoto: false,
@@ -280,7 +248,7 @@ export const staffMembers: StaffMember[] = [
     name: "一瀬恭子",
     nameKana: "いちのせ きょうこ",
     role: "緩和ケア認定看護師",
-    department: "看護",
+    department: "看護・サポーター",
     societies: ["日本緩和医療学会", "死の臨床研究会"],
     description:
       "ピースハウス病院（ホスピス）で患者さんとご家族のケアを学び、最期までその人らしく生きることを支えたいと思っています。",
@@ -290,7 +258,7 @@ export const staffMembers: StaffMember[] = [
     name: "上田久子",
     nameKana: "うえだ ひさこ",
     role: "看護師",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "地域に密着した在宅医療に興味を持ち、丁寧な対応を心がけ、患者さんやご家族が穏やかに過ごせるよう支援いたします。",
     hasPhoto: true,
@@ -302,7 +270,7 @@ export const staffMembers: StaffMember[] = [
     name: "佐藤郁恵",
     nameKana: "さとう いくえ",
     role: "看護師",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "在宅医療に関わってきて、患者さん、ご家族が在宅で穏やかに過ごせるようサポートいたします。",
     hasPhoto: true,
@@ -314,7 +282,7 @@ export const staffMembers: StaffMember[] = [
     name: "島津綾子",
     nameKana: "しまづ あやこ",
     role: "診療サポーター",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "在宅医療に関わって5年。様々な問題に直面する患者さん、ご家族のお手伝いができればと思います。",
     hasPhoto: false,
@@ -323,7 +291,7 @@ export const staffMembers: StaffMember[] = [
     name: "伊東知子",
     nameKana: "いとう ともこ",
     role: "診療サポーター",
-    department: "看護",
+    department: "看護・サポーター",
     hasPhoto: true,
     photoFile: "20190814-3.jpg",
     photoPosition: "center center",
@@ -333,7 +301,7 @@ export const staffMembers: StaffMember[] = [
     name: "久保田明日香",
     nameKana: "くぼた あすか",
     role: "看護師",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "先生方と患者さんの診察がスムーズに運ぶよう、お手伝いさせていただきます。",
     hasPhoto: true,
@@ -345,7 +313,7 @@ export const staffMembers: StaffMember[] = [
     name: "片桐文",
     nameKana: "かたぎり ふみ",
     role: "看護師・認定心理士",
-    department: "看護",
+    department: "看護・サポーター",
     description:
       "患者さんとご家族の不安や苦痛に寄り添い、意思決定を支える看護師でありたいと思います。",
     hasPhoto: true,
@@ -404,4 +372,4 @@ export const staffMembers: StaffMember[] = [
   },
 ];
 
-export const departments = ["医師", "看護", "地域連携室", "グリーフサポート"] as const;
+export const departments = ["医師", "看護・サポーター", "地域連携室", "グリーフサポート"] as const;

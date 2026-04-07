@@ -77,7 +77,7 @@ export default function ServicesPage() {
               <h2 className="heading-section text-navy mb-6">診療内容</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "定期訪問診療（月2回・週1回など）",
+                  "定期訪問診療（月2回または月1回など、症状によって異なります）",
                   "緊急往診（24時間365日対応）",
                   "疼痛管理・緩和ケア",
                   "看取り・ACP（アドバンス・ケア・プランニング）",
@@ -114,9 +114,9 @@ export default function ServicesPage() {
                     <tr className="border-b">
                       <td className="px-4 py-3 font-medium">9:00〜12:00</td>
                       <td className="px-4 py-3 text-center text-navy font-medium">一般</td>
-                      <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
-                      <td className="px-4 py-3 text-center text-navy font-medium">一般</td>
+                      <td className="px-4 py-3 text-center text-text-muted">−</td>
+                      <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
                     </tr>
                   </tbody>

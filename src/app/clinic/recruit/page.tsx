@@ -93,7 +93,7 @@ export default function RecruitPage() {
                 {[
                   {
                     title: "チーム医療の実践",
-                    text: "医師・看護師・ドライバーの3名体制。一人で抱え込まない環境です。",
+                    text: "医師・看護師（またはサポーター）・ドライバーの3名体制。一人で抱え込まない環境です。",
                   },
                   {
                     title: "緩和ケアが学べる",
@@ -204,14 +204,6 @@ export default function RecruitPage() {
                   </div>
                   <p className="text-sm text-text-muted mt-2">※ 現在募集しておりません</p>
                 </div>
-              </div>
-
-              {/* ドライバー */}
-              <div className="flex items-center justify-between border border-gray-200 rounded-lg px-6 py-4 mb-4">
-                <span className="font-medium">ドライバー</span>
-                <span className="text-xs bg-sunrise text-white px-3 py-1 rounded-full">
-                  募集中
-                </span>
               </div>
 
               {/* 医療事務 */}

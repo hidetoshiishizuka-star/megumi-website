@@ -251,7 +251,10 @@ export default async function TopPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
               <div>
                 <h3 className="font-medium text-navy-light mb-2">所在地</h3>
-                <p className="text-sm">{CLINIC_INFO.address}</p>
+                <p className="text-sm">
+                  〒246-0037<br />
+                  神奈川県横浜市瀬谷区橋戸2-4-3
+                </p>
               </div>
               <div>
                 <h3 className="font-medium text-navy-light mb-2">診療体制</h3>

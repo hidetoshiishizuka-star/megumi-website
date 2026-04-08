@@ -23,7 +23,10 @@ export default function Footer() {
                 めぐみ在宅クリニック
               </span>
             </div>
-            <p className="text-sm leading-relaxed mb-3">{CLINIC_INFO.address}</p>
+            <p className="text-sm leading-relaxed mb-3">
+              〒246-0037<br />
+              神奈川県横浜市瀬谷区橋戸2-4-3
+            </p>
             <p className="text-sm">
               <span className="text-gray-400">診療のお問い合わせ：</span>
               <a href={`tel:${CLINIC_INFO.tel}`} className="text-white hover:text-navy-light">

@@ -149,12 +149,14 @@ export async function getBookList(): Promise<
     endpoint: "books",
     queries: { limit: 50 },
   });
-  return data.contents.map((item) => ({
-    title: (item.title as string) || "",
-    publisher: (item.publisher as string) || "",
-    date: (item.date as string) || "",
-    coverImage: (item.coverImage as { url?: string } | undefined)?.url || "",
-  }));
+  return data.contents
+    .map((item) => ({
+      title: (item.title as string) || "",
+      publisher: (item.publisher as string) || "",
+      date: (item.date as string) || "",
+      coverImage: (item.coverImage as { url?: string } | undefined)?.url || "",
+    }))
+    .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 /**
@@ -176,13 +178,15 @@ export async function getMediaList(): Promise<MediaEntry[]> {
     if (allContents.length >= data.totalCount) break;
     offset += limit;
   }
-  return allContents.map((item) => ({
-    category: ((item.category as string) || "") as MediaEntry["category"],
-    publication: (item.source as string) || "",
-    title: (item.title as string) || "",
-    details: "",
-    sortDate: (item.date as string) || "",
-  }));
+  return allContents
+    .map((item) => ({
+      category: ((item.category as string) || "") as MediaEntry["category"],
+      publication: (item.source as string) || "",
+      title: (item.title as string) || "",
+      details: "",
+      sortDate: (item.date as string) || "",
+    }))
+    .sort((a, b) => b.sortDate.localeCompare(a.sortDate));
 }
 
 /**
@@ -204,12 +208,14 @@ export async function getLectureList(): Promise<LectureRecord[]> {
     if (allContents.length >= data.totalCount) break;
     offset += limit;
   }
-  return allContents.map((item) => ({
-    year: (item.year as number) || 0,
-    date: (item.date as string) || "",
-    title: (item.title as string) || "",
-    location: (item.location as string) || "",
-  }));
+  return allContents
+    .map((item) => ({
+      year: (item.year as number) || 0,
+      date: (item.date as string) || "",
+      title: (item.title as string) || "",
+      location: (item.location as string) || "",
+    }))
+    .sort((a, b) => b.year - a.year || b.date.localeCompare(a.date));
 }
 
 // ========================================

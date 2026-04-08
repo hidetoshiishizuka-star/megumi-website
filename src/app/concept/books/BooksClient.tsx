@@ -3,10 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { books } from "@/data/books";
+import { books as fallbackBooks, type Book } from "@/data/books";
 import { mediaEntries, mediaCategories, type MediaCategory } from "@/data/media";
 
-export default function BooksClient() {
+interface Props {
+  booksFromServer?: Book[];
+}
+
+export default function BooksClient({ booksFromServer }: Props) {
+  const books = booksFromServer && booksFromServer.length > 0 ? booksFromServer : fallbackBooks;
   const [selectedCategory, setSelectedCategory] = useState<MediaCategory | null>(null);
   const [showAllMedia, setShowAllMedia] = useState(false);
 

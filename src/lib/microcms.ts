@@ -139,13 +139,20 @@ export async function getBlogPost(id: string) {
   });
 }
 
-export async function getBooks() {
+export async function getBookList(): Promise<
+  { title: string; publisher: string; date: string; coverImage: string }[]
+> {
   if (!client) return [];
-  const data = await client.getList<Book>({
+  const data = await client.getList<Record<string, unknown>>({
     endpoint: "books",
-    queries: { orders: "-publishedDate", limit: 50 },
+    queries: { limit: 50 },
   });
-  return data.contents;
+  return data.contents.map((item) => ({
+    title: (item.title as string) || "",
+    publisher: (item.publisher as string) || "",
+    date: (item.date as string) || "",
+    coverImage: "",
+  }));
 }
 
 // ========================================

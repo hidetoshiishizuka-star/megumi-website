@@ -1,5 +1,7 @@
 import { createClient } from "microcms-js-sdk";
 import type { StaffMember } from "@/data/staff";
+import type { MediaEntry } from "@/data/media";
+import type { LectureRecord } from "@/data/lectures";
 
 const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN ?? "";
 const apiKey = process.env.MICROCMS_API_KEY ?? "";
@@ -152,6 +154,61 @@ export async function getBookList(): Promise<
     publisher: (item.publisher as string) || "",
     date: (item.date as string) || "",
     coverImage: "",
+  }));
+}
+
+/**
+ * microCMS media APIからメディア掲載一覧を取得
+ * microCMS未設定時は空配列を返す
+ */
+export async function getMediaList(): Promise<MediaEntry[]> {
+  if (!client) return [];
+  const allContents: Record<string, unknown>[] = [];
+  let offset = 0;
+  const limit = 100;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const data = await client.getList<Record<string, unknown>>({
+      endpoint: "media",
+      queries: { limit, offset },
+    });
+    allContents.push(...data.contents);
+    if (allContents.length >= data.totalCount) break;
+    offset += limit;
+  }
+  return allContents.map((item) => ({
+    category: ((item.category as string) || "") as MediaEntry["category"],
+    publication: (item.source as string) || "",
+    title: (item.title as string) || "",
+    details: "",
+    sortDate: (item.date as string) || "",
+  }));
+}
+
+/**
+ * microCMS lectures APIから講演実績一覧を取得
+ * microCMS未設定時は空配列を返す
+ */
+export async function getLectureList(): Promise<LectureRecord[]> {
+  if (!client) return [];
+  const allContents: Record<string, unknown>[] = [];
+  let offset = 0;
+  const limit = 100;
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const data = await client.getList<Record<string, unknown>>({
+      endpoint: "lectures",
+      queries: { limit, offset },
+    });
+    allContents.push(...data.contents);
+    if (allContents.length >= data.totalCount) break;
+    offset += limit;
+  }
+  return allContents.map((item) => ({
+    year: 0,
+    date: "",
+    title: (item.title as string) || "",
+    location: "",
   }));
 }
 

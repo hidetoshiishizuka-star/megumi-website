@@ -4,20 +4,22 @@ import Image from "next/image";
 import { useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { books as fallbackBooks, type Book } from "@/data/books";
-import { mediaEntries, mediaCategories, type MediaCategory } from "@/data/media";
+import { mediaEntries as fallbackMedia, mediaCategories, type MediaCategory, type MediaEntry } from "@/data/media";
 
 interface Props {
   booksFromServer?: Book[];
+  mediaFromServer?: MediaEntry[];
 }
 
-export default function BooksClient({ booksFromServer }: Props) {
+export default function BooksClient({ booksFromServer, mediaFromServer }: Props) {
   const books = booksFromServer && booksFromServer.length > 0 ? booksFromServer : fallbackBooks;
+  const media = mediaFromServer && mediaFromServer.length > 0 ? mediaFromServer : fallbackMedia;
   const [selectedCategory, setSelectedCategory] = useState<MediaCategory | null>(null);
   const [showAllMedia, setShowAllMedia] = useState(false);
 
   const filteredMedia = selectedCategory
-    ? mediaEntries.filter((e) => e.category === selectedCategory)
-    : mediaEntries;
+    ? media.filter((e) => e.category === selectedCategory)
+    : media;
 
   const displayedMedia = showAllMedia ? filteredMedia : filteredMedia.slice(0, 20);
 
@@ -29,7 +31,7 @@ export default function BooksClient({ booksFromServer }: Props) {
             <p className="overline text-sunrise-light mb-6">Books & Media</p>
             <h1 className="heading-hero text-white mb-6">著書・メディア</h1>
             <p className="subheading text-white/90">
-              院長 小澤竹俊の著書{books.length}冊とメディア掲載・出演{mediaEntries.length}件
+              院長 小澤竹俊の著書{books.length}冊とメディア掲載・出演{media.length}件
             </p>
           </div>
         </section>
@@ -78,7 +80,7 @@ export default function BooksClient({ booksFromServer }: Props) {
               <div className="text-center mb-16">
                 <p className="overline text-twilight mb-4">Media</p>
                 <h2 className="heading-section text-navy">メディア掲載・出演</h2>
-                <p className="subheading mt-4 text-text-muted">全{mediaEntries.length}件</p>
+                <p className="subheading mt-4 text-text-muted">全{media.length}件</p>
               </div>
             </ScrollReveal>
 
@@ -92,10 +94,10 @@ export default function BooksClient({ booksFromServer }: Props) {
                     : "bg-white text-navy hover:bg-navy-light"
                 }`}
               >
-                すべて ({mediaEntries.length})
+                すべて ({media.length})
               </button>
               {mediaCategories.map((cat) => {
-                const count = mediaEntries.filter((e) => e.category === cat).length;
+                const count = media.filter((e) => e.category === cat).length;
                 return (
                   <button
                     key={cat}

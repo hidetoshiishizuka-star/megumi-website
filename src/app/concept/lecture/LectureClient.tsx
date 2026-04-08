@@ -4,10 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CLINIC_INFO } from "@/lib/constants";
-import { lectureRecords, lectureYears } from "@/data/lectures";
+import { lectureRecords as fallbackLectures, lectureYears as fallbackYears, type LectureRecord } from "@/data/lectures";
 import { books } from "@/data/books";
 import { mediaEntries } from "@/data/media";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+
+interface Props {
+  lecturesFromServer?: LectureRecord[];
+}
 
 function Linkify({ text }: { text: string }) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -33,7 +37,9 @@ function Linkify({ text }: { text: string }) {
   );
 }
 
-export default function LectureClient() {
+export default function LectureClient({ lecturesFromServer }: Props) {
+  const lectureRecords = lecturesFromServer && lecturesFromServer.length > 0 ? lecturesFromServer : fallbackLectures;
+  const lectureYears = [...new Set(lectureRecords.map(l => l.year))].sort((a, b) => b - a);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 

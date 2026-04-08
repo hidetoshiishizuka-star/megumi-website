@@ -4,8 +4,9 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { DIRECTOR } from "@/lib/constants";
-import { lectureRecords } from "@/data/lectures";
+import { lectureRecords as fallbackLectures } from "@/data/lectures";
 import { columns } from "@/data/columns";
+import { getLectureList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
   title: "院長・コンセプト｜小澤竹俊｜瀬谷区の在宅医療",
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
     "めぐみ在宅クリニック院長・小澤竹俊のプロフィールとコンセプト。緩和医療専門医。ユニバーサル・ホスピスマインドで在宅医療を実践。横浜市瀬谷区。",
 };
 
-export default function AboutDirectorPage() {
+export default async function AboutDirectorPage() {
+  const cmsLectures = await getLectureList().catch(() => []);
+  const lectureRecords = cmsLectures.length > 0 ? cmsLectures : fallbackLectures;
+
   return (
     <>
         <Breadcrumb items={[

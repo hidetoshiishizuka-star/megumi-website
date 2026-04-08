@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import BooksClient from "./BooksClient";
-import { getBookList } from "@/lib/microcms";
+import { getBookList, getMediaList } from "@/lib/microcms";
 import { books as fallbackBooks } from "@/data/books";
 
 export const metadata: Metadata = {
@@ -20,6 +20,8 @@ export default async function BooksPage() {
       }))
     : fallbackBooks;
 
+  const cmsMedia = await getMediaList().catch(() => []);
+
   return (
     <>
       <Breadcrumb items={[
@@ -27,7 +29,7 @@ export default async function BooksPage() {
         { label: "院長・コンセプト", href: "/concept/about" },
         { label: "著書・メディア掲載" },
       ]} />
-      <BooksClient booksFromServer={booksData} />
+      <BooksClient booksFromServer={booksData} mediaFromServer={cmsMedia} />
     </>
   );
 }

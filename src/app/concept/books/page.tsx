@@ -18,7 +18,7 @@ export default async function BooksPage() {
     ? cmsBooks.map((b) => ({
         ...b,
         author: "小澤竹俊",
-        coverImage: fallbackBooks.find((fb) => fb.title === b.title)?.coverImage || "",
+        coverImage: b.coverImage || fallbackBooks.find((fb) => fb.title === b.title)?.coverImage || "",
       }))
     : fallbackBooks;
 

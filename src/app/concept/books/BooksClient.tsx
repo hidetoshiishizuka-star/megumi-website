@@ -53,7 +53,7 @@ export default function BooksClient({ booksFromServer, mediaFromServer }: Props)
                   <div className="group">
                     <div className="aspect-[3/4] bg-gray-50 rounded-xl overflow-hidden mb-3 flex items-center justify-center p-2">
                       <Image
-                        src={`/images/books/${book.coverImage}`}
+                        src={book.coverImage.startsWith("http") ? book.coverImage : `/images/books/${book.coverImage}`}
                         alt={book.title}
                         width={300}
                         height={450}

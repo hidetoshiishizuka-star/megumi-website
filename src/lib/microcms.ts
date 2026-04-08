@@ -153,7 +153,7 @@ export async function getBookList(): Promise<
     title: (item.title as string) || "",
     publisher: (item.publisher as string) || "",
     date: (item.date as string) || "",
-    coverImage: "",
+    coverImage: (item.coverImage as { url?: string } | undefined)?.url || "",
   }));
 }
 

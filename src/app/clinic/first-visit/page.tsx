@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "在宅医療・訪問診療をご検討中の方へ。横浜市瀬谷区のめぐみ在宅クリニックが訪問診療開始までの流れをわかりやすくご説明します。瀬谷駅徒歩9分。まずはお電話ください。",
 };
 
+export const revalidate = 60;
+
 export default async function FirstVisitPage() {
   const cmsStaff = await getStaffList().catch(() => []);
   const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;

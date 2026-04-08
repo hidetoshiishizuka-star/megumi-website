@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "めぐみ在宅クリニック院長・小澤竹俊のプロフィールとコンセプト。緩和医療専門医。ユニバーサル・ホスピスマインドで在宅医療を実践。横浜市瀬谷区。",
 };
 
+export const revalidate = 60;
+
 export default async function AboutDirectorPage() {
   const cmsLectures = await getLectureList().catch(() => []);
   const lectureRecords = cmsLectures.length > 0 ? cmsLectures : fallbackLectures;

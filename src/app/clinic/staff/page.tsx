@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     "めぐみ在宅クリニックの医師・看護師・スタッフをご紹介。緩和医療専門医の院長を中心に、チームで在宅医療を支えています。横浜市瀬谷区。",
 };
 
+export const revalidate = 60;
+
 export default async function StaffPage() {
   const cmsStaff = await getStaffList().catch(() => []);
   const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;

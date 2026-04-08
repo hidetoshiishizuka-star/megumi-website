@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     "院長・小澤竹俊への講演・執筆のご依頼。ホスピスマインド・エンドオブライフケア・いのちの授業をテーマに全国130件以上の講演実績。お問い合わせフォームから。",
 };
 
+export const revalidate = 60;
+
 export default async function LecturePage() {
   const cmsLectures = await getLectureList().catch(() => []);
 

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     "医療機関・介護事業所・ケアマネジャーの皆さまへ。横浜市瀬谷区のめぐみ在宅クリニックへの患者さまご紹介・地域連携のご案内。24時間365日対応。",
 };
 
+export const revalidate = 60;
+
 export default async function PartnershipPage() {
   const cmsStaff = await getStaffList().catch(() => []);
   const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;

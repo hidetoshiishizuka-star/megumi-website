@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     "横浜市瀬谷区の在宅医療・訪問診療クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。通院が困難な方のご自宅に医師が訪問します。まずはお電話ください。",
 };
 
+export const revalidate = 60;
+
 const fallbackNews: { date: string; title: string; link?: string }[] = [
   { date: "2026.02.05", title: "2月オンライン・イベントのお知らせ" },
   { date: "2025.12.17", title: "小澤院長メディア掲載・出演＜専門誌・医療関係＞を更新しました" },

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "院長・小澤竹俊の著書13冊とメディア掲載・出演298件の実績一覧。NHKプロフェッショナル出演、著書多数。専門誌・新聞・テレビ出演歴。",
 };
 
+export const revalidate = 60;
+
 export default async function BooksPage() {
   const cmsBooks = await getBookList().catch(() => []);
   const booksData = cmsBooks.length > 0

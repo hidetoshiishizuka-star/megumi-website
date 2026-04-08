@@ -205,10 +205,10 @@ export async function getLectureList(): Promise<LectureRecord[]> {
     offset += limit;
   }
   return allContents.map((item) => ({
-    year: 0,
-    date: "",
+    year: (item.year as number) || 0,
+    date: (item.date as string) || "",
     title: (item.title as string) || "",
-    location: "",
+    location: (item.location as string) || "",
   }));
 }
 

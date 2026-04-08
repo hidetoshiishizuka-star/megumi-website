@@ -73,9 +73,7 @@ export default async function StaffPage() {
                               fill
                               className="object-cover"
                               style={{
-                                objectPosition: staff.photoPosition || "center 25%",
-                                transform: `scale(${staff.photoScale || 1.5})`,
-                                transformOrigin: "center top",
+                                objectPosition: staff.photoPosition || "center center",
                               }}
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />

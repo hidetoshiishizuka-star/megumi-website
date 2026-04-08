@@ -101,7 +101,7 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
             {/* モバイルハンバーガー */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`p-2 lg:hidden transition-colors ${
+              className={`p-3 lg:hidden transition-colors relative z-[60] ${
                 isOverlay && !scrolled ? "text-white/70" : "text-text-secondary"
               }`}
               aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}

@@ -15,7 +15,22 @@ export const revalidate = 60;
 
 export default async function StaffPage() {
   const cmsStaff = await getStaffList().catch(() => []);
-  const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;
+  // CMSデータにハードコードデータの不足情報を補完
+  const staffMembers = cmsStaff.length > 0
+    ? cmsStaff.map((s) => {
+        const fallback = fallbackStaff.find((f) => f.name === s.name);
+        if (!fallback) return s;
+        return {
+          ...s,
+          hasPhoto: s.photoUrl ? true : (fallback.hasPhoto || false),
+          photoFile: s.photoUrl ? undefined : (fallback.photoFile || undefined),
+          certifications: (s.certifications && s.certifications.length > 0) ? s.certifications : fallback.certifications,
+          societies: (s.societies && s.societies.length > 0) ? s.societies : fallback.societies,
+          interests: (s.interests && s.interests.length > 0) ? s.interests : fallback.interests,
+          description: s.description || fallback.description,
+        };
+      })
+    : fallbackStaff;
   return (
     <>
         <Breadcrumb items={[

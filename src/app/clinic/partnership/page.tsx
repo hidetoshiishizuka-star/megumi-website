@@ -17,7 +17,13 @@ export const revalidate = 60;
 
 export default async function PartnershipPage() {
   const cmsStaff = await getStaffList().catch(() => []);
-  const staffMembers = cmsStaff.length > 0 ? cmsStaff : fallbackStaff;
+  const staffMembers = cmsStaff.length > 0
+    ? cmsStaff.map((s) => {
+        const fb = fallbackStaff.find((f) => f.name === s.name);
+        if (!fb) return s;
+        return { ...s, hasPhoto: s.photoUrl ? true : (fb.hasPhoto || false), photoFile: s.photoUrl ? undefined : fb.photoFile, description: s.description || fb.description };
+      })
+    : fallbackStaff;
   return (
     <>
       <Breadcrumb items={[

@@ -158,7 +158,7 @@ export default function ServicesPage() {
                   { label: "費用について", href: "/clinic/fee", desc: "訪問診療にかかる費用の目安" },
                   { label: "よくあるご質問", href: "/clinic/faq", desc: "在宅医療に関するQ&A" },
                   { label: "スタッフ紹介", href: "/clinic/staff", desc: "医師・看護師・スタッフ一覧" },
-                  { label: "ご遺族の方へ", href: "/clinic/grief", desc: "グリーフサポートのご案内" },
+                  { label: "当院のグリーフケアについて", href: "/clinic/grief", desc: "グリーフサポートのご案内" },
                 ].map((item) => (
                   <Link
                     key={item.href}

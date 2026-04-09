@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHeader from "@/components/ui/PageHeader";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
@@ -80,17 +81,17 @@ export default function GriefPage() {
               </svg>
               {CLINIC_INFO.tel}
             </a>
-            <a
-              href="mailto:megumi_zaitaku@miracle.ocn.ne.jp"
+            <Link
+              href="/clinic/contact"
               className="inline-flex items-center gap-2 border-2 border-navy text-navy px-8 py-4 rounded-lg font-medium hover:bg-navy hover:text-white transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              メールで相談
-            </a>
+              お問い合わせフォーム
+            </Link>
           </div>
-          <p className="text-sm text-text-muted mt-3">電話受付：10:00〜16:00</p>
+          <p className="text-sm text-text-muted mt-3">電話受付：月〜金 10:00〜16:00</p>
         </section>
       </div>
     </>

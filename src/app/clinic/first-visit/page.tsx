@@ -150,9 +150,12 @@ export default async function FirstVisitPage() {
           {/* お電話時にお伝えいただきたいこと */}
           <ScrollReveal>
             <section className="mb-16">
-              <h2 className="heading-section text-navy mb-6">
+              <h2 className="heading-section text-navy mb-4">
                 お電話時に<br />お伝えいただきたいこと
               </h2>
+              <p className="text-text-secondary leading-relaxed mb-6 italic">
+                あなたが今、困っていること、悩んでいることを、まずそのままお聞かせください。私たちはその声を大切に受けとめます。
+              </p>
               <div className="bg-warm-gray rounded-xl p-6 space-y-3 text-sm text-text-secondary">
                 <p>① ご本人・ご家族のお名前・ご連絡先</p>
                 <p>② 現在の状況（病名・食事量・動ける範囲・起きている時間の目安・ここ1か月の変化）</p>

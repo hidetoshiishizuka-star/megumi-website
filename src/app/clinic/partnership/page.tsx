@@ -196,7 +196,6 @@ export default async function PartnershipPage() {
           <ul className="space-y-2 text-sm text-text-secondary mb-6">
             {[
               "通院が困難になり、訪問診療の導入を検討されている場合",
-              "退院前カンファレンスへの参加を希望される場合",
               "現在の訪問診療からの転院をご検討中の場合",
               "終末期の在宅看取りについてご相談されたい場合",
               "サービス担当者会議への医師の出席を希望される場合",

@@ -61,7 +61,7 @@ export const NAV_CLINIC = [
   { label: "費用について", href: "/clinic/fee" },
   { label: "よくあるご質問", href: "/clinic/faq" },
   { label: "スタッフ紹介", href: "/clinic/staff" },
-  { label: "ご遺族の方へ", href: "/clinic/grief" },
+  { label: "当院のグリーフケアについて", href: "/clinic/grief" },
   { label: "採用情報", href: "/clinic/recruit" },
   { label: "医療機関・介護事業所の方へ", href: "/clinic/partnership" },
   { label: "お問い合わせ", href: "/clinic/contact" },

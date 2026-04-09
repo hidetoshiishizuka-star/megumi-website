@@ -37,7 +37,7 @@ export default async function TopPage() {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-navy/70" />
+            <div className="absolute inset-0 gradient-twilight opacity-70" />
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
             <p className="text-white/80 text-sm font-medium tracking-widest mb-4">

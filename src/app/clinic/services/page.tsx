@@ -37,7 +37,7 @@ export default function ServicesPage() {
               <h2 className="heading-section text-navy mb-6">在宅医療とは</h2>
               <div className="prose max-w-none text-text-secondary leading-relaxed space-y-4">
                 <p>
-                  高齢に伴う足腰の負担が増えたり、病気のために通院が困難な方がいます。
+                  病気・高齢のために通院が困難な方がいます。
                   在宅医療は、通院が困難な方のご自宅（介護施設を含む）で、継続して医療を受けるために
                   医師が訪問して医療を提供するものです。
                 </p>

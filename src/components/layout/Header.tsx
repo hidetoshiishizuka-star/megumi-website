@@ -147,7 +147,6 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
             { label: "緩和ケアとは", href: "/concept/palliative-care" },
             { label: "講演・執筆依頼", href: "/concept/lecture" },
             { label: "著書・メディア", href: "/concept/books" },
-            { label: "コラム", href: "/concept/blog" },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="text-lg font-medium text-text-primary/80 hover:text-sunrise py-2 transition-colors" onClick={() => setMenuOpen(false)}>
               {item.label}

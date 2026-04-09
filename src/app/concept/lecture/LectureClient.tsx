@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { CLINIC_INFO } from "@/lib/constants";
-import { lectureRecords as fallbackLectures, lectureYears as fallbackYears, type LectureRecord } from "@/data/lectures";
+import { lectureRecords as fallbackLectures, type LectureRecord } from "@/data/lectures";
 import { books } from "@/data/books";
 import { mediaEntries } from "@/data/media";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -13,41 +12,17 @@ interface Props {
   lecturesFromServer?: LectureRecord[];
 }
 
-function Linkify({ text }: { text: string }) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const parts = text.split(urlRegex);
-  return (
-    <>
-      {parts.map((part, i) =>
-        urlRegex.test(part) ? (
-          <a
-            key={i}
-            href={part}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-twilight underline hover:text-navy break-all"
-          >
-            {part}
-          </a>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </>
-  );
-}
-
 export default function LectureClient({ lecturesFromServer }: Props) {
   const lectureRecords = lecturesFromServer && lecturesFromServer.length > 0 ? lecturesFromServer : fallbackLectures;
-  const lectureYears = [...new Set(lectureRecords.map(l => l.year))].sort((a, b) => b - a);
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
-  const [showAll, setShowAll] = useState(false);
 
-  const filtered = selectedYear
-    ? lectureRecords.filter((l) => l.year === selectedYear)
-    : lectureRecords;
-
-  const displayed = showAll ? filtered : filtered.slice(0, 20);
+  // 年別件数を集計
+  const byYear: Record<number, number> = {};
+  lectureRecords.forEach((l) => {
+    byYear[l.year] = (byYear[l.year] || 0) + 1;
+  });
+  const yearEntries = Object.entries(byYear)
+    .map(([y, c]) => ({ year: Number(y), count: c }))
+    .sort((a, b) => b.year - a.year);
 
   return (
     <>
@@ -170,7 +145,7 @@ export default function LectureClient({ lecturesFromServer }: Props) {
           </div>
         </section>
 
-        {/* 講演実績（130件） */}
+        {/* 講演実績（件数のみ） */}
         <section className="py-24 md:py-32">
           <div className="max-w-[740px] mx-auto px-6">
             <ScrollReveal>
@@ -183,70 +158,17 @@ export default function LectureClient({ lecturesFromServer }: Props) {
               </div>
             </ScrollReveal>
 
-            {/* 年別フィルタ */}
-            <div className="flex flex-wrap gap-2 mb-10 justify-center">
-              <button
-                onClick={() => { setSelectedYear(null); setShowAll(false); }}
-                className={`px-5 py-2 rounded-full text-sm transition-colors ${
-                  selectedYear === null
-                    ? "bg-navy text-white"
-                    : "bg-surface text-navy hover:bg-navy-light"
-                }`}
-              >
-                すべて ({lectureRecords.length})
-              </button>
-              {lectureYears.map((year) => (
-                <button
-                  key={year}
-                  onClick={() => { setSelectedYear(year); setShowAll(false); }}
-                  className={`px-5 py-2 rounded-full text-sm transition-colors ${
-                    selectedYear === year
-                      ? "bg-navy text-white"
-                      : "bg-surface text-navy hover:bg-navy-light"
-                  }`}
-                >
-                  {year}年
-                </button>
-              ))}
-            </div>
-
-            {/* 実績一覧 */}
-            <div className="divide-y divide-gray-100">
-              {displayed.map((lecture, i) => (
-                <div key={`${lecture.date}-${i}`} className="py-4">
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-text-muted text-xs shrink-0 tabular-nums w-20">
-                      {lecture.date.slice(0, 20)}
-                    </span>
-                    <div>
-                      <p className="text-navy font-medium text-[15px] leading-snug">
-                        <Linkify text={lecture.title} />
-                      </p>
-                      {lecture.location && (
-                        <p className="text-text-muted text-xs mt-0.5">
-                          <Linkify text={lecture.location} />
-                        </p>
-                      )}
-                    </div>
+            {/* 年別件数 */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {yearEntries.map((entry, i) => (
+                <ScrollReveal key={entry.year} delay={i * 60}>
+                  <div className="bg-surface rounded-xl p-5 text-center">
+                    <p className="text-text-muted text-sm">{entry.year}年</p>
+                    <p className="text-2xl font-bold text-navy mt-1">{entry.count}<span className="text-sm font-normal text-text-muted ml-0.5">件</span></p>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
-
-            {!showAll && filtered.length > 20 && (
-              <div className="text-center mt-10">
-                <button
-                  onClick={() => setShowAll(true)}
-                  className="btn-pill btn-pill-secondary"
-                >
-                  すべての実績を表示（{filtered.length}件）
-                </button>
-              </div>
-            )}
-
-            {filtered.length === 0 && (
-              <p className="text-center text-text-muted py-12">該当する実績がありません。</p>
-            )}
           </div>
         </section>
 

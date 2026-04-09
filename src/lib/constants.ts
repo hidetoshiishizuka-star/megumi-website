@@ -74,5 +74,4 @@ export const NAV_CONCEPT = [
   { label: "見学・研修", href: "/concept/training" },
   { label: "講演・執筆依頼", href: "/concept/lecture" },
   { label: "著書・メディア", href: "/concept/books" },
-  { label: "コラム", href: "/concept/blog" },
 ] as const;

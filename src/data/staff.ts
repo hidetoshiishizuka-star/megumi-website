@@ -269,7 +269,7 @@ export const staffMembers: StaffMember[] = [
   // === 看護 ===
   {
     name: "洲濱良子",
-    nameKana: "すはま よしこ",
+    nameKana: "すはま りょうこ",
     role: "緩和ケア認定看護師",
     department: "看護・サポーター",
     description:
@@ -281,9 +281,10 @@ export const staffMembers: StaffMember[] = [
     nameKana: "いちのせ きょうこ",
     role: "緩和ケア認定看護師",
     department: "看護・サポーター",
+    certifications: ["一般社団法人日本グリーフケア協会 特級グリーフケアアドバイザー"],
     societies: ["日本緩和医療学会", "死の臨床研究会"],
     description:
-      "ピースハウス病院（ホスピス）で患者さんとご家族のケアを学び、最期までその人らしく生きることを支えたいと思っています。",
+      "ご本人とご家族が望む場所で安心して過ごせるようチームでサポートさせて頂きます。皆さんの大切にしたいことを是非お聞かせ下さい。",
     hasPhoto: false,
   },
   {

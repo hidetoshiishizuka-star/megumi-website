@@ -11,11 +11,11 @@ export const CLINIC_INFO = {
   telPlanning: "045-300-6630",
   hours: "月〜金 9:00〜17:00",
   established: 2006,
-  areas: ["瀬谷区", "泉区", "旭区（一部）", "大和市"],
+  areas: ["瀬谷区", "泉区", "旭区（一部）", "緑区（一部）", "大和市"],
   access: "相鉄線 瀬谷駅より徒歩9分",
   outpatient: {
-    general: "月曜・木曜 午前（予約制・受付 8:45〜12:00）",
-    palliative: "緩和ケア外来",
+    general: "月曜・木曜 午前（受付 8:45〜12:00）",
+    palliative: "火曜 午前（予約制）",
   },
 } as const;
 
@@ -26,7 +26,7 @@ export const DIRECTOR = {
   birthYear: 1963,
   specialty: [
     "総合内科専門医（日本内科学会）",
-    "緩和医療専門医（日本緩和医療学会）",
+    "緩和医療専門医・指導医（日本緩和医療学会）",
     "認定指導医（日本在宅医療連合学会）",
   ],
   career: [

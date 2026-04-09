@@ -83,8 +83,8 @@ export default async function PartnershipPage() {
             ))}
           </div>
           <p className="text-xs text-text-muted mt-4">
-            ※ 対応エリア：{CLINIC_INFO.areas.join("・")}（クリニックから5km以内）。
-            対応エリアはクリニックから5km以内です。
+            ※ 対応エリア：{CLINIC_INFO.areas.join("・")}（クリニックから原則5km以内）。
+            緩和ケア専門医などの対応が必要な終末期の患者さまの場合、5kmを超えて対応することがあります。
           </p>
         </section>
 
@@ -133,6 +133,11 @@ export default async function PartnershipPage() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="bg-sunrise/10 border border-sunrise/30 rounded-xl p-5 mt-6">
+            <p className="text-sm text-text-secondary leading-relaxed">
+              <span className="font-bold text-navy">※ 緊急の場合：</span>緊急で在宅対応が必要な場合には、この流れとは別に対応することがあります。限られた時間でも、自宅に帰りたいと願う思いを応援したいと考えています。まずはお電話でご相談ください。
+            </p>
           </div>
         </section>
 
@@ -202,10 +207,17 @@ export default async function PartnershipPage() {
               </li>
             ))}
           </ul>
-          <p className="text-text-secondary text-sm">
+          <p className="text-text-secondary text-sm mb-4">
             居宅療養管理指導のもと、ケアマネジャーの皆さまとの情報共有・連携を重視しています。
             診療内容や患者さまの状態変化について、適時ご報告いたします。
           </p>
+          <div className="bg-navy-light rounded-xl p-5">
+            <h3 className="font-bold text-navy text-sm mb-2">スタッフ研修のご案内</h3>
+            <p className="text-xs text-text-secondary leading-relaxed">
+              当院では、介護スタッフの皆さまを対象とした研修（看取りケア・緩和ケア・コミュニケーション等）も承っております。
+              ご希望の方は地域連携室までお気軽にお問い合わせください。
+            </p>
+          </div>
         </section>
 
         {/* 関連ページ */}

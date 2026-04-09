@@ -67,11 +67,10 @@ export default async function FirstVisitPage() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "通院が難しくなってきた方",
-                  "退院後、ご自宅での医療継続が必要な方",
-                  "介護施設に入所中で医療が必要な方",
-                  "慢性疾患・神経難病をお持ちの方",
                   "がんの療養で自宅を希望される方",
+                  "慢性疾患・神経難病をお持ちの方",
+                  "退院後、ご自宅での医療継続が必要な方",
+                  "通院が難しくなってきた方",
                   "お一人暮らしで医療の不安がある方",
                 ].map((item, i) => (
                   <ScrollReveal key={item} delay={i * 80}>
@@ -109,7 +108,7 @@ export default async function FirstVisitPage() {
                     step: "1",
                     title: "まずはお電話ください",
                     description:
-                      "地域連携室までお電話ください。ご本人やご家族の状況をお伺いし、対応可能かお伝えします。ケアマネジャーや病院の地域連携室からのご連絡も歓迎です。",
+                      "地域連携室までお電話ください。ご本人やご家族の状況をお伺いし、対応可能かお伝えします。ケアマネジャー、病院の地域連携室などの、担当者の皆様からのご連絡もお受けします。",
                   },
                   {
                     step: "2",
@@ -157,8 +156,9 @@ export default async function FirstVisitPage() {
               <div className="bg-warm-gray rounded-xl p-6 space-y-3 text-sm text-text-secondary">
                 <p>① ご本人・ご家族のお名前・ご連絡先</p>
                 <p>② 現在の状況（病名・食事量・動ける範囲・起きている時間の目安・ここ1か月の変化）</p>
-                <p>③ 療養場所のご希望（ご自宅・施設など）</p>
-                <p>④ 希望されるケアの内容</p>
+                <p>③ 今、困っていること、悩んでいること</p>
+                <p>④ 療養場所のご希望（ご自宅・施設など）</p>
+                <p>⑤ 希望されるケアの内容</p>
                 <p className="text-text-muted pt-2">
                   ※ すべてがわからなくても大丈夫です。お気軽にご相談ください。
                 </p>

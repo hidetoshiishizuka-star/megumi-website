@@ -24,8 +24,8 @@ export default function FeePage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <p className="text-text-secondary mb-8 leading-relaxed">
-          ひと月に訪問する回数や治療内容（在宅酸素・中心静脈栄養など）で医療費が変わります。
-          下記はあくまで目安です。詳しくはお気軽にお問い合わせください。
+          月2回の訪問を基本とした場合の費用の目安です。治療内容（在宅酸素・中心静脈栄養など）により変わります。
+          詳しくはお気軽にお問い合わせください。
         </p>
 
         {/* 標準負担額 */}

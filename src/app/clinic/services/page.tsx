@@ -120,17 +120,17 @@ export default function ServicesPage() {
                   <tbody>
                     <tr className="border-b">
                       <td className="px-4 py-3 font-medium">9:00〜12:00</td>
+                      <td className="px-4 py-3 text-center text-navy font-medium">一般外来</td>
                       <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
-                      <td className="px-4 py-3 text-center text-text-muted">−</td>
-                      <td className="px-4 py-3 text-center text-sunrise font-medium">緩和ケア</td>
+                      <td className="px-4 py-3 text-center text-navy font-medium">一般外来</td>
                       <td className="px-4 py-3 text-center text-text-muted">−</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <p className="text-sm text-text-muted mt-3">
-                ※ 土・日・祝は休診です。緩和ケア外来は予約制です。受付 8:45〜12:00。
+                ※ 土・日・祝は休診です。緩和ケア外来（火曜）は予約制です。受付 8:45〜12:00。
                 採血・採尿は可能です。X線・CT・内視鏡は連携先の横浜甦生病院外来をご紹介します。
               </p>
             </section>
@@ -141,7 +141,7 @@ export default function ServicesPage() {
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">訪問対応エリア</h2>
               <p className="text-text-secondary mb-6">
-                クリニックから5km圏内を対象としています。
+                クリニックから原則5km圏内を対象としています。緩和ケア専門医などの対応が必要な終末期の患者さまの場合、5kmを超えて対応することがあります。
               </p>
               <ServiceAreaMap />
               <div className="bg-warm-gray rounded-xl p-6 mt-6">
@@ -150,7 +150,7 @@ export default function ServicesPage() {
                   {CLINIC_INFO.areas.join("・")}
                 </p>
                 <p className="text-sm text-text-muted mt-2">
-                  ※ 対応エリアはクリニックから5km以内です。
+                  ※ 対応エリアはクリニックから原則5km以内です。終末期の患者さまの場合、5kmを超えて対応することがあります。
                 </p>
               </div>
             </section>

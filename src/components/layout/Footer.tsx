@@ -26,6 +26,18 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-3">
               〒246-0037<br />
               神奈川県横浜市瀬谷区橋戸2-4-3
+              <a
+                href="https://maps.google.com/maps?q=%E3%82%81%E3%81%90%E3%81%BF%E5%9C%A8%E5%AE%85%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 ml-2 text-sunrise hover:text-sunrise-light transition-colors text-xs font-medium"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                MAP
+              </a>
             </p>
             <p className="text-sm">
               <span className="text-gray-400">診療のお問い合わせ：</span>

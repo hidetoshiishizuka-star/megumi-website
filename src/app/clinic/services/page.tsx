@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import ServiceAreaMap from "@/components/ui/ServiceAreaMap";
+import AreaTabs from "@/components/ui/AreaTabs";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import MedicalSupervision from "@/components/ui/MedicalSupervision";
 import { CLINIC_INFO } from "@/lib/constants";
@@ -136,23 +136,11 @@ export default function ServicesPage() {
             </section>
           </ScrollReveal>
 
-          {/* 対応エリア */}
+          {/* 対応エリア・外来アクセス */}
           <ScrollReveal>
             <section className="mb-16">
-              <h2 className="heading-section text-navy mb-6">訪問対応エリア</h2>
-              <p className="text-text-secondary mb-6">
-                クリニックから原則5km圏内を対象としています。緩和ケア専門医などの対応が必要な終末期の患者さまの場合、5kmを超えて対応することがあります。
-              </p>
-              <ServiceAreaMap />
-              <div className="bg-warm-gray rounded-xl p-6 mt-6">
-                <p className="font-medium mb-2">主な対応地域</p>
-                <p className="text-text-secondary">
-                  {CLINIC_INFO.areas.join("・")}
-                </p>
-                <p className="text-sm text-text-muted mt-2">
-                  ※ 対応エリアはクリニックから原則5km以内です。終末期の患者さまの場合、5kmを超えて対応することがあります。
-                </p>
-              </div>
+              <h2 className="heading-section text-navy mb-6">訪問対応エリア・外来アクセス</h2>
+              <AreaTabs />
             </section>
           </ScrollReveal>
 

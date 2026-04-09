@@ -15,7 +15,7 @@ export const CLINIC_INFO = {
   access: "相鉄線 瀬谷駅より徒歩9分",
   outpatient: {
     general: "月曜・木曜 午前（受付 8:45〜12:00）",
-    palliative: "火曜 午前（予約制）",
+    palliative: "月曜・火曜・木曜 午前（予約制）",
   },
 } as const;
 

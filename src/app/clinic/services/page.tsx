@@ -71,9 +71,6 @@ export default function ServicesPage() {
                   </ScrollReveal>
                 ))}
               </ul>
-              <p className="text-sm text-text-muted mt-3">
-                ※ 介護保険・医療保険いずれにも対応しています。
-              </p>
             </section>
           </ScrollReveal>
 

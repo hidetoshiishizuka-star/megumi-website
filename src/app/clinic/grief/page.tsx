@@ -27,9 +27,12 @@ export default function GriefPage() {
             大切なご家族さまとお別れをされて、心や身体の変化を感じることがあります。
             これはとても自然な反応で、「グリーフ（grief）」と呼ばれています。
           </p>
-          <p className="text-text-secondary leading-relaxed">
+          <p className="text-text-secondary leading-relaxed mb-4">
             当院では、療養中の支援だけでなく、ご家族さまのその後のグリーフサポートも
             大切にしています。
+          </p>
+          <p className="font-bold text-text-primary leading-relaxed">
+            当院で療養された患者さまのご家族に向けて、以下のサポートを行っています。
           </p>
         </section>
 

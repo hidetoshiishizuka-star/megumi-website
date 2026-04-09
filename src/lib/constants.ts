@@ -11,7 +11,7 @@ export const CLINIC_INFO = {
   telPlanning: "045-300-6630",
   hours: "月〜金 9:00〜17:00",
   established: 2006,
-  areas: ["瀬谷区", "泉区", "旭区（一部）", "緑区（一部）", "大和市"],
+  areas: ["瀬谷区全般", "泉区（一部）", "旭区（一部）", "大和市（一部）"],
   access: "相鉄線 瀬谷駅より徒歩9分",
   outpatient: {
     general: "月曜・木曜 午前（受付 8:45〜12:00）",

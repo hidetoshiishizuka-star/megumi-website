@@ -37,19 +37,6 @@ export type NewsItem = {
   publishedAt: string;
 };
 
-export type BlogPost = {
-  id: string;
-  title: string;
-  body: string;
-  eyecatch?: {
-    url: string;
-    width: number;
-    height: number;
-  };
-  author: string;
-  publishedAt: string;
-};
-
 export type Book = {
   id: string;
   title: string;
@@ -122,23 +109,6 @@ export async function getNewsList(
     category: item.tag || undefined,
     link: item.link || undefined,
   }));
-}
-
-export async function getBlogPosts(limit = 10) {
-  if (!client) return [];
-  const data = await client.getList<BlogPost>({
-    endpoint: "blog",
-    queries: { orders: "-publishedAt", limit },
-  });
-  return data.contents;
-}
-
-export async function getBlogPost(id: string) {
-  if (!client) return null;
-  return client.get<BlogPost>({
-    endpoint: "blog",
-    contentId: id,
-  });
 }
 
 export async function getBookList(): Promise<

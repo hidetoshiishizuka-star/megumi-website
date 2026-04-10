@@ -1,7 +1,8 @@
 import fs from 'fs';
 
-const DOMAIN = '3gc6ro399e';
-const API_KEY = 'WEAo1Vx6h6DeE7K4pTOVUEpdjfMyBjYEIGB8';
+const DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN;
+const API_KEY = process.env.MICROCMS_API_KEY;
+if (!DOMAIN || !API_KEY) { console.error('Error: MICROCMS_SERVICE_DOMAIN and MICROCMS_API_KEY must be set in .env.local'); process.exit(1); }
 const BASE_URL = `https://${DOMAIN}.microcms.io/api/v1`;
 const DELAY_MS = 300;
 

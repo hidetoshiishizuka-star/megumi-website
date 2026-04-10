@@ -37,7 +37,7 @@ export default function AreaMaps() {
       <div>
         <h3 className="text-lg font-bold text-navy mb-4">訪問対応エリア</h3>
         <p className="text-text-secondary mb-6">
-          クリニックから原則5km圏内を対象としています。緩和ケア専門医などの対応が必要な終末期の患者さまの場合、5kmを超えて対応することがあります。
+          クリニックから原則5km圏内を対象としています。
         </p>
         <ServiceAreaMap />
         <div className="bg-warm-gray rounded-xl p-6 mt-4">
@@ -46,7 +46,7 @@ export default function AreaMaps() {
             {CLINIC_INFO.areas.join("・")}
           </p>
           <p className="text-sm text-text-muted mt-2">
-            ※ 対応エリアはクリニックから原則5km以内です。終末期の患者さまの場合、5kmを超えて対応することがあります。
+            ※ 対応エリアはクリニックから原則5km以内です。
           </p>
         </div>
       </div>

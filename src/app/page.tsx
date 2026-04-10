@@ -165,19 +165,19 @@ export default async function TopPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <StrengthCard
                 title="24時間365日対応"
-                description="シフト制の決まった医師が夜間も担当。当直室を完備し、いつでも駆けつけます。"
+                description="日中・夜間・休日問わず医師が、いつでも対応します。"
               />
               <StrengthCard
                 title="継続性のある診療"
-                description="医師がコロコロ変わるのではなく、チームでみていますので、途切れなく安心して診療が受けられます。"
+                description="医師・全てのスタッフで、電子カルテで情報共有を行い、途切れなく安心して診療が受けられる体制をとっています。"
               />
               <StrengthCard
                 title="3名体制の訪問"
-                description="医師・看護師（またはサポーター）・ドライバーの3名体制。手厚い処置と相談しやすい環境を実現。"
+                description="医師・看護師（またはサポーター）・ドライバーの3名体制で訪問し、手厚い処置と相談しやすい環境をつくります。"
               />
               <StrengthCard
                 title="交通費無料"
-                description="当院では訪問診療時の交通費をいただいておりません。安心して在宅医療を続けられる環境を整えています。"
+                description="当院では訪問診療時の交通費をいただいておりません。金銭面も安心して在宅医療を続けられる環境を整えています。"
               />
             </div>
           </div>

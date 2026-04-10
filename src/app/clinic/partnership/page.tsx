@@ -133,11 +133,6 @@ export default async function PartnershipPage() {
               </div>
             ))}
           </div>
-          <div className="bg-sunrise/10 border border-sunrise/30 rounded-xl p-5 mt-6">
-            <p className="text-sm text-text-secondary leading-relaxed">
-              <span className="font-bold text-navy">※ 緊急の場合：</span>緊急で在宅対応が必要な場合には、この流れとは別に対応することがあります。限られた時間でも、自宅に帰りたいと願う思いを応援したいと考えています。まずはお電話でご相談ください。
-            </p>
-          </div>
         </section>
 
         {/* 当院の診療体制 */}
@@ -152,15 +147,15 @@ export default async function PartnershipPage() {
             {[
               {
                 title: "24時間365日の緊急往診",
-                desc: "医師が当直室で待機。Uber型（コール後に空いている医師を探す方式）ではなく、当直医が対応します。",
+                desc: "当院では24時間365日医師が対応できる体制をとっております。日中・夜間・休日問わず緊急往診いたします。",
               },
               {
                 title: "継続性のある診療",
-                desc: "医師がコロコロ変わるのではなく、チームでみていますので、途切れなく安心して診療が受けられます。カルテで思考や状況を共有し、引き継ぎ時も情報が途切れません。",
+                desc: "原則主治医担当制です。当院では電子カルテ情報共有を行い、途切れなく継続性のある診療を行います。",
               },
               {
                 title: "日中3名体制の訪問",
-                desc: "医師・看護師（またはサポーター）・ドライバーの3名で訪問。処置対応力の向上と、様々な相談にチームで対応します。",
+                desc: "医師・看護師（またはサポーター）・ドライバーの3名で訪問します。患者様、ご家族様に寄り添い、丁寧な診療を行います。",
               },
               {
                 title: "緩和ケア専門医が在籍",
@@ -195,7 +190,7 @@ export default async function PartnershipPage() {
           <ul className="space-y-2 text-sm text-text-secondary mb-6">
             {[
               "通院が困難になり、訪問診療の導入を検討されている場合",
-              "現在の訪問診療からの転院をご検討中の場合",
+              "現在の訪問診療から当院に変更を検討される場合",
               "終末期の在宅看取りについてご相談されたい場合",
               "サービス担当者会議への医師の出席を希望される場合",
             ].map((item) => (

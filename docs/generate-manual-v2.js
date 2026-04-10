@@ -505,7 +505,7 @@ const doc = new Document({
           ["項目", "内容"],
           [
             ["WEBサイト管理者", "石塚秀俊（MI-ZA Corporation）"],
-            ["メールアドレス", "ishizuka55@gmail.com"],
+            ["メールアドレス", "※管理者にお問い合わせください"],
           ]
         ),
 
@@ -545,7 +545,7 @@ const doc = new Document({
 // Generate and save
 (async () => {
   const buffer = await Packer.toBuffer(doc);
-  const outputPath = "/Users/ishizuka/Documents/megumi-website/docs/CMS運用マニュアル_めぐみ在宅クリニック_v2.docx";
+  const outputPath = "./docs/CMS運用マニュアル_めぐみ在宅クリニック_v2.docx";
   fs.writeFileSync(outputPath, buffer);
   console.log(`Generated: ${outputPath}`);
   console.log(`File size: ${(buffer.length / 1024).toFixed(1)} KB`);

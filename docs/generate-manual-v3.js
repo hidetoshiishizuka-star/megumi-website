@@ -573,7 +573,7 @@ const doc = new Document({
         spacer(),
         kvTable([
           ["WEBサイト管理者", "石塚秀俊（MI-ZA Corporation）"],
-          ["メール", "ishizuka55@gmail.com"],
+          ["メール", "※管理者にお問い合わせください"],
           ["対応範囲", "デザイン変更、機能追加、不具合修正、コラム更新"],
         ]),
         spacer(), spacer(),
@@ -595,7 +595,7 @@ const doc = new Document({
 // Generate and save
 (async () => {
   const buffer = await Packer.toBuffer(doc);
-  const outPath = "/Users/ishizuka/Documents/megumi-website/docs/CMS\u904B\u7528\u30DE\u30CB\u30E5\u30A2\u30EB_\u3081\u3050\u307F\u5728\u5B85\u30AF\u30EA\u30CB\u30C3\u30AF_v3.docx";
+  const outPath = "./docs/CMS\u904B\u7528\u30DE\u30CB\u30E5\u30A2\u30EB_\u3081\u3050\u307F\u5728\u5B85\u30AF\u30EA\u30CB\u30C3\u30AF_v3.docx";
   fs.writeFileSync(outPath, buffer);
   console.log("Generated: " + outPath);
   console.log("Size: " + (buffer.length / 1024).toFixed(1) + " KB");

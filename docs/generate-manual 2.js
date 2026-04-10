@@ -123,7 +123,7 @@ const doc = new Document({
       new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun("2. ログイン方法")] }),
       new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun("管理画面URL")] }),
       new Paragraph({ spacing: { after: 120 }, children: [
-        new TextRun({ text: "https://megumizaitaku.microcms.io/", bold: true, color: "4A6AAE" })
+        new TextRun({ text: "※管理者にお問い合わせください", bold: true, color: "4A6AAE" })
       ]}),
       new Paragraph({ spacing: { after: 200 }, children: [
         new TextRun("上記URLをブラウザ（Chrome推奨）で開いてください。")
@@ -329,7 +329,7 @@ const doc = new Document({
             ]}),
             new TableRow({ children: [
               new TableCell({ borders, margins, width: { size: 3000, type: WidthType.DXA }, shading: { fill: "F5F5F7", type: ShadingType.CLEAR }, children: [new Paragraph({ children: [new TextRun({ text: "メール", bold: true, size: 20 })] })] }),
-              new TableCell({ borders, margins, width: { size: 6506, type: WidthType.DXA }, children: [new Paragraph({ children: [new TextRun({ text: "ishizuka55@gmail.com", size: 20 })] })] }),
+              new TableCell({ borders, margins, width: { size: 6506, type: WidthType.DXA }, children: [new Paragraph({ children: [new TextRun({ text: "※管理者にお問い合わせください", size: 20 })] })] }),
             ]}),
             new TableRow({ children: [
               new TableCell({ borders, margins, width: { size: 3000, type: WidthType.DXA }, shading: { fill: "F5F5F7", type: ShadingType.CLEAR }, children: [new Paragraph({ children: [new TextRun({ text: "対応範囲", bold: true, size: 20 })] })] }),
@@ -347,7 +347,7 @@ const doc = new Document({
   }]
 });
 
-const outPath = "/Users/ishizuka/Documents/megumi-website/docs/CMS運用マニュアル_めぐみ在宅クリニック.docx";
+const outPath = "./docs/CMS運用マニュアル_めぐみ在宅クリニック.docx";
 Packer.toBuffer(doc).then(buffer => {
   fs.writeFileSync(outPath, buffer);
   console.log("Created: " + outPath);

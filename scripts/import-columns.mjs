@@ -18,7 +18,7 @@ function parseColumnsTS(filePath) {
 }
 
 async function main() {
-  const columns = parseColumnsTS('/Users/ishizuka/Documents/megumi-website/src/data/columns.ts');
+  const columns = parseColumnsTS('./src/data/columns.ts');
   console.log(`Importing ${columns.length} columns to blog API via POST...`);
 
   let success = 0, fail = 0;

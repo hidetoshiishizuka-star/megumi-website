@@ -79,7 +79,7 @@ export const lectureRecords: LectureRecord[] = ${JSON.stringify(lectures, null, 
 export const lectureYears = [...new Set(lectureRecords.map(l => l.year))].sort((a, b) => b - a);
 `;
 
-const outDir = "/Users/ishizuka/Documents/megumi-website/src/data";
+const outDir = "./src/data";
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "lectures.ts"), ts, "utf-8");
 

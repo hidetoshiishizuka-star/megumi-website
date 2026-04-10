@@ -23,12 +23,9 @@ export default function PhilosophyPage() {
       <section className="gradient-twilight text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
           <p className="overline text-sunrise-light mb-6">Philosophy</p>
-          <h1 className="heading-hero text-white mb-6">
+          <h1 className="heading-hero text-white mb-6 whitespace-nowrap text-[clamp(1.5rem,5vw,3.5rem)]">
             ユニバーサル・ホスピスマインド
           </h1>
-          <p className="subheading text-white/90">
-            治す医療ではなく、支える医療を
-          </p>
         </div>
       </section>
 
@@ -252,7 +249,7 @@ export default function PhilosophyPage() {
         {/* コンピテンシー6領域 */}
         <ScrollReveal>
           <section className="mb-16">
-            <h2 className="heading-section text-navy mb-4">
+            <h2 className="heading-section text-navy mb-4 text-[clamp(1.3rem,4vw,2.75rem)]">
               めぐみ在宅クリニックのコンピテンシー
             </h2>
             <p className="text-text-secondary mb-4 leading-relaxed">

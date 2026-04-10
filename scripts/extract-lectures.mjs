@@ -4,7 +4,7 @@
 import fs from "fs";
 import path from "path";
 
-const BASE = "/Users/ishizuka/Documents/020_MI-ZA/012_めぐみ在宅クリニック/ wwwデータ/www/dat/schedule";
+const BASE = process.env.LECTURE_DATA_DIR || "./data/schedule";
 const years = [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2025];
 
 const lectures = [];

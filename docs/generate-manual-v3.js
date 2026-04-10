@@ -348,7 +348,7 @@ const doc = new Document({
         spacer(),
 
         h2("1.2 管理画面へのアクセス"),
-        labeledP("管理画面URL: ", "https://3gc6ro399e.microcms.io/"),
+        labeledP("管理画面URL: ", "※管理者にお問い合わせください"),
         labeledP("ログイン方法: ", "メールアドレスとパスワードでログインします。"),
         labeledP("推奨ブラウザ: ", "Google Chrome（最新版）"),
         spacer(),

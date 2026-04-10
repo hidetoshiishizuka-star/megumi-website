@@ -271,7 +271,7 @@ const doc = new Document({
         p("CMS（Contents Management System）とは、専門的な知識がなくてもブラウザ上でWEBサイトのコンテンツを編集・管理できるシステムです。めぐみ在宅クリニックのWEBサイトでは「microCMS」というサービスを使用しています。"),
 
         h2("1.2 管理画面へのアクセス"),
-        labeledP("管理画面URL: ", "https://3gc6ro399e.microcms.io/"),
+        labeledP("管理画面URL: ", "※管理者にお問い合わせください"),
         p("上記URLにアクセスし、登録済みのメールアドレスとパスワードでログインしてください。"),
 
         h3("ログイン手順"),

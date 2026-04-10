@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "megumi_zaitaku@miracle.ocn.ne.jp";
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "noreply@megumizaitaku.jp";
+// Security: No hardcoded fallbacks - fail fast if env vars missing
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL;
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL;
 const ALLOWED_ORIGINS = ["https://www.megumizaitaku.jp", "https://megumi-website-xi.vercel.app"];
 
 // --- Security: HTML escape ---
@@ -53,8 +54,10 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "不正なリクエストです" }, { status: 403 });
     }
 
-    // --- Security: Rate limiting ---
-    const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    // --- Security: Rate limiting (prefer x-real-ip on Vercel, fallback to x-forwarded-for) ---
+    const ip = request.headers.get("x-real-ip")
+      || request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()
+      || "unknown";
     if (isRateLimited(ip)) {
       return NextResponse.json(
         { error: "送信回数の上限に達しました。しばらく経ってから再度お試しください。" },
@@ -98,8 +101,8 @@ export async function POST(request: Request) {
     }
 
     const resend = getResend();
-    if (!resend) {
-      console.error("RESEND_API_KEY is not configured");
+    if (!resend || !TO_EMAIL || !FROM_EMAIL) {
+      console.error("Email configuration is incomplete");
       return NextResponse.json(
         { error: "メール送信の設定が完了していません。お電話（045-300-6630）でお問い合わせください。" },
         { status: 503 }
@@ -136,14 +139,13 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("Resend error:", JSON.stringify(error));
-      // Security: Do not expose error details to client
       return NextResponse.json(
         { error: "メール送信に失敗しました。しばらく経ってから再度お試しください。" },
         { status: 500 }
       );
     }
 
-    // 自動返信メール（お客様宛）
+    // 自動返信メール（お客様宛） — クリニック宛送信が成功した場合のみ送信
     await resend.emails.send({
       from: `めぐみ在宅クリニック <${FROM_EMAIL}>`,
       to: [email],

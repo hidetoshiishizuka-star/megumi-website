@@ -77,7 +77,7 @@ async function fetchAll(endpoint) {
 // ============ TASK 1: Import Columns (blog) ============
 async function importColumns() {
   console.log('\n=== TASK 1: Import コラム (blog) ===');
-  const columns = parseColumnsTS('/Users/ishizuka/Documents/megumi-website/src/data/columns.ts');
+  const columns = parseColumnsTS('./src/data/columns.ts');
   console.log(`Parsed ${columns.length} columns`);
 
   // Test with first entry
@@ -144,7 +144,7 @@ async function importColumns() {
 // ============ TASK 2: Import Lectures ============
 async function importLectures() {
   console.log('\n=== TASK 2: Import 講演実績 (lectures) ===');
-  const lectures = parseLecturesTS('/Users/ishizuka/Documents/megumi-website/src/data/lectures.ts');
+  const lectures = parseLecturesTS('./src/data/lectures.ts');
   console.log(`Parsed ${lectures.length} lectures`);
 
   // Test with first entry
@@ -179,7 +179,7 @@ async function importLectures() {
 // ============ TASK 3: Import Media ============
 async function importMedia() {
   console.log('\n=== TASK 3: Import メディア掲載 (media) ===');
-  const mediaEntries = parseMediaTS('/Users/ishizuka/Documents/megumi-website/src/data/media.ts');
+  const mediaEntries = parseMediaTS('./src/data/media.ts');
   console.log(`Parsed ${mediaEntries.length} media entries`);
 
   // Fetch existing entries from microCMS

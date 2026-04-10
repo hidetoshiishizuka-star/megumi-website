@@ -84,7 +84,6 @@ export default async function PartnershipPage() {
           </div>
           <p className="text-xs text-text-muted mt-4">
             ※ 対応エリア：{CLINIC_INFO.areas.join("・")}（クリニックから原則5km以内）。
-            緩和ケア専門医などの対応が必要な終末期の患者さまの場合、5kmを超えて対応することがあります。
           </p>
         </section>
 

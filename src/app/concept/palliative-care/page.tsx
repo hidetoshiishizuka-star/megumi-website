@@ -109,6 +109,37 @@ export default function PalliativeCarePage() {
           </div>
         </section>
 
+        {/* 医療機関の皆さまへ */}
+        <section className="bg-navy-light rounded-2xl p-8 mb-12">
+          <h2 className="text-xl font-bold text-navy mb-4">医療機関の皆さまへ</h2>
+          <p className="text-text-secondary leading-relaxed mb-4">
+            がん末期・終末期の患者さまの在宅移行をご検討の際は、当院にご相談ください。
+            院長は緩和医療専門医・指導医であり、疼痛管理からディグニティセラピー、看取り後のグリーフケアまで一貫して対応いたします。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+            <div className="bg-white rounded-lg p-4 text-center">
+              <p className="text-2xl font-bold text-navy">24h</p>
+              <p className="text-xs text-text-muted mt-1">365日緊急往診対応</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center">
+              <p className="text-2xl font-bold text-navy">土曜</p>
+              <p className="text-xs text-text-muted mt-1">訪問診療も実施</p>
+            </div>
+            <div className="bg-white rounded-lg p-4 text-center">
+              <p className="text-2xl font-bold text-navy">迅速</p>
+              <p className="text-xs text-text-muted mt-1">初回訪問を柔軟に調整</p>
+            </div>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/clinic/partnership"
+              className="inline-flex items-center gap-2 text-navy font-medium text-sm hover:text-twilight transition-colors"
+            >
+              連携・ご紹介の詳細はこちら →
+            </Link>
+          </div>
+        </section>
+
         <MedicalSupervision lastUpdated="2026-04-07" />
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">

@@ -56,9 +56,13 @@ export default function ServicesPage() {
               </h2>
               <ul className="space-y-3 text-text-secondary">
                 {[
+                  "がん末期・終末期の在宅緩和ケアを希望される方",
+                  "神経難病（ALS・パーキンソン病・多系統萎縮症等）の方",
+                  "認知症でご自宅での生活を続けたい方",
+                  "心不全・呼吸器疾患・腎疾患等の慢性疾患をお持ちの方",
+                  "人工呼吸器・在宅酸素・経管栄養等の管理が必要な方",
                   "加齢や病気のために通院が困難になった方",
                   "退院後、ご自宅での医療継続が必要な方",
-                  "がん・神経難病・慢性疾患をお持ちの方",
                   "在宅での看取りを希望される方",
                 ].map((item, i) => (
                   <ScrollReveal key={item} delay={i * 80}>
@@ -69,6 +73,9 @@ export default function ServicesPage() {
                   </ScrollReveal>
                 ))}
               </ul>
+              <p className="text-sm text-text-muted mt-4">
+                ※ 精神科疾患が主体の場合は、専門医療機関をご案内しています。
+              </p>
             </section>
           </ScrollReveal>
 
@@ -133,8 +140,11 @@ export default function ServicesPage() {
                 </table>
               </div>
               <p className="text-sm text-text-muted mt-3">
-                ※ 土・日・祝は休診です。緩和ケア外来は予約制です。受付 8:45〜12:00。
+                ※ 外来は土・日・祝は休診です。緩和ケア外来は予約制です。受付 8:45〜12:00。
                 採血・採尿は可能です。X線・CT・内視鏡は連携先の横浜甦生病院外来をご紹介します。
+              </p>
+              <p className="text-sm text-navy font-medium mt-2">
+                ※ 訪問診療は土曜日も実施しています。緊急往診は24時間365日対応です。
               </p>
             </section>
           </ScrollReveal>

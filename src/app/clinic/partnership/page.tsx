@@ -109,7 +109,7 @@ export default async function PartnershipPage() {
               {
                 step: "3",
                 title: "初回訪問日の調整",
-                desc: "対応可能な場合、ご本人・ご家族のご都合に合わせて初回訪問日を調整いたします。急なご依頼にも可能な限り柔軟に対応いたします。",
+                desc: "できる限り迅速に初回訪問を調整いたします。緊急性の高い場合は最優先で対応します。土曜日の訪問にも対応しています。",
                 detail: null,
               },
               {
@@ -211,6 +211,54 @@ export default async function PartnershipPage() {
               ご希望の方は地域連携室までお気軽にお問い合わせください。
             </p>
           </div>
+        </section>
+
+        {/* 病院連携担当者の方へ */}
+        <section className="mb-16">
+          <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
+            病院連携担当者の皆さまへ
+          </h2>
+          <p className="text-text-secondary leading-relaxed mb-6">
+            がん末期・終末期の患者さまの在宅移行をご検討の際は、ぜひ当院にご相談ください。
+            以下の体制で、退院後の在宅療養を支えます。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+            {[
+              "緩和医療専門医・指導医が在籍",
+              "24時間365日の緊急往診体制",
+              "土曜日も訪問診療を実施",
+              "できる限り迅速に初回訪問を調整",
+              "限られた時間でも在宅移行を支援",
+              "看取り後のグリーフケアまで対応",
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-navy-light rounded-lg px-4 py-3 text-sm text-navy font-medium flex items-start gap-2"
+              >
+                <span className="text-sunrise shrink-0">✓</span>
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <h3 className="font-bold text-navy text-sm mb-3">在籍医師の主な専門領域</h3>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[
+              "緩和医療", "総合内科", "総合診療", "家庭医療",
+              "麻酔科", "外科", "救急医学", "呼吸器内科",
+              "リハビリテーション", "老年医学", "病態栄養学",
+            ].map((spec) => (
+              <span
+                key={spec}
+                className="bg-warm-gray text-text-secondary text-xs px-3 py-1.5 rounded-full"
+              >
+                {spec}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm text-text-muted">
+            ※ 人工呼吸器・CPAP・在宅酸素・中心静脈栄養・経管栄養等の医療処置にも対応しています。
+          </p>
         </section>
 
         {/* 関連ページ */}

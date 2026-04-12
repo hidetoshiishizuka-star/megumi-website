@@ -26,6 +26,31 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // モバイルメニュー開閉時のbodyスクロールロック
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  // Escキーでメニューを閉じる
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen]);
+
+  // 画面幅がlg以上になったらメニューを閉じる
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setMenuOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const isOverlay = variant === "top";
 
   return (

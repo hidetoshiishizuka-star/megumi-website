@@ -220,8 +220,6 @@ export default async function TopPage() {
                   className="object-cover object-[75%_center]"
                 />
               </div>
-              <p className="text-xs text-text-muted text-center mt-2">
-              </p>
             </div>
             <div className="md:w-2/3">
               <p className="text-navy text-sm font-medium mb-2">院長紹介</p>

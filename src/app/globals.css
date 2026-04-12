@@ -59,24 +59,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* === Apple風アニメーション === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* smooth scroll -- モーション軽減設定を尊重 */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .scroll-reveal {
@@ -88,6 +75,15 @@ html {
 .scroll-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* モーション軽減 or JS無効時はアニメーションを無効化してコンテンツを表示 */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* === Apple風ボタン === */
@@ -104,11 +100,6 @@ html {
   letter-spacing: 0.01em;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-
-.btn-pill-sm {
-  padding: 8px 20px;
-  font-size: 13px;
 }
 
 .btn-pill-primary {
@@ -128,17 +119,6 @@ html {
 
 .btn-pill-secondary:hover {
   background-color: var(--color-sunrise-light);
-}
-
-.btn-pill-white {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-}
-
-.btn-pill-white:hover {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* === Apple風フロストグラス === */

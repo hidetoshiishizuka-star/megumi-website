@@ -4,7 +4,8 @@ import { Resend } from "resend";
 // Security: No hardcoded fallbacks - fail fast if env vars missing
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL;
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL;
-const ALLOWED_ORIGINS = ["https://www.megumizaitaku.jp", "https://megumi-website-xi.vercel.app"];
+// 許可ドメインは環境変数で管理（カンマ区切り）
+const ALLOWED_ORIGINS = (process.env.CONTACT_ALLOWED_ORIGINS || "").split(",").filter(Boolean);
 
 // --- Security: HTML escape ---
 function escapeHtml(str: string): string {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "めぐみ在宅クリニック｜瀬谷区の在宅医療・訪問診療・往診",
     template: `%s | ${SITE_NAME}`,
   },
-  description: "横浜市瀬谷区の在宅医療・訪問診療・往診クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。三ツ境駅周辺も対応。通院が困難な方のご自宅に医師が訪問します。",
+  description: "横浜市瀬谷区の訪問診療・在宅医療・在宅緩和ケア。24時間365日緊急往診対応。緩和ケア専門医在籍。瀬谷区全般・泉区・旭区・大和市へ訪問。在宅看取り・退院後の在宅療養もご相談ください。",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "./",
@@ -89,8 +89,14 @@ export default function RootLayout({
                 "jobTitle": "院長"
               },
               "medicalSpecialty": ["緩和医療", "在宅医療", "総合内科"],
+              "availableService": [
+                { "@type": "MedicalTherapy", "name": "訪問診療" },
+                { "@type": "MedicalTherapy", "name": "在宅緩和ケア" },
+                { "@type": "MedicalTherapy", "name": "在宅看取り" },
+                { "@type": "MedicalTherapy", "name": "緊急往診" }
+              ],
               "areaServed": ["横浜市瀬谷区", "横浜市泉区", "横浜市旭区", "大和市"],
-              "description": "横浜市瀬谷区で20年。通院が困難な方の在宅医療を支えるクリニック。24時間365日対応。"
+              "description": "横浜市瀬谷区の訪問診療・在宅医療クリニック。在宅緩和ケア・在宅看取り・24時間緊急往診対応。緩和医療専門医在籍。"
             })
           }}
         />

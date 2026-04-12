@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "費用について｜瀬谷区の訪問診療の料金目安",
+  title: "訪問診療の費用｜料金目安・負担額｜瀬谷区",
   description:
-    "めぐみ在宅クリニックの訪問診療にかかる費用の目安。1割負担で月約8,000円から。交通費無料。横浜市瀬谷区を中心に在宅医療を提供しています。",
+    "訪問診療の費用目安。1割負担で月2回約8,000円、月1回約6,000円。交通費無料。横浜市瀬谷区のめぐみ在宅クリニック。在宅緩和ケア・在宅看取りの費用もご相談ください。",
 };
 
 export default function FeePage() {

@@ -9,9 +9,9 @@ import { staffMembers as fallbackStaff } from "@/data/staff";
 import { getStaffList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
-  title: "はじめての方へ｜瀬谷区の訪問診療の流れ",
+  title: "はじめての方へ｜訪問診療の流れ・費用｜瀬谷区",
   description:
-    "在宅医療・訪問診療をご検討中の方へ。横浜市瀬谷区のめぐみ在宅クリニックが訪問診療開始までの流れをわかりやすくご説明します。瀬谷駅徒歩9分。まずはお電話ください。",
+    "退院後の訪問診療をご検討中の方へ。横浜市瀬谷区のめぐみ在宅クリニックが在宅医療開始の流れを説明します。一人暮らしの方の在宅看取りもご相談ください。24時間緊急往診対応。",
 };
 
 export const revalidate = 60;

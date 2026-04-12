@@ -84,10 +84,11 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">
-          ご用件 <span className="text-sunrise">*</span>
+        <label htmlFor="purpose" className="block text-sm font-medium mb-2">
+          ご用件
         </label>
         <select
+          id="purpose"
           name="purpose"
           value={formData.purpose}
           onChange={handleChange}
@@ -106,11 +107,12 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-sm font-medium mb-2">
             お名前 <span className="text-sunrise">*</span>
           </label>
           <input
             type="text"
+            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -120,9 +122,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">フリガナ</label>
+          <label htmlFor="kana" className="block text-sm font-medium mb-2">フリガナ</label>
           <input
             type="text"
+            id="kana"
             name="kana"
             value={formData.kana}
             onChange={handleChange}
@@ -134,11 +137,12 @@ export default function ContactForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-medium mb-2">
             メールアドレス <span className="text-sunrise">*</span>
           </label>
           <input
             type="email"
+            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
@@ -147,9 +151,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-2">電話番号</label>
+          <label htmlFor="phone" className="block text-sm font-medium mb-2">電話番号</label>
           <input
             type="tel"
+            id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
@@ -159,10 +164,11 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block text-sm font-medium mb-2">
           お問い合わせ内容 <span className="text-sunrise">*</span>
         </label>
         <textarea
+          id="message"
           name="message"
           value={formData.message}
           onChange={handleChange}

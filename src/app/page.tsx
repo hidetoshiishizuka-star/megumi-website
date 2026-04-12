@@ -26,7 +26,7 @@ export default async function TopPage() {
   return (
     <>
       <Header variant="top" />
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="relative">
           <div className="absolute inset-0">
@@ -34,6 +34,7 @@ export default async function TopPage() {
               src="/images/hero-visit.jpg"
               alt="訪問診療の様子"
               fill
+              sizes="100vw"
               className="object-cover"
               priority
             />
@@ -215,6 +216,7 @@ export default async function TopPage() {
                   src="/images/director-car.jpg"
                   alt="院長 小澤竹俊"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover object-[75%_center]"
                 />
               </div>

@@ -8,9 +8,9 @@ import { staffMembers as fallbackStaff } from "@/data/staff";
 import { getStaffList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
-  title: "医療機関・介護事業所の方へ｜瀬谷区の在宅医療",
+  title: "医療機関・介護事業所の方へ｜訪問診療の連携｜瀬谷区",
   description:
-    "医療機関・介護事業所・ケアマネジャーの皆さまへ。横浜市瀬谷区のめぐみ在宅クリニックへの患者さまご紹介・地域連携のご案内。24時間365日対応。",
+    "医療機関・ケアマネジャーの皆さまへ。横浜市瀬谷区のめぐみ在宅クリニックへの患者ご紹介案内。在宅緩和ケア・退院後の訪問診療・緊急往診24時間対応。土曜訪問可。",
 };
 
 export const revalidate = 60;

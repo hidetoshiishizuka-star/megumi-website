@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     '', '/privacy',
     '/clinic/services', '/clinic/first-visit', '/clinic/fee', '/clinic/faq',
-    '/clinic/staff', '/clinic/grief', '/clinic/recruit', '/clinic/partnership', '/clinic/contact',
+    '/clinic/staff', '/clinic/grief', '/clinic/recruit', '/clinic/partnership', '/clinic/contact', '/clinic/news',
     '/concept/about', '/concept/philosophy', '/concept/palliative-care',
     '/concept/training', '/concept/lecture', '/concept/books',
   ]

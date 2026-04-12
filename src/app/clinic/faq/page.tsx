@@ -58,8 +58,26 @@ const faqs = [
 ];
 
 export default function FaqPage() {
+  // FAQPage構造化データ（Googleリッチリザルト対応）
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Breadcrumb items={[
         { label: "ホーム", href: "/" },
         { label: "よくあるご質問" },

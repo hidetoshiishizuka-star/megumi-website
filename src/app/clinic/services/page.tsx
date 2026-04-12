@@ -7,9 +7,9 @@ import MedicalSupervision from "@/components/ui/MedicalSupervision";
 import { CLINIC_INFO } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "診療案内｜瀬谷区の在宅医療・訪問診療・往診",
+  title: "診療案内｜訪問診療・在宅緩和ケア・緊急往診｜瀬谷区",
   description:
-    "めぐみ在宅クリニックの診療案内。横浜市瀬谷区を中心に訪問診療・往診・緩和ケア外来を提供。24時間365日の緊急往診体制。瀬谷駅・三ツ境駅周辺対応。お気軽にご相談ください。",
+    "横浜市瀬谷区の訪問診療・在宅緩和ケア・在宅看取り。24時間365日緊急往診対応。泉区・旭区・大和市も訪問。退院後の在宅療養、一人暮らしの方もご相談ください。",
 };
 
 export default function ServicesPage() {

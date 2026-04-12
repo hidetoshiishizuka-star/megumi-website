@@ -5,9 +5,9 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import MedicalSupervision from "@/components/ui/MedicalSupervision";
 
 export const metadata: Metadata = {
-  title: "緩和ケアとは｜瀬谷区の在宅緩和ケア",
+  title: "在宅緩和ケア・在宅看取り｜瀬谷区の訪問診療",
   description:
-    "緩和ケアとは何か。めぐみ在宅クリニックが実践するホスピスマインドに基づく在宅緩和ケアをご紹介。横浜市瀬谷区で緩和医療専門医が対応します。",
+    "横浜市瀬谷区の在宅緩和ケア・在宅看取り。緩和医療専門医・指導医が在籍。がん末期の疼痛管理からグリーフケアまで。一人暮らしの方の在宅看取りもご相談ください。24時間緊急往診対応。",
 };
 
 export default function PalliativeCarePage() {

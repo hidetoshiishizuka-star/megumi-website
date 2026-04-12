@@ -28,11 +28,8 @@ export default function ContactPage() {
 
         <div className="max-w-[var(--content-narrow)] mx-auto px-4 sm:px-6 py-12">
           <ScrollReveal>
-            <p className="text-text-secondary mb-4 leading-relaxed">
+            <p className="text-text-secondary mb-10 leading-relaxed">
               お問い合わせは各目的に応じて、下記の通りお寄せください。
-            </p>
-            <p className="text-sm text-text-muted mb-10 leading-relaxed">
-              新規ご相談：月〜金 9:00〜17:00 / 既存患者さまの緊急連絡：24時間対応
             </p>
           </ScrollReveal>
 
@@ -44,8 +41,8 @@ export default function ContactPage() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <ScrollReveal delay={0}>
-                  <div className="bg-navy-light rounded-xl p-6">
-                    <h3 className="font-bold mb-2">診療・採用について</h3>
+                  <div className="bg-navy-light rounded-xl p-6 h-full">
+                    <h3 className="font-bold mb-2">診療について</h3>
                     <a
                       href={`tel:${CLINIC_INFO.tel}`}
                       className="inline-flex items-center gap-2 text-2xl font-bold text-navy hover:text-navy-dark"
@@ -56,16 +53,18 @@ export default function ContactPage() {
                       {CLINIC_INFO.tel}
                     </a>
                     <p className="text-sm text-text-muted mt-2">
-                      地域連携室・採用係
+                      地域連携室
                       <br />
-                      月〜金 9:00〜17:00
+                      新規ご相談：月〜金 9:00〜17:00
+                      <br />
+                      既存患者さまの緊急連絡：24時間対応
                     </p>
                   </div>
                 </ScrollReveal>
                 <ScrollReveal delay={80}>
-                  <div className="bg-navy-light rounded-xl p-6">
-                    <h3 className="font-bold mb-2">研修・講演・取材について</h3>
-                    <p className="text-sm text-text-secondary mb-3">
+                  <div className="bg-navy-light rounded-xl p-6 h-full">
+                    <h3 className="font-bold mb-2">採用（求人）・研修・講演・取材について</h3>
+                    <p className="text-sm text-text-secondary">
                       下記のお問い合わせフォームよりご連絡ください。
                     </p>
                   </div>

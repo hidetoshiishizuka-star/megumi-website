@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="max-w-[var(--content-narrow)] mx-auto px-4 sm:px-6 py-12">
           <ScrollReveal>
             <p className="text-text-secondary mb-10 leading-relaxed">
-              お問い合わせは各目的に応じて、下記の通りお寄せください。
+              お問い合わせは各目的に応じて、下記参照の上、お問い合わせください。
             </p>
           </ScrollReveal>
 

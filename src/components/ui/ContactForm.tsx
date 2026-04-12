@@ -103,7 +103,7 @@ export default function ContactForm() {
         >
           <option value="">選択してください</option>
           <option value="診療について">診療について</option>
-          <option value="求人に関する問い合わせ">求人に関する問い合わせ</option>
+          <option value="採用（求人）に関する問い合わせ">採用（求人）に関する問い合わせ</option>
           <option value="研修会・勉強会について">研修会・勉強会について</option>
           <option value="在宅医療・緩和ケアを学びたい">在宅医療・緩和ケアを学びたい</option>
           <option value="講演依頼">講演依頼</option>

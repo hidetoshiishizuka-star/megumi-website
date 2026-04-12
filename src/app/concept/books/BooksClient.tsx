@@ -17,10 +17,12 @@ export default function BooksClient({ booksFromServer, mediaFromServer }: Props)
   const [selectedCategory, setSelectedCategory] = useState<MediaCategory | null>(null);
   const [showAllMedia, setShowAllMedia] = useState(false);
 
+  // カテゴリで絞り込み（未選択時は全件表示）
   const filteredMedia = selectedCategory
     ? media.filter((e) => e.category === selectedCategory)
     : media;
 
+  // 初期表示は20件まで、「すべて表示」クリックで全件表示
   const displayedMedia = showAllMedia ? filteredMedia : filteredMedia.slice(0, 20);
 
   return (

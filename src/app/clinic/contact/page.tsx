@@ -84,19 +84,6 @@ export default function ContactPage() {
             </section>
           </ScrollReveal>
 
-          {/* アクセス */}
-          <ScrollReveal>
-            <section>
-              <h2 className="heading-section text-navy mb-6">アクセス</h2>
-              <div className="bg-warm-gray rounded-xl p-6">
-                <p className="font-bold mb-2">めぐみ在宅クリニック</p>
-                <p className="text-sm text-text-secondary">{CLINIC_INFO.address}</p>
-                <p className="text-sm text-text-muted mt-2">
-                  ※ 当院は在宅医療を中心とした診療を行っています。外来は月曜・木曜の午前のみです。
-                </p>
-              </div>
-            </section>
-          </ScrollReveal>
         </div>
     </>
   );

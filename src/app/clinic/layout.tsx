@@ -9,7 +9,7 @@ export default function ClinicLayout({
   return (
     <>
       <Header variant="clinic" />
-      <main className="min-h-screen" style={{ paddingTop: "var(--header-height, 48px)" }}>{children}</main>
+      <main id="main-content" className="min-h-screen" style={{ paddingTop: "var(--header-height, 48px)" }}>{children}</main>
       <Footer />
     </>
   );

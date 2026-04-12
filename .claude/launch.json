@@ -2,11 +2,12 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "megumi-new",
+      "name": "megumi-services",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--", "--port", "3001"],
-      "cwd": "/Users/mieishizuka/Documents/megumi-website",
-      "port": 3001
+      "runtimeArgs": ["run", "dev", "--", "--port", "3002"],
+      "cwd": "/Users/ishizuka/Documents/megumi-website",
+      "port": 3002,
+      "url": "http://localhost:3002/clinic/services"
     }
   ]
 }

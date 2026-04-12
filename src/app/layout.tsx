@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   },
   description: "横浜市瀬谷区の在宅医療・訪問診療・往診クリニック。瀬谷駅徒歩9分。24時間365日対応、緩和ケア専門医在籍。三ツ境駅周辺も対応。通院が困難な方のご自宅に医師が訪問します。",
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
@@ -40,12 +43,20 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="font-sans text-text-primary bg-white antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-navy focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm"
+        >
+          メインコンテンツへスキップ
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

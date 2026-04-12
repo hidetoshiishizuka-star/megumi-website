@@ -1,52 +1,57 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/ui/PageHeader";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import { getNewsList } from "@/lib/microcms";
 
 export const metadata: Metadata = {
-  title: "お知らせ",
-  description: "めぐみ在宅クリニックからのお知らせ。",
+  title: "お知らせ｜めぐみ在宅クリニック",
+  description: "めぐみ在宅クリニックからのお知らせ。診療・採用・研修・メディア掲載情報を掲載しています。",
 };
 
-// TODO: microCMS連携後は動的に取得
-const news = [
-  {
-    date: "2026.02.05",
-    title: "2月オンライン・イベントのお知らせ",
-  },
-  {
-    date: "2025.12.17",
-    title: "小澤院長メディア掲載・出演＜専門誌・医療関係＞を更新しました",
-  },
-  {
-    date: "2025.12.01",
-    title: "医師/看護師採用情報を掲載しています",
-  },
-  {
-    date: "2025.11.15",
-    title: "めぐみ在宅クリニックでは特定健診を実施しております（予約制）",
-  },
-];
+export const revalidate = 60;
 
-export default function NewsPage() {
+export default async function NewsPage() {
+  const newsList = await getNewsList(50).catch(() => []);
+
   return (
     <>
-      <PageHeader title="お知らせ" />
+      <Breadcrumb items={[
+        { label: "ホーム", href: "/" },
+        { label: "お知らせ" },
+      ]} />
+      <PageHeader title="お知らせ" subtitle="クリニックからの最新情報" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-        <div className="space-y-4">
-          {news.map((item, i) => (
-            <article
-              key={i}
-              className="border-b border-gray-200 pb-4"
-            >
-              <time className="text-sm text-text-muted">{item.date}</time>
-              <h2 className="font-medium mt-1 ">
-                {item.title}
-              </h2>
-            </article>
-          ))}
-        </div>
-        <p className="text-sm text-text-muted mt-8 text-center">
-        </p>
+        {newsList.length > 0 ? (
+          <div className="space-y-4">
+            {newsList.map((item, i) => (
+              <article
+                key={i}
+                className="border-b border-gray-200 pb-4"
+              >
+                <div className="flex items-center gap-3">
+                  <time className="text-sm text-text-muted tabular-nums">{item.date}</time>
+                  {item.category && (
+                    <span className="text-xs bg-navy-light text-navy px-2 py-0.5 rounded-full font-medium">
+                      {item.category}
+                    </span>
+                  )}
+                </div>
+                <h2 className="font-medium mt-1 text-text-primary">
+                  {item.link ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-navy transition-colors">
+                      {item.title}
+                    </a>
+                  ) : (
+                    item.title
+                  )}
+                </h2>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-text-muted py-12">現在、お知らせはありません。</p>
+        )}
       </div>
     </>
   );

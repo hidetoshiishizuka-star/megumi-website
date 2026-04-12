@@ -9,7 +9,7 @@ export default function ConceptLayout({
   return (
     <>
       <Header variant="concept" />
-      <main className="min-h-screen" style={{ paddingTop: "var(--header-height, 48px)" }}>{children}</main>
+      <main id="main-content" className="min-h-screen" style={{ paddingTop: "var(--header-height, 48px)" }}>{children}</main>
       <Footer />
     </>
   );

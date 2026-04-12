@@ -15,22 +15,29 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<"success" | "error" | null>(null);
+  const [validationError, setValidationError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setValidationError(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setValidationError(null);
 
     if (!formData.name || !formData.email || !formData.message) {
-      alert("必須項目をご入力ください。");
+      setValidationError("お名前・メールアドレス・お問い合わせ内容は必須です。");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setValidationError("メールアドレスの形式が正しくありません。");
       return;
     }
     if (!agreed) {
-      alert("プライバシーポリシーに同意してください。");
+      setValidationError("プライバシーポリシーに同意してください。");
       return;
     }
 
@@ -197,6 +204,12 @@ export default function ContactForm() {
           に同意の上、送信してください。
         </label>
       </div>
+
+      {validationError && (
+        <div className="bg-sunrise/10 text-sunrise border border-sunrise/30 rounded-lg p-4 text-sm" role="alert">
+          {validationError}
+        </div>
+      )}
 
       {result === "error" && (
         <div className="bg-red-50 text-red-700 rounded-lg p-4 text-sm">

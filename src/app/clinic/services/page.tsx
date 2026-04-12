@@ -111,12 +111,12 @@ export default function ServicesPage() {
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-navy text-white">
-                      <th className="px-4 py-3 text-left">時間</th>
-                      <th className="px-4 py-3">月</th>
-                      <th className="px-4 py-3">火</th>
-                      <th className="px-4 py-3">水</th>
-                      <th className="px-4 py-3">木</th>
-                      <th className="px-4 py-3">金</th>
+                      <th scope="col" className="px-4 py-3 text-left">時間</th>
+                      <th scope="col" className="px-4 py-3">月</th>
+                      <th scope="col" className="px-4 py-3">火</th>
+                      <th scope="col" className="px-4 py-3">水</th>
+                      <th scope="col" className="px-4 py-3">木</th>
+                      <th scope="col" className="px-4 py-3">金</th>
                     </tr>
                   </thead>
                   <tbody>

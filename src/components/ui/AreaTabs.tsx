@@ -5,7 +5,7 @@ import { CLINIC_INFO } from "@/lib/constants";
 
 const ServiceAreaMap = dynamic(() => import("./ServiceAreaMap"), { ssr: false });
 
-export default function AreaMaps() {
+export default function AreaTabs() {
   return (
     <div className="space-y-16">
       {/* 外来アクセス（Google Map） */}

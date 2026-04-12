@@ -37,10 +37,10 @@ export default function FeePage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-navy text-white">
-                  <th className="px-4 py-3 text-left">対象</th>
-                  <th className="px-4 py-3">負担割合</th>
-                  <th className="px-4 py-3">自己負担額（目安）</th>
-                  <th className="px-4 py-3">負担上限</th>
+                  <th scope="col" className="px-4 py-3 text-left">対象</th>
+                  <th scope="col" className="px-4 py-3">負担割合</th>
+                  <th scope="col" className="px-4 py-3">自己負担額（目安）</th>
+                  <th scope="col" className="px-4 py-3">負担上限</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
@@ -82,10 +82,10 @@ export default function FeePage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-navy text-white">
-                  <th className="px-4 py-3 text-left">対象</th>
-                  <th className="px-4 py-3">負担割合</th>
-                  <th className="px-4 py-3">自己負担額（目安）</th>
-                  <th className="px-4 py-3">負担上限</th>
+                  <th scope="col" className="px-4 py-3 text-left">対象</th>
+                  <th scope="col" className="px-4 py-3">負担割合</th>
+                  <th scope="col" className="px-4 py-3">自己負担額（目安）</th>
+                  <th scope="col" className="px-4 py-3">負担上限</th>
                 </tr>
               </thead>
               <tbody className="divide-y">

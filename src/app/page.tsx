@@ -149,6 +149,19 @@ export default async function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
           <h2 className="text-xl font-bold mb-4">お知らせ</h2>
           <div className="divide-y divide-gray-200 bg-white rounded-2xl overflow-hidden border border-gray-100">
+            <div className="px-6 py-4 bg-navy-light/50 hover:bg-navy-light transition-colors">
+              <div className="flex items-baseline gap-4">
+                <span className="text-xs text-sunrise font-bold shrink-0">重要</span>
+                <a
+                  href="/documents/basic-fee-list.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-navy font-medium hover:underline"
+                >
+                  当院が届け出ている基本診療料・特掲診療料一覧（PDF）
+                </a>
+              </div>
+            </div>
             {newsItems.map((item, i) => (
               <div key={i} className="px-6 py-4 hover:bg-gray-50 transition-colors">
                 <div className="flex items-baseline gap-4">

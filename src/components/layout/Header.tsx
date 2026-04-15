@@ -54,6 +54,7 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
   const isOverlay = variant === "top";
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -142,9 +143,10 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
           </div>
         </div>
       </div>
+    </header>
 
-      {/* モバイルメニュー */}
-      <div className={`lg:hidden fixed inset-0 top-12 bg-white/95 backdrop-blur-xl z-40 transition-all duration-300 overflow-y-auto ${
+      {/* モバイルメニュー (iOS Safariのスタッキングコンテキスト対策でheader外に配置) */}
+      <div className={`lg:hidden fixed inset-0 top-12 bg-white z-[55] transition-opacity duration-300 overflow-y-auto ${
         menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
       }`}>
         <nav className="flex flex-col px-8 py-8 gap-1">
@@ -204,6 +206,6 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

@@ -102,7 +102,8 @@ export default function ServicesPage() {
           <ScrollReveal>
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">外来診療</h2>
-              <div className="overflow-x-auto">
+              {/* PC表示：テーブル */}
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-navy text-white">
@@ -136,6 +137,34 @@ export default function ServicesPage() {
                     </tr>
                   </tbody>
                 </table>
+              </div>
+
+              {/* スマホ表示：曜日ごとリスト */}
+              <div className="md:hidden space-y-2">
+                <div className="bg-navy text-white px-4 py-2 rounded-t-lg text-sm font-medium">
+                  診療時間 9:00〜12:00（受付 8:45〜12:00）
+                </div>
+                {[
+                  { day: "月", general: true, palliative: true },
+                  { day: "火", general: false, palliative: true },
+                  { day: "水", general: false, palliative: false },
+                  { day: "木", general: true, palliative: true },
+                  { day: "金", general: false, palliative: false },
+                ].map((d) => (
+                  <div key={d.day} className="flex items-center border-b border-gray-200 px-4 py-3">
+                    <span className="w-8 font-bold text-navy">{d.day}</span>
+                    <div className="flex-1 text-sm">
+                      {!d.general && !d.palliative ? (
+                        <span className="text-text-muted">−（休診）</span>
+                      ) : (
+                        <>
+                          {d.general && <span className="text-navy font-medium mr-3">一般外来</span>}
+                          {d.palliative && <span className="text-sunrise font-medium">緩和ケア外来</span>}
+                        </>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
               <p className="text-sm text-text-muted mt-3">
                 ※ 緩和ケア外来は予約制です。

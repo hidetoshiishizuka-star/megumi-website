@@ -33,7 +33,8 @@ export default function FeePage() {
           <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
             月2回定期訪問の場合（24時間緊急体制）
           </h2>
-          <div className="overflow-x-auto">
+          {/* PC表示：テーブル */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-navy text-white">
@@ -70,6 +71,33 @@ export default function FeePage() {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* スマホ表示：カードリスト */}
+          <div className="md:hidden space-y-3">
+            {[
+              { target: "高齢者", rate: "1割", amount: "約8,000円", limit: "18,000円" },
+              { target: "高齢者", rate: "2割", amount: "約16,000円", limit: "18,000円" },
+              { target: "高齢者", rate: "3割", amount: "約24,000円", limit: "高額療養費制度の限度額" },
+              { target: "一般（70歳未満）", rate: "3割", amount: "約24,000円", limit: "高額療養費制度の限度額" },
+            ].map((row, i) => (
+              <div key={i} className="border border-gray-200 rounded-lg overflow-hidden">
+                <div className="bg-navy text-white px-4 py-2 text-sm font-medium flex justify-between items-center">
+                  <span>{row.target}</span>
+                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded">{row.rate}負担</span>
+                </div>
+                <div className="px-4 py-3 space-y-1.5 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-text-muted">自己負担額（目安）</span>
+                    <span className="font-medium">{row.amount}</span>
+                  </div>
+                  <div className="flex justify-between gap-3">
+                    <span className="text-text-muted shrink-0">負担上限</span>
+                    <span className="font-medium text-right">{row.limit}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

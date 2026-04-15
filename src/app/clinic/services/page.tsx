@@ -144,7 +144,7 @@ export default function ServicesPage() {
                 採血・採尿は可能です。X線・CT・内視鏡は連携先の横浜甦生病院外来をご紹介します。
               </p>
               <p className="text-sm text-navy font-medium mt-2">
-                ※ 訪問診療は土曜日も実施しています。緊急往診は24時間365日対応です。
+                ※ 緊急往診は24時間365日対応です。
               </p>
             </section>
           </ScrollReveal>

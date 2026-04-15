@@ -249,8 +249,8 @@ export default function PhilosophyPage() {
         {/* コンピテンシー6領域 */}
         <ScrollReveal>
           <section className="mb-16">
-            <h2 className="heading-section text-navy mb-4 text-[clamp(1.3rem,4vw,2.75rem)]">
-              めぐみ在宅クリニックのコンピテンシー
+            <h2 className="heading-section text-navy mb-4 text-[clamp(1.25rem,4.5vw,2.75rem)]">
+              めぐみ在宅クリニックの<br className="sm:hidden" />コンピテンシー
             </h2>
             <p className="text-text-secondary mb-4 leading-relaxed">
               コンピテンシーとは、知識・技能・態度を統合し、実際の臨床場面で発揮できる能力です。

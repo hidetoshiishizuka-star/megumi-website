@@ -80,9 +80,15 @@ export default async function TopPage() {
             <NavCard
               icon="🏠"
               title="患者さま・ご家族の方"
-              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
+              description="在宅医療の流れ、費用、対応エリア、よくあるご質問をご案内します。"
               href="/clinic/first-visit"
               color="bg-navy-light"
+              links={[
+                { label: "はじめての方へ", href: "/clinic/first-visit" },
+                { label: "費用について", href: "/clinic/fee" },
+                { label: "対応エリア", href: "/clinic/services#area" },
+                { label: "よくあるご質問", href: "/clinic/faq" },
+              ]}
             />
             <NavCard
               icon="🤝"
@@ -90,6 +96,12 @@ export default async function TopPage() {
               description="患者さまのご紹介の手順、連携窓口のご案内です。"
               href="/clinic/partnership"
               color="bg-dawn-light"
+              links={[
+                { label: "連携のご案内", href: "/clinic/partnership" },
+                { label: "診療案内", href: "/clinic/services" },
+                { label: "よくあるご質問", href: "/clinic/faq" },
+                { label: "お問い合わせ", href: "/clinic/contact" },
+              ]}
             />
             <NavCard
               icon="🎓"
@@ -97,6 +109,12 @@ export default async function TopPage() {
               description="緩和ケアの学びの場として、見学プログラム・研修をご案内します。"
               href="/concept/training"
               color="bg-twilight-light"
+              links={[
+                { label: "見学・研修のご案内", href: "/concept/training" },
+                { label: "院長・コンセプト", href: "/concept/about" },
+                { label: "スタッフ紹介", href: "/clinic/staff" },
+                { label: "お問い合わせ", href: "/clinic/contact" },
+              ]}
             />
             <NavCard
               icon="👥"
@@ -104,6 +122,12 @@ export default async function TopPage() {
               description="医師・看護師・コメディカルスタッフの採用情報をご案内します。"
               href="/clinic/recruit"
               color="bg-sunrise-light"
+              links={[
+                { label: "採用情報", href: "/clinic/recruit" },
+                { label: "スタッフ紹介", href: "/clinic/staff" },
+                { label: "診療案内", href: "/clinic/services" },
+                { label: "お問い合わせ", href: "/clinic/contact" },
+              ]}
             />
             <NavCard
               icon="🎤"
@@ -111,6 +135,12 @@ export default async function TopPage() {
               description="院長の講演テーマ・実績、ご依頼方法をご案内します。"
               href="/concept/lecture"
               color="bg-twilight-light"
+              links={[
+                { label: "講演・執筆依頼", href: "/concept/lecture" },
+                { label: "著書・メディア", href: "/concept/books" },
+                { label: "院長・コンセプト", href: "/concept/about" },
+                { label: "お問い合わせ", href: "/clinic/contact" },
+              ]}
             />
           </div>
         </section>
@@ -281,13 +311,43 @@ function NavCard({
   description,
   href,
   color,
+  links,
 }: {
   icon: string;
   title: string;
   description: string;
   href: string;
   color: string;
+  links?: { label: string; href: string }[];
 }) {
+  if (links && links.length > 0) {
+    return (
+      <div
+        className={`${color} rounded-xl p-6 hover:shadow-lg transition-shadow flex flex-col`}
+      >
+        <span className="text-3xl mb-4 block">{icon}</span>
+        <Link href={href} className="group">
+          <h3 className="font-bold text-lg mb-2 group-hover:text-navy transition-colors">
+            {title}
+          </h3>
+        </Link>
+        <p className="text-sm text-text-secondary mb-4 min-h-[2.75rem]">{description}</p>
+        <ul className="mt-auto space-y-2 border-t border-white/60 pt-4">
+          {links.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                className="text-sm text-navy font-medium hover:underline inline-flex items-center gap-1"
+              >
+                <span>→</span>
+                {l.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
   return (
     <Link
       href={href}

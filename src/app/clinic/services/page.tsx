@@ -37,9 +37,7 @@ export default function ServicesPage() {
               <h2 className="heading-section text-navy mb-6">在宅医療とは</h2>
               <div className="prose max-w-none text-text-secondary leading-relaxed space-y-4">
                 <p>
-                  病気・高齢のために通院が困難な方がいます。
-                  在宅医療は、通院が困難な方のご自宅（介護施設を含む）で、継続して医療を受けるために
-                  医師が訪問して医療を提供するものです。
+                  在宅医療とは、通院が困難な患者さんのもとに、医師が定期的にお伺いし、診療、治療やお薬の処方、健康管理や療養上の相談指導を行うものです。
                 </p>
                 <p>
                   当院では、安心して医療を受けられるように24時間365日の診療体制を整えています。地域の介護・福祉サービス事業所や訪問看護ステーション、薬局、医療機関と連携し、患者様が住み慣れた環境で療養生活が送れるように支援を行います。
@@ -73,9 +71,6 @@ export default function ServicesPage() {
                   </ScrollReveal>
                 ))}
               </ul>
-              <p className="text-sm text-text-muted mt-4">
-                ※ 精神科疾患が主体の場合は、専門医療機関をご案内しています。
-              </p>
             </section>
           </ScrollReveal>
 
@@ -90,7 +85,7 @@ export default function ServicesPage() {
                   { title: "疼痛管理・緩和ケア", sub: "痛みの緩和と心身の支え" },
                   { title: "看取り・ACP", sub: "意思決定支援と穏やかな最期" },
                   { title: "介護認定意見書・各種診断書", sub: "書類作成に対応" },
-                  { title: "特定健診", sub: "予約制" },
+                  { title: "特定健診", sub: "予約制（一般外来）" },
                 ].map((item, i) => (
                   <ScrollReveal key={item.title} delay={i * 80}>
                     <div className="bg-navy-light rounded-lg px-5 py-4">
@@ -121,7 +116,10 @@ export default function ServicesPage() {
                   </thead>
                   <tbody>
                     <tr className="border-b">
-                      <td className="px-4 py-3 font-medium">9:00〜12:00</td>
+                      <td className="px-4 py-3 font-medium">
+                        <span className="block">9:00〜12:00</span>
+                        <span className="block text-xs text-text-muted font-normal mt-1">（受付8:45〜12:00）</span>
+                      </td>
                       <td className="px-4 py-3 text-center">
                         <span className="block text-navy font-medium">一般外来</span>
                         <span className="block text-sunrise font-medium text-xs mt-1">緩和ケア外来</span>
@@ -140,11 +138,10 @@ export default function ServicesPage() {
                 </table>
               </div>
               <p className="text-sm text-text-muted mt-3">
-                ※ 外来は土・日・祝は休診です。緩和ケア外来は予約制です。受付 8:45〜12:00。
-                採血・採尿は可能です。X線・CT・内視鏡は連携先の横浜甦生病院外来をご紹介します。
+                ※ 緩和ケア外来は予約制です。
               </p>
-              <p className="text-sm text-navy font-medium mt-2">
-                ※ 緊急往診は24時間365日対応です。
+              <p className="text-sm text-text-muted mt-1">
+                ※ 特定健診は予約制です。
               </p>
             </section>
           </ScrollReveal>

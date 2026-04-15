@@ -27,9 +27,6 @@ export default function AreaTabs() {
           <p className="font-medium mb-2">アクセス</p>
           <p className="text-text-secondary">{CLINIC_INFO.address}</p>
           <p className="text-text-secondary mt-1">{CLINIC_INFO.access}</p>
-          <p className="text-sm text-text-muted mt-3">
-            外来診療：{CLINIC_INFO.outpatient.general}／緩和ケア外来：{CLINIC_INFO.outpatient.palliative}
-          </p>
         </div>
       </div>
 

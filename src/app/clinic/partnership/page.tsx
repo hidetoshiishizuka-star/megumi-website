@@ -48,7 +48,6 @@ export default async function PartnershipPage() {
             ——そうした患者さまやご家族のご希望に、チーム一丸で応えます。
           </p>
           <p className="text-text-secondary leading-relaxed">
-            居宅中心の訪問診療を基本方針としており、
             「家に帰りたい」という患者さまの思いに寄り添うクリニックです。
             患者さまのご紹介は地域連携室にて承っております。
           </p>
@@ -109,7 +108,7 @@ export default async function PartnershipPage() {
               {
                 step: "3",
                 title: "初回訪問日の調整",
-                desc: "できる限り迅速に初回訪問を調整いたします。緊急性の高い場合は最優先で対応します。土曜日の訪問にも対応しています。",
+                desc: "できる限り迅速に初回訪問を調整いたします。緊急性の高い場合は最優先で対応します。",
                 detail: null,
               },
               {
@@ -147,7 +146,7 @@ export default async function PartnershipPage() {
             {[
               {
                 title: "24時間365日の緊急往診",
-                desc: "当院では24時間365日医師が対応できる体制をとっております。日中・夜間・休日問わず緊急往診いたします。",
+                desc: "当院では24時間365日医師が対応できる体制をとっております。日中・夜間・休日問わず、必要時緊急往診いたします。",
               },
               {
                 title: "継続性のある診療",
@@ -158,8 +157,8 @@ export default async function PartnershipPage() {
                 desc: "医師・看護師（またはサポーター）・ドライバーの3名で訪問します。患者様、ご家族様に寄り添い、丁寧な診療を行います。",
               },
               {
-                title: "緩和ケア専門医が在籍",
-                desc: "院長は緩和医療専門医・指導医。疼痛管理から精神的ケア、ディグニティセラピー、グリーフケアまで対応します。",
+                title: "多数の専門医が在籍",
+                desc: "当院は緩和医療学会・緩和医療専門医・認定医をはじめ、内科、麻酔科、家庭医など様々な専門分野で活躍する医師が、複数在籍しています。",
               },
               {
                 title: "幅広い医療行為に対応",
@@ -208,7 +207,7 @@ export default async function PartnershipPage() {
             <h3 className="font-bold text-navy text-sm mb-2">スタッフ研修のご案内</h3>
             <p className="text-xs text-text-secondary leading-relaxed">
               当院では、介護スタッフの皆さまを対象とした研修（看取りケア・緩和ケア・コミュニケーション等）も承っております。
-              ご希望の方は地域連携室までお気軽にお問い合わせください。
+              ご希望の方はお気軽にお問い合わせください。
             </p>
           </div>
         </section>
@@ -226,7 +225,6 @@ export default async function PartnershipPage() {
             {[
               "緩和医療専門医・指導医が在籍",
               "24時間365日の緊急往診体制",
-              "土曜日も訪問診療を実施",
               "できる限り迅速に初回訪問を調整",
               "限られた時間でも在宅移行を支援",
               "看取り後のグリーフケアまで対応",
@@ -246,7 +244,7 @@ export default async function PartnershipPage() {
             {[
               "緩和医療", "総合内科", "総合診療", "家庭医療",
               "麻酔科", "外科", "救急医学", "呼吸器内科",
-              "リハビリテーション", "老年医学", "病態栄養学",
+              "リハビリテーション", "老年医学",
             ].map((spec) => (
               <span
                 key={spec}

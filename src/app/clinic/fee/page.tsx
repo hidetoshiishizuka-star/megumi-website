@@ -31,7 +31,7 @@ export default function FeePage() {
         {/* 月2回訪問 */}
         <section className="mb-12">
           <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
-            月2回訪問の場合（24時間緊急体制）
+            月2回定期訪問の場合（24時間緊急体制）
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
@@ -73,50 +73,6 @@ export default function FeePage() {
           </div>
         </section>
 
-        {/* 月1回訪問 */}
-        <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
-            月1回訪問の場合（24時間緊急体制）
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-navy text-white">
-                  <th scope="col" className="px-4 py-3 text-left">対象</th>
-                  <th scope="col" className="px-4 py-3">負担割合</th>
-                  <th scope="col" className="px-4 py-3">自己負担額（目安）</th>
-                  <th scope="col" className="px-4 py-3">負担上限</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                <tr>
-                  <td className="px-4 py-3">高齢者</td>
-                  <td className="px-4 py-3 text-center">1割</td>
-                  <td className="px-4 py-3 text-center">約6,000円</td>
-                  <td className="px-4 py-3 text-center">18,000円</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-4 py-3">高齢者</td>
-                  <td className="px-4 py-3 text-center">2割</td>
-                  <td className="px-4 py-3 text-center">約12,000円</td>
-                  <td className="px-4 py-3 text-center">18,000円</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3">高齢者</td>
-                  <td className="px-4 py-3 text-center">3割</td>
-                  <td className="px-4 py-3 text-center">約18,000円</td>
-                  <td className="px-4 py-3 text-center">高額療養費制度の限度額</td>
-                </tr>
-                <tr className="bg-gray-50">
-                  <td className="px-4 py-3">一般（70歳未満）</td>
-                  <td className="px-4 py-3 text-center">3割</td>
-                  <td className="px-4 py-3 text-center">約18,000円</td>
-                  <td className="px-4 py-3 text-center">高額療養費制度の限度額</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
 
         {/* 交通費 */}
         <section className="mb-12">

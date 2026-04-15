@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-text-primary mb-3">1. 基本方針</h2>
           <p>
-            めぐみ在宅クリニック（以下「当院」）は、患者さま・ご家族・お問い合わせいただいた方の個人情報を
+            めぐみ在宅クリニック（以下「当院」）は、患者さん・ご家族・お問い合わせいただいた方の個人情報を
             適切に保護することが重要な責務であると考え、以下の方針に基づき個人情報の保護に努めます。
           </p>
         </section>

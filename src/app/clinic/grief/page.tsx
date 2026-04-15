@@ -33,7 +33,7 @@ export default function GriefPage() {
             大切にしています。
           </p>
           <p className="font-bold text-text-primary leading-relaxed">
-            当院で療養された患者さまのご家族に向けて、以下のサポートを行っています。
+            当院で療養された患者さんのご家族に向けて、以下のサポートを行っています。
           </p>
         </section>
 

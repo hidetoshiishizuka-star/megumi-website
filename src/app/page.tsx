@@ -79,7 +79,7 @@ export default async function TopPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <NavCard
               icon="🏠"
-              title="患者さま・ご家族の方"
+              title="患者さん・ご家族の方"
               description="在宅医療の流れ、費用、対応エリア、よくあるご質問をご案内します。"
               href="/clinic/first-visit"
               color="bg-navy-light"
@@ -93,7 +93,7 @@ export default async function TopPage() {
             <NavCard
               icon="🤝"
               title="医療機関・連携先の方"
-              description="患者さまのご紹介の手順、連携窓口のご案内です。"
+              description="患者さんのご紹介の手順、連携窓口のご案内です。"
               href="/clinic/partnership"
               color="bg-dawn-light"
               links={[

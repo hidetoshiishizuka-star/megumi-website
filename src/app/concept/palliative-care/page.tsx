@@ -113,7 +113,7 @@ export default function PalliativeCarePage() {
         <section className="bg-navy-light rounded-2xl p-8 mb-12">
           <h2 className="text-xl font-bold text-navy mb-4">医療機関の皆さまへ</h2>
           <p className="text-text-secondary leading-relaxed mb-4">
-            がん末期・終末期の患者さまの在宅移行をご検討の際は、当院にご相談ください。
+            がん末期・終末期の患者さんの在宅移行をご検討の際は、当院にご相談ください。
             院長は緩和医療専門医・指導医であり、疼痛管理からディグニティセラピー、看取り後のグリーフケアまで一貫して対応いたします。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">

@@ -32,7 +32,7 @@ export default async function PartnershipPage() {
       ]} />
       <PageHeader
         title="医療機関・介護事業所の皆さまへ"
-        subtitle="患者さまのご紹介・地域連携のご案内"
+        subtitle="患者さんのご紹介・地域連携のご案内"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -45,18 +45,18 @@ export default async function PartnershipPage() {
           </p>
           <p className="text-text-secondary leading-relaxed mb-4">
             「通院が困難になった」「退院後もご自宅で療養を続けたい」「終末期をご自宅で過ごしたい」
-            ——そうした患者さまやご家族のご希望に、チーム一丸で応えます。
+            ——そうした患者さんやご家族のご希望に、チーム一丸で応えます。
           </p>
           <p className="text-text-secondary leading-relaxed">
-            「家に帰りたい」という患者さまの思いに寄り添うクリニックです。
-            患者さまのご紹介は地域連携室にて承っております。
+            「家に帰りたい」という患者さんの思いに寄り添うクリニックです。
+            患者さんのご紹介は地域連携室にて承っております。
           </p>
         </section>
 
-        {/* 対応可能な患者さま */}
+        {/* 対応可能な患者さん */}
         <section className="mb-16">
           <h2 className="text-xl font-bold mb-6 pb-2 border-b-2 border-twilight">
-            ご紹介いただける患者さま
+            ご紹介いただける患者さん
           </h2>
           <p className="text-text-secondary text-sm mb-6">
             以下のような方のご紹介を承っております。対応の可否はお気軽にお電話でご相談ください。
@@ -96,7 +96,7 @@ export default async function PartnershipPage() {
               {
                 step: "1",
                 title: "お電話でご連絡",
-                desc: "地域連携室にお電話ください。患者さまの状況をお伺いし、対応可否をお伝えいたします。",
+                desc: "地域連携室にお電話ください。患者さんの状況をお伺いし、対応可否をお伝えいたします。",
                 detail: "電話：045-300-6630（月〜金 9:00〜17:00）",
               },
               {
@@ -140,7 +140,7 @@ export default async function PartnershipPage() {
             当院の診療体制
           </h2>
           <p className="text-text-secondary text-sm mb-6">
-            ご紹介いただいた患者さまを安心してお任せいただけるよう、以下の体制を整えています。
+            ご紹介いただいた患者さんを安心してお任せいただけるよう、以下の体制を整えています。
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
@@ -166,7 +166,7 @@ export default async function PartnershipPage() {
               },
               {
                 title: "居宅中心の方針",
-                desc: "施設ではなく居宅（ご自宅）中心の訪問診療を基本方針としています。「家に帰りたい」という患者さまの希望に寄り添います。",
+                desc: "施設ではなく居宅（ご自宅）中心の訪問診療を基本方針としています。「家に帰りたい」という患者さんの希望に寄り添います。",
               },
             ].map((item) => (
               <div key={item.title} className="bg-navy-light rounded-xl p-5">
@@ -201,7 +201,7 @@ export default async function PartnershipPage() {
           </ul>
           <p className="text-text-secondary text-sm mb-4">
             居宅療養管理指導のもと、ケアマネジャーの皆さまとの情報共有・連携を重視しています。
-            診療内容や患者さまの状態変化について、適時ご報告いたします。
+            診療内容や患者さんの状態変化について、適時ご報告いたします。
           </p>
           <div className="bg-navy-light rounded-xl p-5">
             <h3 className="font-bold text-navy text-sm mb-2">スタッフ研修のご案内</h3>
@@ -218,7 +218,7 @@ export default async function PartnershipPage() {
             病院連携担当者の皆さまへ
           </h2>
           <p className="text-text-secondary leading-relaxed mb-6">
-            がん末期・終末期の患者さまの在宅移行をご検討の際は、ぜひ当院にご相談ください。
+            がん末期・終末期の患者さんの在宅移行をご検討の際は、ぜひ当院にご相談ください。
             以下の体制で、退院後の在宅療養を支えます。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -348,7 +348,7 @@ export default async function PartnershipPage() {
         <section className="bg-navy-light rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold mb-3">地域連携室</h2>
           <p className="text-text-secondary mb-2 text-sm">
-            患者さまのご紹介・ご相談はこちらまでお気軽にご連絡ください
+            患者さんのご紹介・ご相談はこちらまでお気軽にご連絡ください
           </p>
           <a
             href={`tel:${CLINIC_INFO.tel}`}

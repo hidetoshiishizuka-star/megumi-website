@@ -46,11 +46,11 @@ export default function ServicesPage() {
             </section>
           </ScrollReveal>
 
-          {/* 対象となる患者さま */}
+          {/* 対象となる患者さん */}
           <ScrollReveal>
             <section className="mb-16">
               <h2 className="heading-section text-navy mb-6">
-                対象となる患者さま
+                対象となる患者さん
               </h2>
               <ul className="space-y-3 text-text-secondary">
                 {[
@@ -192,7 +192,7 @@ export default function ServicesPage() {
                 新規ご相談：月〜金 9:00〜17:00
               </p>
               <p className="text-text-secondary mb-6">
-                既存患者さまの緊急：24時間365日対応
+                既存患者さんの緊急：24時間365日対応
               </p>
               <a
                 href={`tel:${CLINIC_INFO.tel}`}

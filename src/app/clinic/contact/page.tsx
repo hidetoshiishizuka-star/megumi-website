@@ -57,7 +57,7 @@ export default function ContactPage() {
                       <br />
                       新規ご相談：月〜金 9:00〜17:00
                       <br />
-                      既存患者さまの緊急連絡：24時間対応
+                      既存患者さんの緊急連絡：24時間対応
                     </p>
                   </div>
                 </ScrollReveal>

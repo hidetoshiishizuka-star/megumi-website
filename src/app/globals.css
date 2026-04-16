@@ -62,7 +62,7 @@ body {
 /* モバイルでの可読性向上（高齢者対応）
    rem基準のTailwindクラス全体がスケールアップ */
 html {
-  font-size: 19.5px;
+  font-size: 18px;
 }
 @media (min-width: 768px) {
   html {
@@ -166,7 +166,7 @@ html {
 }
 
 .heading-section {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.2;
@@ -174,24 +174,24 @@ html {
 
 @media (min-width: 768px) {
   .heading-section {
-    font-size: 2.75rem;
+    font-size: 44px;
   }
 }
 
 .subheading {
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
 }
 
 @media (min-width: 768px) {
   .subheading {
-    font-size: 1.375rem;
+    font-size: 22px;
   }
 }
 
 .overline {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;

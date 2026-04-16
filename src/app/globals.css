@@ -62,7 +62,7 @@ body {
 /* モバイルでの可読性向上（高齢者対応）
    rem基準のTailwindクラス全体がスケールアップ */
 html {
-  font-size: 17.5px;
+  font-size: 19.5px;
 }
 @media (min-width: 768px) {
   html {

@@ -183,7 +183,7 @@ export default async function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
           <Link
             href="/clinic/recruit"
-            className="block bg-gradient-to-r from-dawn to-sunrise rounded-2xl p-8 text-white hover:shadow-xl hover:opacity-95 transition-all group"
+            className="block bg-gradient-to-r from-twilight to-dawn rounded-2xl p-8 text-white hover:shadow-xl hover:opacity-95 transition-all group"
           >
             <div className="flex items-center justify-between">
               <div>

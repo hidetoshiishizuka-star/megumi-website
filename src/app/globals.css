@@ -147,7 +147,7 @@ html {
 
 /* === Apple風タイポグラフィ === */
 .heading-hero {
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.15;
@@ -155,13 +155,13 @@ html {
 
 @media (min-width: 640px) {
   .heading-hero {
-    font-size: 2.75rem;
+    font-size: 44px;
   }
 }
 
 @media (min-width: 768px) {
   .heading-hero {
-    font-size: 3.5rem;
+    font-size: 56px;
   }
 }
 

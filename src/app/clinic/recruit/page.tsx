@@ -131,7 +131,11 @@ export default function RecruitPage() {
             <section className="mb-16">
               <div className="bg-gradient-to-r from-twilight-light to-dawn-light rounded-2xl p-8">
                 <p className="text-dawn text-sm font-medium mb-2">Philosophy</p>
-                <h2 className="heading-section text-navy mb-4">ユニバーサル・ホスピスマインド</h2>
+                <h2 className="heading-section text-navy mb-4 text-[22px] sm:text-[44px]">
+                  <span className="whitespace-nowrap">ユニバーサル・</span>
+                  <br className="sm:hidden" />
+                  <span className="whitespace-nowrap">ホスピスマインド</span>
+                </h2>
                 <p className="text-text-secondary leading-relaxed mb-4">
                   めぐみ在宅クリニックでは「治す医療」ではなく「支える医療」を実践しています。
                   解決が難しい苦しみを抱えたとしても、関わりを通して穏やかさを支えることができる

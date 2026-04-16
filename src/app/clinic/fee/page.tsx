@@ -31,7 +31,7 @@ export default function FeePage() {
         {/* 月2回訪問 */}
         <section className="mb-12">
           <h2 className="text-xl font-bold mb-4 pb-2 border-b-2 border-twilight">
-            月2回定期訪問の場合（24時間緊急体制）
+            月2回定期訪問の場合<br className="sm:hidden" />（24時間緊急体制）
           </h2>
           {/* PC表示：テーブル */}
           <div className="hidden md:block overflow-x-auto">

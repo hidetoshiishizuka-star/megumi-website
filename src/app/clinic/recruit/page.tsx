@@ -24,7 +24,7 @@ export default function RecruitPage() {
             <p className="overline text-sunrise-light mb-6">Recruitment</p>
             <h1 className="heading-hero text-white mb-6">採用情報</h1>
             <p className="subheading text-white/90">
-              「継続性のある在宅医療」を一緒に作りませんか
+              「継続性のある在宅医療」を<br className="sm:hidden" />一緒に作りませんか
             </p>
           </div>
         </section>

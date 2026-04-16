@@ -183,15 +183,15 @@ export default async function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-8">
           <Link
             href="/clinic/recruit"
-            className="block bg-gradient-to-r from-navy to-twilight rounded-2xl p-8 text-white hover:shadow-xl transition-shadow group"
+            className="block bg-gradient-to-r from-dawn to-sunrise rounded-2xl p-8 text-white hover:shadow-xl hover:opacity-95 transition-all group"
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sunrise-light text-sm font-medium mb-1">Recruitment</p>
+                <p className="text-white/90 text-sm font-medium mb-1 tracking-widest">Recruitment</p>
                 <h3 className="text-xl font-bold mb-1">一緒に働く仲間を募集しています</h3>
-                <p className="text-white/70 text-sm">在宅医療チームの一員として働きませんか。</p>
+                <p className="text-white/85 text-sm">在宅医療チームの一員として働きませんか。</p>
               </div>
-              <span className="text-white/50 text-3xl group-hover:translate-x-1 transition-transform">→</span>
+              <span className="text-white text-3xl group-hover:translate-x-1 transition-transform">→</span>
             </div>
           </Link>
         </section>

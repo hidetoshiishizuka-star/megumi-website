@@ -42,14 +42,14 @@ export default async function TopPage() {
           </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 sm:py-32 text-center">
             <p className="text-white/80 text-sm font-medium tracking-widest mb-4">
-              横浜市瀬谷区の在宅医療・訪問診療・在宅緩和ケア
+              訪問診療・在宅緩和ケア
             </p>
             <h1 className="heading-hero text-white mb-6">
-              瀬谷区の訪問診療・在宅医療<br />めぐみ在宅クリニック
+              めぐみ在宅クリニック
             </h1>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
               横浜市瀬谷区を中心に、泉区・旭区・大和市へ訪問診療を行っています。
-              24時間365日の緊急往診体制で、在宅緩和ケア・在宅看取りまで一貫して支えます。
+              24時間365日の緊急往診体制で、在宅看取りまで一貫して支えます。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

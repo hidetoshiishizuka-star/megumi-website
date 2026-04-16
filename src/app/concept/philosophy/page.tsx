@@ -23,7 +23,7 @@ export default function PhilosophyPage() {
       <section className="gradient-twilight text-white">
         <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
           <p className="overline text-sunrise-light mb-6">Philosophy</p>
-          <h1 className="heading-hero text-white mb-6 whitespace-nowrap text-[clamp(1.5rem,5vw,3.5rem)]">
+          <h1 className="heading-hero text-white mb-6 whitespace-nowrap text-[clamp(20px,5.5vw,56px)]">
             ユニバーサル・ホスピスマインド
           </h1>
         </div>
@@ -249,8 +249,10 @@ export default function PhilosophyPage() {
         {/* コンピテンシー6領域 */}
         <ScrollReveal>
           <section className="mb-16">
-            <h2 className="heading-section text-navy mb-4 text-[clamp(1.25rem,4.5vw,2.75rem)]">
-              めぐみ在宅クリニックの<br className="sm:hidden" />コンピテンシー
+            <h2 className="heading-section text-navy mb-4 text-[22px] sm:text-[44px]">
+              <span className="whitespace-nowrap">めぐみ在宅クリニックの</span>
+              <br className="sm:hidden" />
+              <span className="whitespace-nowrap">コンピテンシー</span>
             </h2>
             <p className="text-text-secondary mb-4 leading-relaxed">
               コンピテンシーとは、知識・技能・態度を統合し、実際の臨床場面で発揮できる能力です。

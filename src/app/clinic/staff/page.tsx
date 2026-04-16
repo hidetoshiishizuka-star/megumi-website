@@ -41,7 +41,7 @@ export default async function StaffPage() {
         <section className="gradient-night text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Staff</p>
-            <h1 className="heading-hero text-white mb-6">スタッフ紹介</h1>
+            <h1 className="heading-hero text-white mb-6 whitespace-nowrap">スタッフ紹介</h1>
             <p className="subheading text-white/90">
               チーム一丸で在宅医療を支えています
             </p>

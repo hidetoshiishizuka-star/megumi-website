@@ -47,7 +47,7 @@ export default function PalliativeCarePage() {
             苦しみへのアプローチ
           </h2>
           <div className="bg-navy-light rounded-2xl p-8 mb-6">
-            <p className="text-center font-bold text-lg mb-2">
+            <p className="text-center font-bold text-base sm:text-lg mb-2 whitespace-nowrap">
               苦しみ ＝ 希望と現実のギャップ
             </p>
             <p className="text-center text-text-secondary text-sm">

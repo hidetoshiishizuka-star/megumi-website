@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CLINIC_INFO } from "@/lib/constants";
-import { lectureRecords as fallbackLectures, type LectureRecord } from "@/data/lectures";
+import { type LectureRecord } from "@/data/lectures";
 import { books } from "@/data/books";
 import { mediaEntries } from "@/data/media";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -12,25 +12,14 @@ interface Props {
   lecturesFromServer?: LectureRecord[];
 }
 
-export default function LectureClient({ lecturesFromServer }: Props) {
-  const lectureRecords = lecturesFromServer && lecturesFromServer.length > 0 ? lecturesFromServer : fallbackLectures;
-
-  // 年別件数を集計
-  const byYear: Record<number, number> = {};
-  lectureRecords.forEach((l) => {
-    byYear[l.year] = (byYear[l.year] || 0) + 1;
-  });
-  const yearEntries = Object.entries(byYear)
-    .map(([y, c]) => ({ year: Number(y), count: c }))
-    .sort((a, b) => b.year - a.year);
-
+export default function LectureClient(_props: Props) {
   return (
     <>
         {/* ヒーロー */}
         <section className="gradient-twilight text-white">
           <div className="max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
             <p className="overline text-sunrise-light mb-6">Lecture Requests</p>
-            <h1 className="heading-hero text-white mb-6">講演・執筆依頼</h1>
+            <h1 className="heading-hero text-white mb-6 whitespace-nowrap">講演・執筆依頼</h1>
             <p className="subheading text-white/90">
               院長 小澤竹俊への講演・執筆のご依頼を承ります
             </p>
@@ -145,30 +134,16 @@ export default function LectureClient({ lecturesFromServer }: Props) {
           </div>
         </section>
 
-        {/* 講演実績（件数のみ） */}
+        {/* 講演実績 */}
         <section className="py-24 md:py-32">
           <div className="max-w-[740px] mx-auto px-6">
             <ScrollReveal>
-              <div className="text-center mb-16">
+              <div className="text-center">
                 <p className="overline text-twilight mb-4">Track Record</p>
-                <h2 className="heading-section text-navy">講演実績</h2>
-                <p className="subheading mt-4 text-text-muted">
-                  全国の病院・自治体・学会・学校等で{lectureRecords.length}件以上の実績
-                </p>
+                <h2 className="heading-section text-navy whitespace-nowrap">講演実績</h2>
+                <p className="subheading mt-6 text-text-muted">調整中</p>
               </div>
             </ScrollReveal>
-
-            {/* 年別件数 */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {yearEntries.map((entry, i) => (
-                <ScrollReveal key={entry.year} delay={i * 60}>
-                  <div className="bg-surface rounded-xl p-5 text-center">
-                    <p className="text-text-muted text-sm">{entry.year}年</p>
-                    <p className="text-2xl font-bold text-navy mt-1">{entry.count}<span className="text-sm font-normal text-text-muted ml-0.5">件</span></p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
           </div>
         </section>
 

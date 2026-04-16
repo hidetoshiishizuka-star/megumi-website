@@ -230,7 +230,7 @@ export default async function TopPage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
           <div className="bg-gradient-to-r from-twilight-light to-dawn-light rounded-2xl p-8 sm:p-12">
             <p className="text-dawn text-sm font-medium mb-2">Learning Community</p>
-            <h2 className="text-2xl font-bold mb-4">学びの場としてのめぐみ</h2>
+            <h2 className="text-[22px] sm:text-2xl font-bold mb-4 whitespace-nowrap">学びの場としてのめぐみ</h2>
             <p className="text-text-secondary leading-relaxed mb-4 max-w-3xl">
               めぐみ在宅クリニックは、在宅医療の「実践の場」であると同時に「学びの場」です。
               ホスピスマインドと対話の技術を体系的に学び、地域に持ち帰って伝えていく。

@@ -6,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 
 const CLINIC_LAT = 35.4628;
 const CLINIC_LNG = 139.4963;
-const RADIUS_M = 5000;
+const RADIUS_M = 4000;
 
 export default function ServiceAreaMap() {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -96,7 +96,7 @@ export default function ServiceAreaMap() {
         </span>
         <span className="flex items-center gap-1.5">
           <span className="w-5 h-0 border-t-2 border-dashed border-sunrise inline-block" />
-          訪問対応エリア（5km以内）
+          訪問対応エリア（おおむね4km以内）
         </span>
         <span className="text-text-muted">
           地図：国土地理院

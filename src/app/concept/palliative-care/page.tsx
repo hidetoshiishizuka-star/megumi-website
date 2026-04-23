@@ -116,14 +116,10 @@ export default function PalliativeCarePage() {
             がん末期・終末期の患者さんの在宅移行をご検討の際は、当院にご相談ください。
             院長は緩和医療専門医・指導医であり、疼痛管理からディグニティセラピー、看取り後のグリーフケアまで一貫して対応いたします。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="bg-white rounded-lg p-4 text-center">
               <p className="text-2xl font-bold text-navy">24h</p>
               <p className="text-xs text-text-muted mt-1">365日緊急往診対応</p>
-            </div>
-            <div className="bg-white rounded-lg p-4 text-center">
-              <p className="text-2xl font-bold text-navy">土曜</p>
-              <p className="text-xs text-text-muted mt-1">訪問診療も実施</p>
             </div>
             <div className="bg-white rounded-lg p-4 text-center">
               <p className="text-2xl font-bold text-navy">迅速</p>

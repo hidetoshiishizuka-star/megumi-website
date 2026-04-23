@@ -96,7 +96,7 @@ export default function ServiceAreaMap() {
         </span>
         <span className="flex items-center gap-1.5">
           <span className="w-5 h-0 border-t-2 border-dashed border-sunrise inline-block" />
-          訪問対応エリア（おおむね4km以内）
+          訪問対応エリア（おおむね5km以内）
         </span>
         <span className="text-text-muted">
           地図：国土地理院

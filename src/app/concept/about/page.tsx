@@ -232,7 +232,7 @@ export default async function AboutDirectorPage() {
                   ))}
                 </div>
 
-                <h3 className="text-lg font-bold text-navy pt-4">「治す医療」ではなく「支える医療」</h3>
+                <h3 className="text-lg font-bold text-navy pt-4">「治す医療」ではなく「寄り添う医療」</h3>
                 <p>
                   苦しみとは「希望と現実の開き」。支えとは「穏やかになれる理由」。
                   めぐみ在宅クリニックのコンピテンシーとは、解決が難しい苦しみを抱えたとしても、

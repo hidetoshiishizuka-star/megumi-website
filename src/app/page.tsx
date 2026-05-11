@@ -80,7 +80,7 @@ export default async function TopPage() {
             <NavCard
               icon="🏠"
               title="患者さん・ご家族の方"
-              description="在宅医療の流れ、費用、対応エリア、よくあるご質問をご案内します。"
+              description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
               href="/clinic/first-visit"
               color="bg-navy-light"
             />

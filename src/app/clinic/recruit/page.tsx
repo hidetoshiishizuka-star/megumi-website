@@ -138,7 +138,7 @@ export default function RecruitPage() {
                 </h2>
                 <p className="text-text-secondary leading-relaxed mb-4">
                   めぐみ在宅クリニックでは「治す医療」ではなく「寄り添う医療」を実践しています。
-                  解決が難しい苦しみを抱えたとしても、関わりを通して穏やかさを支えることができる
+                  解決が難しい苦しみを抱えた方の傍らに在り続け、穏やかさに寄り添う
                   ——そのための対人援助の思想「ユニバーサル・ホスピスマインド」を全スタッフで共有しています。
                 </p>
                 <p className="text-text-secondary leading-relaxed mb-6">

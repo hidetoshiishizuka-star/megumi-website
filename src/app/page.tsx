@@ -79,7 +79,7 @@ export default async function TopPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <NavCard
               icon="🏠"
-              title="患者さん・ご家族の方"
+              title="患者さん・ご家族さまの方"
               description="在宅医療の流れ、費用、対応エリア、よくあるご質問などをご案内します。"
               href="/clinic/first-visit"
               color="bg-navy-light"

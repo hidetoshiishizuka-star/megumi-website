@@ -19,7 +19,7 @@ export default function GriefPage() {
       ]} />
       <PageHeader
         title="当院のグリーフケアについて"
-        subtitle="大切な方をお見送りされたご家族へ。"
+        subtitle="大切な方をお見送りされたご家族さまへ。"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -33,7 +33,7 @@ export default function GriefPage() {
             大切にしています。
           </p>
           <p className="font-bold text-text-primary leading-relaxed">
-            当院で療養された患者さんのご家族に向けて、以下のサポートを行っています。
+            当院で療養された患者さんのご家族さまに向けて、以下のサポートを行っています。
           </p>
         </section>
 
@@ -44,7 +44,7 @@ export default function GriefPage() {
           <div className="bg-warm-gray rounded-xl p-6">
             <p className="text-text-secondary leading-relaxed mb-4">
               毎月1回、第2水曜日に開催しています。めぐみ在宅クリニックと関わりのあった
-              ご家族が対象です。同じ経験をされた方と気持ちを共有できる場です。
+              ご家族さまが対象です。同じ経験をされた方と気持ちを共有できる場です。
             </p>
             <p className="text-sm font-medium text-sunrise">現在、休止中です。</p>
           </div>

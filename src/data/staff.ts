@@ -284,7 +284,7 @@ export const staffMembers: StaffMember[] = [
     certifications: ["一般社団法人日本グリーフケア協会 特級グリーフケアアドバイザー"],
     societies: ["日本緩和医療学会", "死の臨床研究会"],
     description:
-      "ご本人とご家族が望む場所で安心して過ごせるようチームでサポートさせて頂きます。皆さんの大切にしたいことを是非お聞かせ下さい。",
+      "ご本人とご家族さまが望む場所で安心して過ごせるようチームでサポートさせて頂きます。皆さんの大切にしたいことを是非お聞かせ下さい。",
     hasPhoto: false,
   },
   {
@@ -293,7 +293,7 @@ export const staffMembers: StaffMember[] = [
     role: "看護師",
     department: "看護・サポーター",
     description:
-      "地域に密着した在宅医療に興味を持ち、丁寧な対応を心がけ、患者さんやご家族が穏やかに過ごせるよう支援いたします。",
+      "地域に密着した在宅医療に興味を持ち、丁寧な対応を心がけ、患者さんやご家族さまが穏やかに過ごせるよう支援いたします。",
     hasPhoto: true,
     photoFile: "nurse-2.jpg",
     photoPosition: "center center",
@@ -305,7 +305,7 @@ export const staffMembers: StaffMember[] = [
     role: "看護師",
     department: "看護・サポーター",
     description:
-      "在宅医療に関わってきて、患者さん、ご家族が在宅で穏やかに過ごせるようサポートいたします。",
+      "在宅医療に関わってきて、患者さん、ご家族さまが在宅で穏やかに過ごせるようサポートいたします。",
     hasPhoto: true,
     photoFile: "20190826.jpg",
     photoPosition: "center center",
@@ -317,7 +317,7 @@ export const staffMembers: StaffMember[] = [
     role: "診療サポーター",
     department: "看護・サポーター",
     description:
-      "在宅医療に関わって5年。様々な問題に直面する患者さん、ご家族のお手伝いができればと思います。",
+      "在宅医療に関わって5年。様々な問題に直面する患者さん、ご家族さまのお手伝いができればと思います。",
     hasPhoto: false,
   },
   {
@@ -348,7 +348,7 @@ export const staffMembers: StaffMember[] = [
     role: "看護師・認定心理士",
     department: "看護・サポーター",
     description:
-      "患者さんとご家族の不安や苦痛に寄り添い、意思決定を支える看護師でありたいと思います。",
+      "患者さんとご家族さまの不安や苦痛に寄り添い、意思決定を支える看護師でありたいと思います。",
     hasPhoto: true,
     photoFile: "20231010.jpg",
     photoPosition: "center center",
@@ -422,7 +422,7 @@ export const staffMembers: StaffMember[] = [
       "一般社団法人グリーフサポートせたがや理事",
     ],
     description:
-      "患者さんを亡くされたご家族のサポートを担当。亡くされた後も地域でサポートできる環境を目指します。",
+      "患者さんを亡くされたご家族さまのサポートを担当。亡くされた後も地域でサポートできる環境を目指します。",
     hasPhoto: false,
   },
 ];

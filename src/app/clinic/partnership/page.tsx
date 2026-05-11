@@ -45,7 +45,7 @@ export default async function PartnershipPage() {
           </p>
           <p className="text-text-secondary leading-relaxed mb-4">
             「通院が困難になった」「退院後もご自宅で療養を続けたい」「終末期をご自宅で過ごしたい」
-            ——そうした患者さんやご家族のご希望に、チーム一丸で応えます。
+            ——そうした患者さんやご家族さまのご希望に、チーム一丸で応えます。
           </p>
           <p className="text-text-secondary leading-relaxed">
             「家に帰りたい」という患者さんの思いに寄り添うクリニックです。
@@ -70,7 +70,7 @@ export default async function PartnershipPage() {
               "認知症でご自宅での生活を続けたい方",
               "人工呼吸器・在宅酸素・経管栄養等の管理が必要な方",
               "褥瘡管理・点滴・注射等の処置が必要な方",
-              "ご自宅での看取りを希望されるご本人・ご家族",
+              "ご自宅での看取りを希望されるご本人・ご家族さま",
             ].map((item) => (
               <div
                 key={item}
@@ -102,7 +102,7 @@ export default async function PartnershipPage() {
               {
                 step: "2",
                 title: "患者情報の共有",
-                desc: "病名・ADL・現在の治療内容・療養場所の希望・ご家族の状況等をお伝えください。紹介状（診療情報提供書）はFAXまたは郵送で承ります。",
+                desc: "病名・ADL・現在の治療内容・療養場所の希望・ご家族さまの状況等をお伝えください。紹介状（診療情報提供書）はFAXまたは郵送で承ります。",
                 detail: "FAX：045-300-6631",
               },
               {
@@ -154,7 +154,7 @@ export default async function PartnershipPage() {
               },
               {
                 title: "日中3名体制の訪問",
-                desc: "医師・看護師（またはサポーター）・ドライバーの3名で訪問します。患者さん、ご家族に寄り添い、丁寧な診療を行います。",
+                desc: "医師・看護師（またはサポーター）・ドライバーの3名で訪問します。患者さん、ご家族さまに寄り添い、丁寧な診療を行います。",
               },
               {
                 title: "多数の専門医が在籍",

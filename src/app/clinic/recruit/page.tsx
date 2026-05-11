@@ -46,9 +46,9 @@ export default function RecruitPage() {
                 </p>
                 <p className="text-text-secondary leading-relaxed mb-4">
                   ACP（アドバンス・ケア・プランニング）の多くは、
-                  治療の差し控えという判断を、患者さんご本人やご家族と意思決定することになります。
+                  治療の差し控えという判断を、患者さんご本人やご家族さまと意思決定することになります。
                   本来あるべき姿は幸せになれる援助を行えるよう支えていくこと、
-                  患者さんご本人やご家族と対話を重ねていくことだと考えています。
+                  患者さんご本人やご家族さまと対話を重ねていくことだと考えています。
                 </p>
                 <p className="text-text-secondary leading-relaxed mb-4">
                   人生の目的は幸せになること。

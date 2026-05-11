@@ -1,9 +1,5 @@
-"use client";
-
-import dynamic from "next/dynamic";
 import { CLINIC_INFO } from "@/lib/constants";
-
-const ServiceAreaMap = dynamic(() => import("./ServiceAreaMap"), { ssr: false });
+import ServiceAreaMap from "./ServiceAreaMap";
 
 export default function AreaTabs() {
   return (

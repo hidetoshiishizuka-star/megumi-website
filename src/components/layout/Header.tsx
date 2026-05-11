@@ -145,10 +145,16 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
       </div>
     </header>
 
-      {/* モバイルメニュー (iOS Safariのスタッキングコンテキスト対策でheader外に配置) */}
-      <div className={`lg:hidden fixed inset-0 top-12 bg-white z-[55] transition-opacity duration-300 overflow-y-auto ${
-        menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-      }`}>
+      {/* モバイルメニュー (iOS Safariのスタッキングコンテキスト対策でheader外に配置)
+          - display切り替え + visibility/opacityでiOS Safariでも確実に表示
+          - 100dvhでアドレスバー込み高さに対応 */}
+      <div
+        className={`lg:hidden fixed left-0 right-0 bottom-0 top-12 bg-white z-[55] overflow-y-auto transition-opacity duration-300 ${
+          menuOpen ? "flex flex-col opacity-100 visible" : "hidden opacity-0 invisible"
+        }`}
+        style={{ height: "calc(100dvh - 3rem)" }}
+        aria-hidden={!menuOpen}
+      >
         <nav className="flex flex-col px-8 py-8 gap-1">
           {/* クリニック */}
           <p className="text-xs text-text-muted font-medium mt-2 mb-1">クリニック</p>
@@ -158,7 +164,7 @@ export default function Header({ variant = "top" }: { variant?: HeaderVariant })
             { label: "費用について", href: "/clinic/fee" },
             { label: "よくあるご質問", href: "/clinic/faq" },
             { label: "スタッフ紹介", href: "/clinic/staff" },
-            { label: "ご遺族の方へ", href: "/clinic/grief" },
+            { label: "当院のグリーフケアについて", href: "/clinic/grief" },
             { label: "医療機関・連携先の方", href: "/clinic/partnership" },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="text-lg font-medium text-text-primary/80 hover:text-sunrise py-2 transition-colors" onClick={() => setMenuOpen(false)}>
